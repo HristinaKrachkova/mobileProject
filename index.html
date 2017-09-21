@@ -15,17 +15,42 @@
             <div id="logo">
                 <a href="index.html"><img src="./assets/img/logo.png" alt=""></a>
             </div>
-            <span id="slogan">Сайт №1 за  <!-- Тук малко JS -->.....</span>
+            <span id="slogan">Сайт №1 за Автомобили </span>
 
             <div id="loginBtn">
                 <button type="button" name="button">Търсене</button>
                 <button type="button" name="button">Login</button>
+
             </div>
         </header>
 
         <main>
             <div class="centerDiv">
+                <div id="iconNav">
+                    <ul>
+                        <li>
+                            <a href="#" value = '1'><img class="iconNav" src="./assets/img/vehicle_1.gif" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#" value = '2'><img class="iconNav" src="./assets/img/vehicle_2.gif" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#" value = '3'><img class="iconNav" src="./assets/img/vehicle_3.gif" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#" value = '4'><img class="iconNav" src="./assets/img/vehicle_4.gif" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#" value = '5'><img class="iconNav" src="./assets/img/vehicle_5.gif" alt=""></a>
+                        </li>
+                    </ul>
+                   
+                </div>
+                <div class="boxTitle">
+                        <h1>Изберете най-подходящата кола</h1>
+                </div>
                 <div id="mainLeft">
+
                     <div id="formNav">
                         <div id="buttonBox">
                             <div id="btnBuy" class="activeItem">
@@ -35,28 +60,24 @@
                                 <a href="#">Продай</a>
                             </div>
                         </div>
-                        <div id="iconNav">
-                            <ul>
-                                <li>
-                                    <a href="#"><img class="iconNav" src="./assets/img/vehicle_1.gif" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img class="iconNav" src="./assets/img/vehicle_2.gif" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img class="iconNav" src="./assets/img/vehicle_3.gif" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img class="iconNav" src="./assets/img/vehicle_4.gif" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img class="iconNav" src="./assets/img/vehicle_5.gif" alt=""></a>
-                                </li>
-                            </ul>
-                        </div>
+
                     </div>
                     <form id="searchMiniForm" action="index.html" method="post">
+                            <div id = 'typesSelect' class="formBoxControl">
+                                    <label for="vType">Тип</label>
+                                    <br>
+                                    <select  id="vType" name="Type">
+                                            <option value="1" selected>Автомобили</option>
+                                            <option value="2">Джипове</option>
+                                            <option value="3">Бусове</option>
+                                            <option value="4">Камиони</option>
+                                            <option value="5">Мотоциклети</option>
+                                    </select>
+                                    <img id = 'picSelect' src="./assets/img/vehicle_1.gif" alt="">
+                                </div>
+                               
                         <div class="colLeft">
+                                
                             <div class="formBoxControl">
                                 <label for="vBrand">Марка</label>
                                 <br>
@@ -75,9 +96,9 @@
                                 <input class="inputWidthCorrect" type="text" id="vPrice" name="vPrice" placeholder="Въведете цена" value="">
                             </div>
                             <div class="formBoxControl">
-                                <label for="vBrand">Двигател</label>
+                                <label for="vEngine">Двигател</label>
                                 <br>
-                                <select id="vBrand" name="">
+                                <select id="vEngine" name="">
                                         <option selected disabled value="0">Всички</option>
                                         <option value="1">Бензин</option>
                                         <option value="2">Дизел</option>
@@ -141,9 +162,7 @@
                     </form>
                 </div>
                 <div id="mainRight">
-                    <div class="boxTitle">
-                        <h1>Изберете най-подходящата кола</h1>
-                    </div>
+                        
                     <div id="bigCatMenu">
                         <ul>
                             <li>
@@ -190,7 +209,9 @@
                 <img src="http://via.placeholder.com/200">
                 <div class="boxNewsContent">
                     <h5>Title</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat.</p>
                 </div>
 
             </div>
@@ -272,8 +293,10 @@
                 Copyright &copy; 2017 MobileIT All Rights Reserved
             </p>
         </footer>
+        
     </div>
-    <script src="assets/js/custom.js"></script>
+    <script src = 'view.js'></script>
+    
 </body>
 
 </html>

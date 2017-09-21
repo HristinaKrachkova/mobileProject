@@ -81,7 +81,7 @@ header {
 main {
     width: 100%;
     position: relative;
-    padding: 60px 0;
+    padding: 20px 0;
 }
 
 #mainLeft,
@@ -101,6 +101,7 @@ main {
     width: 50% !important;
     padding-left: 15px;
     box-sizing: border-box;
+    margin-top: -32px;
 }
 
 #mainLeft,
@@ -152,12 +153,14 @@ main {
 }
 
 #iconNav {
-    width: 100%;
-    margin-top: 40px;
+    width: 50%;
+    margin-top: 10px;
+    display: inline-block;
+   
 }
 
 #iconNav ul {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     list-style: none;
     width: 470px;
@@ -171,7 +174,7 @@ main {
 #iconNav ul li a {
     width: 90px;
     height: 60px;
-    display: block;
+    display: inline-block;
     cursor: default;
 }
 
@@ -316,9 +319,21 @@ h1 {
 #bigCatMenu ul li a>img:hover {
     opacity: 0.7;
 }
+.boxTitle {
+    display: inline-block;
+    width: 48%;
+    margin: auto;
+    text-align: center;
+    vertical-align: super;
+}
 
 .boxTitle h1 {
     text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+   
 }
 
 section#news {
@@ -447,3 +462,19 @@ p.copyright {
     text-align: right;
     padding: 0 10px 10px 0;
 }
+#typesSelect {
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+#typesSelect > select {
+    width: 60%;
+    margin-right: 50px;
+ }
+
+ #typesSelect > img {
+   text-align: center;
+   vertical-align: middle;
+   cursor: pointer;
+ }
+ 

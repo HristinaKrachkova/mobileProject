@@ -29,25 +29,25 @@
                 <div id="iconNav">
                     <ul>
                         <li>
-                            <a href="#" value = '1'><img class="iconNav" src="./assets/img/vehicle_1.gif" alt=""></a>
+                            <a href="#" value='1'><img class="iconNav" src="./assets/img/vehicle_1.gif" alt=""></a>
                         </li>
                         <li>
-                            <a href="#" value = '2'><img class="iconNav" src="./assets/img/vehicle_2.gif" alt=""></a>
+                            <a href="#" value='2'><img class="iconNav" src="./assets/img/vehicle_2.gif" alt=""></a>
                         </li>
                         <li>
-                            <a href="#" value = '3'><img class="iconNav" src="./assets/img/vehicle_3.gif" alt=""></a>
+                            <a href="#" value='3'><img class="iconNav" src="./assets/img/vehicle_3.gif" alt=""></a>
                         </li>
                         <li>
-                            <a href="#" value = '4'><img class="iconNav" src="./assets/img/vehicle_4.gif" alt=""></a>
+                            <a href="#" value='4'><img class="iconNav" src="./assets/img/vehicle_4.gif" alt=""></a>
                         </li>
                         <li>
-                            <a href="#" value = '5'><img class="iconNav" src="./assets/img/vehicle_5.gif" alt=""></a>
+                            <a href="#" value='5'><img class="iconNav" src="./assets/img/vehicle_5.gif" alt=""></a>
                         </li>
                     </ul>
-                   
+
                 </div>
                 <div class="boxTitle">
-                        <h1>Изберете най-подходящата кола</h1>
+                    <h1>Изберете най-подходящата кола</h1>
                 </div>
                 <div id="mainLeft">
 
@@ -63,31 +63,28 @@
 
                     </div>
                     <form id="searchMiniForm" action="index.html" method="post">
-                            <div id = 'typesSelect' class="formBoxControl">
-                                    <label for="vType">Тип</label>
-                                    <br>
-                                    <select  id="vType" name="Type">
-                                            <option value="1" selected>Автомобили</option>
-                                            <option value="2">Джипове</option>
-                                            <option value="3">Бусове</option>
-                                            <option value="4">Камиони</option>
-                                            <option value="5">Мотоциклети</option>
+                        <div id='typesSelect' class="formBoxControl">
+                            <label for="vType">Тип</label>
+                            <br>
+                            <select id="vType" name="Type">
+                                            <option value="0" selected >Всички</option>   
+                                            <option value="1" type = 'car' >Автомобили</option>
+                                            <option value="2" type = 'jeep'>Джипове</option>
+                                            <option value="3" type = 'bus'>Бусове</option>
+                                            <option value="4" type = 'truck'>Камиони</option>
+                                            <option value="5" type = 'bike'>Мотоциклети</option>
                                     </select>
-                                    <img id = 'picSelect' src="./assets/img/vehicle_1.gif" alt="">
-                                </div>
-                               
+                            <img id='picSelect' src="./assets/img/vehicle_1.gif" alt="">
+                        </div>
+
                         <div class="colLeft">
-                                
+
                             <div class="formBoxControl">
                                 <label for="vBrand">Марка</label>
                                 <br>
                                 <select id="vBrand" name="vBrand">
-                                        <option selected disabled value="0">Всички</option>
-                                        <option value="1">Opel</option>
-                                        <option value="2">Fiat</option>
-                                        <option value="3">Ford</option>
-                                        <option value="4">BMW</option>
-                                        <option value="5">Audi</option>
+                                        <option selected  value="0">Всички</option>
+                                       
                                     </select>
                             </div>
                             <div class="formBoxControl">
@@ -99,7 +96,7 @@
                                 <label for="vEngine">Двигател</label>
                                 <br>
                                 <select id="vEngine" name="">
-                                        <option selected disabled value="0">Всички</option>
+                                        <option selected value="0">Всички</option>
                                         <option value="1">Бензин</option>
                                         <option value="2">Дизел</option>
                                         <option value="3">Електрически</option>
@@ -129,7 +126,7 @@
                                 <label for="vModel">Модел</label>
                                 <br>
                                 <select id="vModel" name="vModel">
-                                        <option selected disabled value="0">Всички</option>
+                                        <option selected value="0">Всички</option>
                                         <option value="1">Някакъв модел</option>
                                     </select>
                             </div>
@@ -162,7 +159,7 @@
                     </form>
                 </div>
                 <div id="mainRight">
-                        
+
                     <div id="bigCatMenu">
                         <ul>
                             <li>
@@ -293,10 +290,11 @@
                 Copyright &copy; 2017 MobileIT All Rights Reserved
             </p>
         </footer>
-        
+
     </div>
-    <script src = 'view.js'></script>
-    
+    <script src='model.js'></script>
+    <script src='view.js'></script>
+
 </body>
 
 </html>

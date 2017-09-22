@@ -6,10 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600'>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/popup.js"></script>
+
     <title>Document</title>
 </head>
 
 <body>
+    <div id="login" class="cont_principal">
+        <div class="cont_centrar">
+            <div id="x">&times;</div>
+            <div class="cont_login">
+                <form action="">
+                    <div class="cont_tabs_login">
+                        <ul class='ul_tabs'>
+                            <li class="active"><a href="#" onclick="sign_in()">SIGN IN</a>
+                                <span class="linea_bajo_nom"></span>
+                            </li>
+                            <li><a href="#up" onclick="sign_up()">SIGN UP</a><span class="linea_bajo_nom"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cont_text_inputs">
+                        <input type="text" class="input_form_sign " placeholder="NAME" name="name_us" />
+                        <input type="text" class="input_form_sign d_block active_inp" placeholder="EMAIL" name="emauil_us" />
+                        <input type="password" class="input_form_sign d_block  active_inp" placeholder="PASSWORD" name="pass_us" />
+                        <input type="password" class="input_form_sign" placeholder="CONFIRM PASSWORD" name="conf_pass_us" />
+                        <!-- <a href="#" class="link_forgot_pass d_block">Forgot Password ?</a> -->
+                        <div class="terms_and_cons d_none">
+                            <p><input type="checkbox" name="terms_and_cons" /> <label for="terms_and_cons">Accept  Terms and Conditions.</label></p>
+                        </div>
+                    </div>
+                    <div class="cont_btn" "login">
+                        <button class="btn_sign" "login">SIGN IN</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <div id="wrapper">
         <header>
             <div id="logo">
@@ -19,8 +55,7 @@
 
             <div id="loginBtn">
                 <button type="button" name="button">Търсене</button>
-                <button type="button" name="button">Login</button>
-
+                <button id="loginButton" type="button" name="button">Login</button>
             </div>
         </header>
 
@@ -206,9 +241,7 @@
                 <img src="http://via.placeholder.com/200">
                 <div class="boxNewsContent">
                     <h5>Title</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
 
             </div>

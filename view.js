@@ -1,17 +1,23 @@
 var options1 = ['djipove', 'aston', 'babi'];
 var opel = ['lodki', 'modki', 'takiva'];
+
 function changeIcon() {
     var e = document.getElementById('vType').value;
     switch (e) {
-        case '1': document.getElementById('picSelect').src = './assets/img/vehicle_1.gif'
+        case '1':
+            document.getElementById('picSelect').src = './assets/img/vehicle_1.gif'
             break;
-        case '2': document.getElementById('picSelect').src = './assets/img/vehicle_2.gif'
+        case '2':
+            document.getElementById('picSelect').src = './assets/img/vehicle_2.gif'
             break;
-        case '3': document.getElementById('picSelect').src = './assets/img/vehicle_3.gif'
+        case '3':
+            document.getElementById('picSelect').src = './assets/img/vehicle_3.gif'
             break;
-        case '4': document.getElementById('picSelect').src = './assets/img/vehicle_4.gif'
+        case '4':
+            document.getElementById('picSelect').src = './assets/img/vehicle_4.gif'
             break;
-        case '5': document.getElementById('picSelect').src = './assets/img/vehicle_5.gif'
+        case '5':
+            document.getElementById('picSelect').src = './assets/img/vehicle_5.gif'
             break;
 
         default:
@@ -19,20 +25,25 @@ function changeIcon() {
     }
 }
 document.getElementById('vType').addEventListener('change', changeIcon, false)
-document.getElementById('vType').addEventListener('change', function (event) {
+document.getElementById('vType').addEventListener('change', function(event) {
     var element = document.getElementById('vType');
     document.getElementById('slogan').innerHTML
 
     switch (element.value) {
-        case '1': document.getElementById('slogan').innerHTML = 'Сайт №1 за Автомобили '
+        case '1':
+            document.getElementById('slogan').innerHTML = 'Сайт №1 за Автомобили '
             break;
-        case '2': document.getElementById('slogan').innerHTML = 'Сайт №1 за Джипове'
+        case '2':
+            document.getElementById('slogan').innerHTML = 'Сайт №1 за Джипове'
             break;
-        case '3': document.getElementById('slogan').innerHTML = 'Сайт №1 за Бусове'
+        case '3':
+            document.getElementById('slogan').innerHTML = 'Сайт №1 за Бусове'
             break;
-        case '4': document.getElementById('slogan').innerHTML = 'Сайт №1 за Камиони'
+        case '4':
+            document.getElementById('slogan').innerHTML = 'Сайт №1 за Камиони'
             break;
-        case '5': document.getElementById('slogan').innerHTML = 'Сайт №1 за Мотоциклети'
+        case '5':
+            document.getElementById('slogan').innerHTML = 'Сайт №1 за Мотоциклети'
             break;
 
         default:
@@ -41,13 +52,13 @@ document.getElementById('vType').addEventListener('change', function (event) {
 })
 
 
-document.getElementById('vType').addEventListener('change', function (event) {
+document.getElementById('vType').addEventListener('change', function(event) {
     var selectButton = document.getElementById('vType')
     while (document.getElementById('vBrand').childNodes.length > 2) {
         document.getElementById('vBrand').removeChild(document.getElementById('vBrand').lastChild);
     }
 
-    cars = cars.sort(function (a, b) {
+    cars = cars.sort(function(a, b) {
         if (a.mark.toUpperCase() > b.mark.toUpperCase()) {
             return 1
         }
@@ -56,7 +67,7 @@ document.getElementById('vType').addEventListener('change', function (event) {
         }
         return 0
     })
-    var options = cars.filter(function (car) {
+    var options = cars.filter(function(car) {
         if (selectButton.value == '1') {
             return car.type == 'car'
         }
@@ -85,18 +96,18 @@ document.getElementById('vType').addEventListener('change', function (event) {
             }
         }
     }
-    marks = marks.filter(function (x) {
+    marks = marks.filter(function(x) {
         return x !== null
     })
 
-    marks.forEach(function (x) {
+    marks.forEach(function(x) {
         var brand = document.createElement('option')
         brand.setAttribute('value', (marks.indexOf(x) + 1))
         brand.innerHTML = x.mark;
         document.getElementById('vBrand').appendChild(brand)
     })
-    document.getElementById('vBrand').addEventListener('change', function (event) {
-        var models = cars.filter(function (x) {
+    document.getElementById('vBrand').addEventListener('change', function(event) {
+        var models = cars.filter(function(x) {
             var e = document.getElementById("vBrand");
             var strUser = e.options[e.selectedIndex];
             return x.mark.toUpperCase() == strUser.innerHTML.toUpperCase()
@@ -104,11 +115,11 @@ document.getElementById('vType').addEventListener('change', function (event) {
         while (document.getElementById('vModel').childNodes.length > 2) {
             document.getElementById('vModel').removeChild(document.getElementById('vModel').lastChild);
         }
-        models.forEach(function (x) {
-            if(document.getElementById('vBrand').options[document.getElementById('vBrand').selectedIndex].innerHTML !== 'Всички')
-            var el = document.getElementById("vType");
+        models.forEach(function(x) {
+            if (document.getElementById('vBrand').options[document.getElementById('vBrand').selectedIndex].innerHTML !== 'Всички')
+                var el = document.getElementById("vType");
             var strUser = el.options[el.selectedIndex];
-            
+
             var mod = document.createElement('option');
             var value = 1
             mod.setAttribute('value', value++)

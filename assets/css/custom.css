@@ -1,3 +1,7 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -6,7 +10,6 @@ body {
     background-color: #e6e6e6;
     background-size: cover;
     background-attachment: fixed;
-    font-family: sans-serif;
     color: #555;
 }
 
@@ -46,7 +49,7 @@ header {
     top: 10%;
     font-size: 20px;
     margin-right: 35px;
-    font-family: sans-serif;
+    font-weight: bold;
 }
 
 #loginBtn {
@@ -156,7 +159,6 @@ main {
     width: 50%;
     margin-top: 10px;
     display: inline-block;
-   
 }
 
 #iconNav ul {
@@ -319,6 +321,7 @@ h1 {
 #bigCatMenu ul li a>img:hover {
     opacity: 0.7;
 }
+
 .boxTitle {
     display: inline-block;
     width: 48%;
@@ -333,7 +336,6 @@ h1 {
     width: 100%;
     margin: auto;
     text-align: center;
-   
 }
 
 section#news {
@@ -462,19 +464,20 @@ p.copyright {
     text-align: right;
     padding: 0 10px 10px 0;
 }
+
 #typesSelect {
     width: 100%;
     box-sizing: border-box;
     display: inline-block;
 }
-#typesSelect > select {
+
+#typesSelect>select {
     width: 60%;
     margin-right: 50px;
- }
+}
 
- #typesSelect > img {
-   text-align: center;
-   vertical-align: middle;
-   cursor: pointer;
- }
- 
+#typesSelect>img {
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}

@@ -11,7 +11,7 @@ function Car(mark, model, type, year, engine, gearBox) {
 Car.prototype.idNumber = 1
 
 var cars = [new Car('chevy', 'stilo', 'car', 2001, 'gas', 'manual'), new Car('chevy', 'rezzo', 'car', 2002, 'gas', 'manual'),
-    new Car('bmw', '316', 'car', 2002, 'disel', 'manual'), new Car('Bmw', '112', 'car', 2010, 'gas', 'manual'),
+    new Car('bmw', '316', 'car', 2008, 'disel', 'manual'),new Car('bmw', '316', 'car', 2009, 'disel', 'manual'), new Car('Bmw', '112', 'car', 2010, 'gas', 'manual'),
     new Car('Opel', 'Astra', 'car', 2004, 'gas', 'manual'), new Car('Opel', 'Vectra', 'car', 1999, 'gas', 'manual'),
     new Car('Mercedes', 'S class', 'car', 2014, 'gas', 'manual'), new Car('Moskvich', '1', 'car', 2002, 'gas', 'manual'),
     new Car('Yamaha', '2 gumi', 'bike', 2002, 'gas', 'manual'), new Car('Honda', 'NM4', 'bike', 2002, 'gas', 'manual'),

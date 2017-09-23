@@ -132,10 +132,9 @@
                                 <br>
                                 <select id="vEngine" name="">
                                         <option selected value="0">Всички</option>
-                                        <option value="1">Бензин</option>
-                                        <option value="2">Дизел</option>
-                                        <option value="3">Електрически</option>
-                                        <option value="4">Хибрид</option>
+                                        <option value="gas">Бензин</option>
+                                        <option value="disel">Дизел</option>
+                                        <option value="electric">Електрически</option>
 
                                     </select>
                             </div>
@@ -168,12 +167,20 @@
                             <div class="formBoxControl">
                                 <label for="vYear">Година</label>
                                 <br>
-                                <select id="vYear" name="vYear">
-                                        <option selected disabled value="0">Всички</option>
-                                        <option value="1">2016</option>
-                                        <option value="2">2015</option>
-                                        <option value="3">2005</option>
-                                        <option value="4">1998</option>
+                                <select id="vYear" name="vYear" >
+                                        <option selected disabled value="0" >Всички</option>
+                                        <option value="2017">след 2017</option>
+                                        <option value="2016">след 2016</option>
+                                        <option value="2015">след 2015</option>
+                                        <option value="2014">след 2014</option>
+                                        <option value="2013">след 2013</option>
+                                        <option value="2012">след 2012</option>
+                                        <option value="2011">след 2011</option>
+                                        <option value="2010">след 2010</option>
+                                        <option value="2009">след 2009</option>
+                                        <option value="2008">след 2008</option>
+                                        <option value="2007">след 2007</option>
+                                        <option value="2006">след 2006</option>
                                     </select>
                             </div>
                             <div class="formBoxControl">
@@ -181,13 +188,13 @@
                                 <br>
                                 <select id="vGear" name="vGear">
                                         <option selected disabled value="0">Всички</option>
-                                        <option value="1">Ръчна</option>
-                                        <option value="2">Автоматична</option>
-                                        <option value="3">Полуавтоматична</option>
+                                        <option value="manual">Ръчна</option>
+                                        <option value="automatic">Автоматична</option>
+                                        <option value="semi">Полуавтоматична</option>
                                     </select>
                             </div>
                             <div class="formBoxControl centerObject">
-                                <input class="btnDefaultBasic" type="submit" name="submit" value="ТЪРСИ">
+                                <input id = 'searchButton' class="btnDefaultBasic" type="submit" name="submit" value="ТЪРСИ">
                             </div>
                         </div>
                         <div class="clear"></div>

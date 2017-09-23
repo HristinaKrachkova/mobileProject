@@ -25,7 +25,7 @@ function changeIcon() {
     }
 }
 document.getElementById('vType').addEventListener('change', changeIcon, false)
-document.getElementById('vType').addEventListener('change', function(event) {
+document.getElementById('vType').addEventListener('change', function (event) {
     var element = document.getElementById('vType');
     document.getElementById('slogan').innerHTML
 
@@ -52,13 +52,16 @@ document.getElementById('vType').addEventListener('change', function(event) {
 })
 
 
-document.getElementById('vType').addEventListener('change', function(event) {
+document.getElementById('vType').addEventListener('change', function (event) {
     var selectButton = document.getElementById('vType')
     while (document.getElementById('vBrand').childNodes.length > 2) {
         document.getElementById('vBrand').removeChild(document.getElementById('vBrand').lastChild);
     }
+    while (document.getElementById('vModel').childNodes.length > 2) {
+        document.getElementById('vModel').removeChild(document.getElementById('vModel').lastChild);
+    }
 
-    cars = cars.sort(function(a, b) {
+    cars = cars.sort(function (a, b) {
         if (a.mark.toUpperCase() > b.mark.toUpperCase()) {
             return 1
         }
@@ -67,7 +70,7 @@ document.getElementById('vType').addEventListener('change', function(event) {
         }
         return 0
     })
-    var options = cars.filter(function(car) {
+    var options = cars.filter(function (car) {
         if (selectButton.value == '1') {
             return car.type == 'car'
         }
@@ -96,18 +99,18 @@ document.getElementById('vType').addEventListener('change', function(event) {
             }
         }
     }
-    marks = marks.filter(function(x) {
+    marks = marks.filter(function (x) {
         return x !== null
     })
 
-    marks.forEach(function(x) {
+    marks.forEach(function (x) {
         var brand = document.createElement('option')
         brand.setAttribute('value', (marks.indexOf(x) + 1))
         brand.innerHTML = x.mark;
         document.getElementById('vBrand').appendChild(brand)
     })
-    document.getElementById('vBrand').addEventListener('change', function(event) {
-        var models = cars.filter(function(x) {
+    document.getElementById('vBrand').addEventListener('change', function (event) {
+        var models = cars.filter(function (x) {
             var e = document.getElementById("vBrand");
             var strUser = e.options[e.selectedIndex];
             return x.mark.toUpperCase() == strUser.innerHTML.toUpperCase()
@@ -115,20 +118,73 @@ document.getElementById('vType').addEventListener('change', function(event) {
         while (document.getElementById('vModel').childNodes.length > 2) {
             document.getElementById('vModel').removeChild(document.getElementById('vModel').lastChild);
         }
-        models.forEach(function(x) {
-            if (document.getElementById('vBrand').options[document.getElementById('vBrand').selectedIndex].innerHTML !== 'Всички')
+        models.forEach(function (x) {
+            if (document.getElementById('vBrand').options[document.getElementById('vBrand').selectedIndex].innerHTML !== 'Всички') {
                 var el = document.getElementById("vType");
-            var strUser = el.options[el.selectedIndex];
+                var strUser = el.options[el.selectedIndex];
 
-            var mod = document.createElement('option');
-            var value = 1
-            mod.setAttribute('value', value++)
-            if (x.type == strUser.getAttribute('type')) {
-                mod.innerHTML = x.model
-                document.getElementById('vModel').appendChild(mod)
+                var mod = document.createElement('option');
+                var value = 1
+                mod.setAttribute('value', value++)
+                if (x.type == strUser.getAttribute('type')) {
+                    mod.innerHTML = x.model
+                    document.getElementById('vModel').appendChild(mod)
+                }
             }
         })
     });
+
+
+
+
+}, false)
+document.getElementById('searchButton').addEventListener('click', function (event) {
+    event.preventDefault()
+    var type = document.getElementById('vType').options[document.getElementById('vType').selectedIndex].getAttribute('type')
+    var mark = document.getElementById('vBrand').options[document.getElementById('vBrand').selectedIndex].textContent
+    var model = document.getElementById('vModel').options[document.getElementById('vModel').selectedIndex].textContent
+    var price = document.getElementById('vPrice').value
+    var year = document.getElementById('vYear').value
+    var engine = document.getElementById('vEngine').value
+    var gearBox = document.getElementById('vGear').value
+    
+    if(type != 0)
+    result = cars.filter(function (x) {
+        return x.type.toUpperCase() == type.toUpperCase()
+    })
+    if (mark !== 'Всички') {
+        result = result.filter(function (x) {
+            return x.mark.toUpperCase() == mark.toUpperCase()
+        })
+    }
+    if(model !== 'Всички') {
+         result = result.filter(function (x) {
+            return x.model.toUpperCase() == model.toUpperCase()
+        })
+    }
+    if(price !== '') {
+         result = result.filter(function (x) {
+            return x.price == price
+        })
+    }
+    if(year != 0) {
+         result = result.filter(function (x) {
+            return x.year >= year
+        })
+    }
+    if(engine != 0) {
+         result = result.filter(function (x) {
+            return x.engine == engine
+        })
+    }
+    if(gearBox != 0) {
+         result = result.filter(function (x) {
+            return x.gearBox == gearBox
+        })
+    }
+
+    console.log(result)
+
 
 
 

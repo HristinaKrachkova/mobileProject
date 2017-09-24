@@ -350,6 +350,8 @@ section#news {
 
 #displayNews img {
     float: left;
+    width: 200px;
+    height: 200px;
 }
 
 #displayNews,
@@ -359,10 +361,19 @@ section#news {
     vertical-align: middle;
 }
 
+#newsList>ul {
+    list-style-type: none;
+}
+
+.newsList>a {
+    text-decoration: none;
+}
+
 .boxNewsContent {
     float: right;
     width: 55%;
     box-sizing: border-box;
+    margin-top: 10px;
 }
 
 #newsList ul {
@@ -378,7 +389,7 @@ section#news {
 }
 
 #newsList ul li a:hover {
-    color: whitesmoke;
+    font-weight: bold;
 }
 
 #news h2 {
@@ -393,7 +404,7 @@ section#news {
 
 .boxNewsContent h5 {
     font-size: 17px;
-    margin: 23px 0;
+    margin: 0px 0 26px 0;
 }
 
 #newsList {

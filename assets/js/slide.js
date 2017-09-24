@@ -1,39 +1,40 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     var index = 1;
-
-
-    //IF WE WANT BUTTONS
-
-    // function plusIndex(n) {
-    //     index = index + n;
-    //     showImage(index);
-    // }
-
-    // function showImage(n) {
-    //     var slides = document.getElementsByClassName("slides");
-    //     if (n > slides.length)
-    //         index = 1;
-    //     if (n < 1)
-    //         index = slides.length;
-    //     for (var i = 0; i < slides.length; i++)
-    //         slides[i].style.display = "none";
-    //     slides[index - 1].style.display = "block";
-    // }
-    // showImage(1);
-
+    var slides = document.getElementsByClassName("slides");
+    var newsList = document.getElementsByClassName("newsList");
+    Array.prototype.forEach.call(slides, function(s) {
+        s.style.display = "none";
+    });
 
     function autoSlide() {
-        var slides = document.getElementsByClassName("slides");
         Array.prototype.forEach.call(slides, function(s) {
             s.style.display = "none";
-        })
-        if (index > slides.length)
+        });
+        Array.prototype.forEach.call(newsList, function(n) {
+            n.style.fontWeight = "normal";
+            n.addEventListener("mouseover", newsHover);
+            var id = n.id;
+        });
+
+        function newsHover() {
+            Array.prototype.forEach.call(slides, function(s) {
+                s.style.display = "none";
+            });
+            Array.prototype.forEach.call(newsList, function(n) {
+                n.style.fontWeight = "normal";
+                n.addEventListener("mouseout", autoSlide);
+            });
+            slides[this.id - 1].style.display = "block";
+            clearTimeout(idTimeout);
+        }
+        if (index > newsList.length)
             index = 1;
         slides[index - 1].style.display = "block";
+        newsList[index - 1].style.fontWeight = "bold";
         index++;
-        setTimeout(autoSlide, 2000);
-    }
+        var idTimeout = setTimeout(autoSlide, 3000);
+    };
     autoSlide();
 
 });

@@ -1,0 +1,511 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-color: #e6e6e6;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #555;
+}
+
+#wrapper {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.70);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.26);
+    border-radius: 6px;
+}
+
+header {
+    width: 100%;
+    position: relative;
+    background-color: rgb(226, 226, 226);
+    border-bottom: 2px solid #007db8;
+    background: linear-gradient(rgba(0, 174, 231, 5.75), rgba(255, 255, 0, 0.10) 56%, rgba(142, 191, 33, 0.75) 83%);
+    height: 200px;
+}
+
+#logo {
+    width: 400px;
+    margin: 12px 0px 0 26px;
+    height: 250px;
+    display: inline-block;
+}
+
+#logo img {
+    width: 100%;
+    transition: opacity 0.4s ease-in-out;
+}
+
+#slogan {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    font-size: 20px;
+    margin-right: 35px;
+    font-weight: bold;
+}
+
+#loginBtn {
+    position: absolute;
+    right: 35px;
+    bottom: 0;
+}
+
+#loginBtn button {
+    padding: 15px;
+    background: #0093ce;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #007db8;
+    color: white;
+    font-weight: bold;
+    width: 100px;
+    margin-left: 15px;
+    border-radius: 5px 5px 0 0;
+    border-bottom: none;
+    transition: background 0.4s ease-in-out;
+}
+
+#loginBtn button:hover {
+    background: #016d98;
+}
+
+#logo img:hover {
+    opacity: 0.7;
+}
+
+main {
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+}
+
+#mainLeft,
+#mainRight {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.centerDiv {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+#mainRight {
+    width: 50% !important;
+    padding-left: 15px;
+    box-sizing: border-box;
+    margin-top: -32px;
+}
+
+#mainLeft,
+.bigCatMenu {
+    background: rgba(181, 181, 181, 0.22);
+    border: 1px solid #cccccc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.32);
+    border-radius: 6px;
+}
+
+#buttonBox #btnBuy {
+    display: inline-block;
+    width: 49.5%;
+}
+
+#buttonBox #btnSell {
+    display: inline-block;
+    width: 49.5%;
+}
+
+#buttonBox {
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    text-align: right;
+}
+
+#buttonBox #btnBuy a,
+#buttonBox #btnSell a {
+    background: #0093ce;
+    text-align: center;
+    padding: 19px 0;
+    display: block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.4s ease-in-out;
+    font-size: 24px;
+}
+
+.activeItem a {
+    background: rgba(181, 181, 181, 0.01) !important;
+    color: black !important;
+}
+
+#buttonBox #btnBuy a:hover,
+#buttonBox #btnSell a:hover {
+    background: #016d98;
+}
+
+#iconNav {
+    width: 50%;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+#iconNav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 470px;
+    text-align: center;
+}
+
+#iconNav ul li {
+    display: inline-block;
+}
+
+#iconNav ul li a {
+    width: 90px;
+    height: 60px;
+    display: inline-block;
+    cursor: default;
+}
+
+.formBoxControl {
+    padding: 10px 0;
+}
+
+#searchMiniForm {
+    padding: 5px 20px 15px;
+}
+
+.colLeft,
+.colRight {
+    width: 48%;
+}
+
+.colLeft {
+    float: left;
+}
+
+.colRight {
+    float: right;
+}
+
+#searchMiniForm select {
+    width: 100%;
+    padding: 10px;
+    background: whitesmoke;
+    margin-top: 7px;
+}
+
+#searchMiniForm input.inputWidthCorrect {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.formBoxControl label {
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#searchMiniForm input {
+    margin: 8px 0px;
+    padding: 10.3px;
+    background: whitesmoke;
+    border: none;
+    border: 1px solid darkgrey;
+    margin-bottom: 0px;
+}
+
+.formControlTitle {
+    font-weight: bold;
+}
+
+.labelModify label {
+    font-size: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    top: -2px;
+}
+
+#searchMiniForm input:focus {
+    outline: none;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+#searchMiniForm select:focus {
+    outline: none;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.labelModify span {
+    margin: 2px;
+}
+
+input.btnDefaultBasic {
+    width: 150px;
+    cursor: pointer;
+    background: #0093ce !important;
+    color: white;
+    font-weight: bold;
+    padding: 20px 0 !important;
+    border: 1px solid #007db8 !important;
+    transition: background 0.4s ease-in-out;
+}
+
+.centerObject {
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}
+
+input.btnDefaultBasic:hover {
+    background: #016d98 !important;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+#bigCatMenu ul {
+    padding: 0;
+    list-style: none;
+    margin: 10px auto -10px;
+    width: 435px;
+    text-align: center;
+}
+
+#bigCatMenu ul li {
+    display: inline-block;
+}
+
+#bigCatMenu ul li a {
+    background: #eee;
+    display: block;
+    width: 140px;
+    height: 130px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    border: 1px solid #cacaca;
+}
+
+#bigCatMenu {
+    margin: 35px 0;
+}
+
+#bigCatMenu ul li a img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: all 0.4s ease-in-out;
+}
+
+#bigCatMenu ul li a:hover {
+    background: #d8d8d8;
+}
+
+#bigCatMenu ul li a>img:hover {
+    opacity: 0.7;
+}
+
+.boxTitle {
+    display: inline-block;
+    width: 48%;
+    margin: auto;
+    text-align: center;
+    vertical-align: super;
+}
+
+.boxTitle h1 {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+section#news {
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    padding-top: 5px;
+    background: #d6d6d6;
+    border-top: 3px solid #888;
+    border-bottom: 3px solid #888;
+}
+
+#displayNews img {
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+
+#displayNews,
+#newsList {
+    display: inline-block;
+    width: 49%;
+    vertical-align: middle;
+}
+
+#newsList>ul {
+    list-style-type: none;
+}
+
+.newsList>a {
+    text-decoration: none;
+}
+
+.boxNewsContent {
+    float: right;
+    width: 55%;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+#newsList ul {
+    margin: 0 40px;
+}
+
+#newsList ul li a {
+    color: #444;
+}
+
+#newsList ul li {
+    margin: 10px 0;
+}
+
+#newsList ul li a:hover {
+    font-weight: bold;
+}
+
+#news h2 {
+    text-align: center;
+}
+
+.boxNeewsContent {
+    float: right;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.boxNewsContent h5 {
+    font-size: 17px;
+    margin: 0px 0 26px 0;
+}
+
+#newsList {
+    border-left: 1px solid rgba(74, 74, 74, 0.2);
+}
+
+#newsList ul {
+    margin: 20px 46px;
+    font-size: 0.9em;
+    box-sizing: border-box;
+}
+
+#newest .item {
+    display: inline-block;
+}
+
+section#newest {
+    text-align: center;
+    margin-top: 60px;
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px 0;
+    background: rgba(181, 181, 181, 0.22);
+    border: 1px solid #cccccc;
+}
+
+#newest .item {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 19%;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.newest {
+    color: #444;
+}
+
+img.iconNav {
+    cursor: pointer;
+}
+
+#footNav {
+    list-style: none;
+    text-align: center;
+    margin: 50px 0;
+    display: block;
+}
+
+#footNav>li>a {
+    text-decoration: none;
+    color: #444;
+    display: inline-block;
+}
+
+#footNav>li {
+    display: inline-block;
+    margin: 0 30px;
+}
+
+footer {
+    width: 100%;
+}
+
+p.copyright {
+    text-align: right;
+    padding: 0 10px 10px 0;
+}
+
+#typesSelect {
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+#typesSelect>select {
+    width: 60%;
+    margin-right: 50px;
+}
+
+#typesSelect>img {
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#termsAndConditions {
+    border: 1px solid #cccccc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.32);
+    border-radius: 6px;
+    padding: 23px;
+}
+#termsAndConditions p {
+    padding: 10px 0;
+}
+
+#termsAndConditions h2 {
+    padding-bottom: 20px;
+}
+#termsAndConditions a {
+    text-decoration: none;
+    color: #555;
+}

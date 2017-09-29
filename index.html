@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600'>
     <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/searchResultsCSS.css">
+    <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src='assets/js/model.js'></script>
+    <script src='assets/js/view.js'></script>
     <script src="assets/js/login.js"></script>
     <script src="assets/js/popup.js"></script>
     <script src="assets/js/slide.js"></script>
     <script src="assets/js/footer.js"></script>
+  
+
 
     <title>Document</title>
 </head>
@@ -118,7 +124,7 @@
         <main class="hidden">
             <div class="centerDiv">
                 <div id="iconNav">
-                    <ul id = 'iconNavUl'>
+                    <ul id='iconNavUl'>
                         <li>
                             <a href="#" value='1'><img class="iconNav" src="./assets/img/vehicle_1.gif" alt=""></a>
                         </li>
@@ -167,7 +173,7 @@
                                     </select>
                             <img id='picSelect' src="./assets/img/vehicle_1.gif" alt="">
                         </div>
-                        
+
                         <div class="colLeft">
 
                             <div class="formBoxControl">
@@ -195,20 +201,8 @@
                                     </select>
                             </div>
                             <div class="formBoxControl labelModify">
-                                <span class="formControlTitle">Състояние</span>
-                                <br>
-                                <span>
-                                        <input type="checkbox" id="vNew" name="vNew" value="">
-                                        <label for="vNew">Нов</label>
-                                    </span>
-                                <span>
-                                        <input type="checkbox" id="vUsed" name="vUsed" value="">
-                                        <label for="vUsed">Употребяван</label>
-                                    </span>
-                                <span>
-                                        <input type="checkbox" id="vParts" name="vParts" value="">
-                                        <label for="vParts">На части</label>
-                                    </span>
+                                <span class="formControlTitle">КУР за цС*ка-ловеч</span>
+                                
                             </div>
                         </div>
                         <div class="colRight">
@@ -261,36 +255,36 @@
                     <div id="bigCatMenu">
                         <ul>
                             <li>
-                                <a class="bigCatMenu" href="#"><img src="./assets/img/category-icons/first-timers-car.png" alt=""></a>
+                                <a class="bigCatMenu" href="#" id='firstTimersCar'><img src="./assets/img/category-icons/first-timers-car.png" alt=""></a>
                             </li>
                             <li>
-                                <a class="bigCatMenu" href="#"><img src="./assets/img/category-icons/luxury-car.png" alt=""></a>
+                                <a class="bigCatMenu" href="#" id='luxuryCar'><img src="./assets/img/category-icons/luxury-car.png" alt=""></a>
                             </li>
                             <li>
-                                <a class="bigCatMenu" href="#"><img src="./assets/img/category-icons/city-car.png" alt=""></a>
+                                <a class="bigCatMenu" href="#" id='cityCar'><img src="./assets/img/category-icons/city-car.png" alt=""></a>
                             </li>
 
                         </ul>
                         <ul>
                             <li>
-                                <a class="bigCatMenu" href="#"><img src="./assets/img/category-icons/sport-car.png" alt=""></a>
+                                <a class="bigCatMenu" href="#" id='sportCar'><img src="./assets/img/category-icons/sport-car.png" alt=""></a>
                             </li>
                             <li>
-                                <a class="bigCatMenu" href="#"><img src="./assets/img/category-icons/cabrio.png" alt=""></a>
+                                <a class="bigCatMenu" href="#" id='cabrio'><img src="./assets/img/category-icons/cabrio.png" alt=""></a>
                             </li>
                             <li>
-                                <a class="bigCatMenu" href="#"><img src="./assets/img/category-icons/classic-car.png" alt=""></a>
+                                <a class="bigCatMenu" href="#" id='classicCar'><img src="./assets/img/category-icons/classic-car.png" alt=""></a>
                             </li>
                         </ul>
                         <ul>
                             <li>
-                                <a class="bigCatMenu" href="#"><img src="./assets/img/category-icons/family-car.png" alt=""></a>
+                                <a class="bigCatMenu" href="#" id='familyCar'><img src="./assets/img/category-icons/family-car.png" alt=""></a>
                             </li>
                             <li>
-                                <a class="bigCatMenu" href="#"><img src="./assets/img/category-icons/suv.png" alt=""></a>
+                                <a class="bigCatMenu" href="#" id='suv'><img src="./assets/img/category-icons/suv.png" alt=""></a>
                             </li>
                             <li>
-                                <a class="bigCatMenu" href="#"><img src="./assets/img/category-icons/eco-friendly.png" alt=""></a>
+                                <a class="bigCatMenu" href="#" id='ecoFriendly'><img src="./assets/img/category-icons/eco-friendly.png" alt=""></a>
                             </li>
                         </ul>
                     </div>
@@ -423,7 +417,22 @@
                 </div>
             </a>
         </section>
-
+        <div id = 'searchResult'></div>
+            <script id="search-template" type="text/x-handlebars-template">
+                {{#each results}}
+                <div class="cars">
+                    <img class = 'imgResults' src="{{img}}">
+                    <div class="carContent">
+                        <p>Марка: {{mark}}</p>
+                        <p>Модел: {{model}} </p>
+                        <p>Година на производство {{year}} </p>
+                        <p>Двигател: {{engine}} </p>
+                        <p>Скоростна кутия: {{gearBox}} </p>
+                    </div>
+                </div>
+                {{/each}}
+            </script>
+        
         <footer class="hidden">
             <ul id="footNav">
                 <li><a href="#">Контакти</a></li>
@@ -438,8 +447,7 @@
         </footer>
 
     </div>
-    <script src='model.js'></script>
-    <script src='view.js'></script>
+
 
 </body>
 

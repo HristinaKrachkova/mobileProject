@@ -509,3 +509,14 @@ p.copyright {
     text-decoration: none;
     color: #555;
 }
+.iconNav {
+  
+    display: block;
+    
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    
+}
+.iconNav:hover {
+   opacity: 0.6;
+}

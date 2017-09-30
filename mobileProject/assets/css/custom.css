@@ -20,6 +20,7 @@ body {
     background: rgba(255, 255, 255, 0.70);
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.26);
     border-radius: 6px;
+    margin-bottom: 20px;
 }
 
 header {
@@ -29,6 +30,7 @@ header {
     border-bottom: 2px solid #007db8;
     background: linear-gradient(rgba(0, 174, 231, 5.75), rgba(255, 255, 0, 0.10) 56%, rgba(142, 191, 33, 0.75) 83%);
     height: 200px;
+    border-radius: 6px 6px 0 0;
 }
 
 #logo {
@@ -89,13 +91,14 @@ main {
     width: 100%;
     position: relative;
     padding: 20px 0;
+    box-sizing: border-box;
 }
 
 #mainLeft,
 #mainRight {
     width: 49%;
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 .centerDiv {
@@ -161,9 +164,9 @@ main {
 }
 
 #iconNav {
-    width: 50%;
+    /* width: 50%; */
     margin-top: 10px;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 #iconNav ul {
@@ -211,6 +214,7 @@ main {
     padding: 10px;
     background: whitesmoke;
     margin-top: 7px;
+    border: 1px solid darkgrey;
 }
 
 #searchMiniForm input.inputWidthCorrect {
@@ -328,11 +332,11 @@ h1 {
 }
 
 .boxTitle {
-    display: inline-block;
-    width: 48%;
-    margin: auto;
-    text-align: center;
-    vertical-align: super;
+    /* display: inline-block; */
+    /* width: 48%; */
+    /* margin: auto; */
+    /* text-align: center; */
+    /* vertical-align: super; */
 }
 
 .boxTitle h1 {
@@ -494,7 +498,6 @@ p.copyright {
 #typesSelect>img {
     text-align: center;
     vertical-align: middle;
-    cursor: pointer;
 }
 
 #termsAndConditions {
@@ -524,7 +527,8 @@ p.copyright {
 }
 
 .iconNav:hover {
-    opacity: 0.6;
+    filter: brightness(80%);
+    backface-visibility: hidden;
 }
 
 #iconUser {

@@ -10,8 +10,7 @@
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid #cccccc;
-    border-radius: 6px;
+    border-bottom: 2px solid #cccccc;
     padding: 23px;
 }
 

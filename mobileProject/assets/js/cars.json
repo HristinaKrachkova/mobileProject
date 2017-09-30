@@ -1,0 +1,21 @@
+{
+    "carList": [{ "id": 1, "mark": "chevy", "model": "stilo", "type": "car", "year": 2001, "engine": "gas", "gearBox": "manual" },
+        { "id": 2, "mark": "chevy", "model": "rezzo", "type": "car", "year": 2002, "engine": "gas", "gearBox": "manual" },
+        { "id": 3, "mark": "bmw", "model": "316", "type": "car", "year": 2008, "engine": "disel", "gearBox": "manual" },
+        { "id": 4, "mark": "bmw", "model": "316", "type": "car", "year": 2009, "engine": "disel", "gearBox": "manual" },
+        { "id": 5, "mark": "Bmw", "model": "112", "type": "car", "year": 2010, "engine": "gas", "gearBox": "manual" },
+        { "id": 6, "mark": "Opel", "model": "Astra", "type": "car", "year": 2004, "engine": "gas", "gearBox": "manual" },
+        { "id": 7, "mark": "Opel", "model": "Vectra", "type": "car", "year": 1999, "engine": "gas", "gearBox": "manual" },
+        { "id": 8, "mark": "Mercedes", "model": "S class", "type": "car", "year": 2014, "engine": "gas", "gearBox": "manual" },
+        { "id": 9, "mark": "Moskvich", "model": "1", "type": "car", "year": 2002, "engine": "gas", "gearBox": "manual" },
+        { "id": 10, "mark": "Yamaha", "model": "2 gumi", "type": "bike", "year": 2002, "engine": "gas", "gearBox": "manual" },
+        { "id": 11, "mark": "Honda", "model": "NM4", "type": "bike", "year": 2002, "engine": "gas", "gearBox": "manual" },
+        { "id": 12, "mark": "Da si ebe", "model": "s edna guma", "type": "bike", "year": 2002, "engine": "gas", "gearBox": "manual" },
+        { "id": 13, "mark": "kamaz", "model": "truck", "type": "truck", "year": 2002, "engine": "gas", "gearBox": "manual" },
+        { "id": 14, "mark": "mercedes", "model": "rezzo", "type": "truck", "year": 2002, "engine": "gas", "gearBox": "manual" },
+        { "id": 15, "mark": "chevy", "model": "kamion", "type": "truck", "year": 2002, "engine": "gas", "gearBox": "manual" },
+        { "id": 16, "mark": "man", "model": "bah maamu", "type": "truck", "year": 2002, "engine": "gas", "gearBox": "manual" },
+        { "id": 17, "mark": "bmw", "model": "x5", "type": "bike", "year": 2002, "engine": "gas", "gearBox": "manual" },
+        { "id": 18, "mark": "Bus", "model": "bus", "type": "bus", "year": 1999, "engine": "gas", "gearBox": "manual" }
+    ]
+}

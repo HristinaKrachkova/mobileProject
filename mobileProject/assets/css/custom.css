@@ -542,3 +542,9 @@ p.copyright {
     clear: both;
     display: none;
 }
+
+.imgResults {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}

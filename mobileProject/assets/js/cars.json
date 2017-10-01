@@ -1,21 +1,413 @@
 {
-    "carList": [{ "id": 1, "mark": "chevy", "model": "stilo", "type": "car", "year": 2001, "engine": "gas", "gearBox": "manual" },
-        { "id": 2, "mark": "chevy", "model": "rezzo", "type": "car", "year": 2002, "engine": "gas", "gearBox": "manual" },
-        { "id": 3, "mark": "bmw", "model": "316", "type": "car", "year": 2008, "engine": "disel", "gearBox": "manual" },
-        { "id": 4, "mark": "bmw", "model": "316", "type": "car", "year": 2009, "engine": "disel", "gearBox": "manual" },
-        { "id": 5, "mark": "Bmw", "model": "112", "type": "car", "year": 2010, "engine": "gas", "gearBox": "manual" },
-        { "id": 6, "mark": "Opel", "model": "Astra", "type": "car", "year": 2004, "engine": "gas", "gearBox": "manual" },
-        { "id": 7, "mark": "Opel", "model": "Vectra", "type": "car", "year": 1999, "engine": "gas", "gearBox": "manual" },
-        { "id": 8, "mark": "Mercedes", "model": "S class", "type": "car", "year": 2014, "engine": "gas", "gearBox": "manual" },
-        { "id": 9, "mark": "Moskvich", "model": "1", "type": "car", "year": 2002, "engine": "gas", "gearBox": "manual" },
-        { "id": 10, "mark": "Yamaha", "model": "2 gumi", "type": "bike", "year": 2002, "engine": "gas", "gearBox": "manual" },
-        { "id": 11, "mark": "Honda", "model": "NM4", "type": "bike", "year": 2002, "engine": "gas", "gearBox": "manual" },
-        { "id": 12, "mark": "Da si ebe", "model": "s edna guma", "type": "bike", "year": 2002, "engine": "gas", "gearBox": "manual" },
-        { "id": 13, "mark": "kamaz", "model": "truck", "type": "truck", "year": 2002, "engine": "gas", "gearBox": "manual" },
-        { "id": 14, "mark": "mercedes", "model": "rezzo", "type": "truck", "year": 2002, "engine": "gas", "gearBox": "manual" },
-        { "id": 15, "mark": "chevy", "model": "kamion", "type": "truck", "year": 2002, "engine": "gas", "gearBox": "manual" },
-        { "id": 16, "mark": "man", "model": "bah maamu", "type": "truck", "year": 2002, "engine": "gas", "gearBox": "manual" },
-        { "id": 17, "mark": "bmw", "model": "x5", "type": "bike", "year": 2002, "engine": "gas", "gearBox": "manual" },
-        { "id": 18, "mark": "Bus", "model": "bus", "type": "bus", "year": 1999, "engine": "gas", "gearBox": "manual" }
+    "carList": [
+        {
+            "id": 1,
+            "mark": "Fiat",
+            "model": "Stilo",
+            "type": "car",
+            "year": 2009,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/cars/fiatStilo.jpg"
+        },
+        {
+            "id": 2,
+            "mark": "Fiat",
+            "model": "Doblo",
+            "type": "car",
+            "year": 2012,
+            "engine": "gas",
+            "gearBox": "automatic",
+            "img": "./assets/img/imgCars/cars/fiatDoblo.jpg"
+        },
+        {
+            "id": 3,
+            "mark": "Bmw",
+            "model": "316",
+            "type": "car",
+            "year": 2008,
+            "engine": "disel",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/cars/bmw316Staro.jpg"
+        },
+        {
+            "id": 4,
+            "mark": "Bmw",
+            "model": "316",
+            "type": "car",
+            "year": 2012,
+            "engine": "disel",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/cars/bmw316novo.jpg"
+        },
+        {
+            "id": 5,
+            "mark": "Bmw",
+            "model": "123",
+            "type": "car",
+            "year": 2010,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/cars/bmw123.jpg"
+        },
+        {
+            "id": 6,
+            "mark": "Opel",
+            "model": "Astra",
+            "type": "car",
+            "year": 2010,
+            "engine": "diesel",
+            "gearBox": "automatic",
+            "img": "./assets/img/imgCars/cars/opelAstra.jpg"
+        },
+        {
+            "id": 7,
+            "mark": "Opel",
+            "model": "Vectra",
+            "type": "car",
+            "year": 2012,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/cars/OpelAstraNova.jpg"
+        },
+        {
+            "id": 8,
+            "mark": "Mercedes",
+            "model": "S class",
+            "type": "car",
+            "year": 2014,
+            "engine": "electric",
+            "gearBox": "automatic",
+            "img": "./assets/img/imgCars/cars/mercedes1.jpg"
+        },
+        {
+            "id": 9,
+            "mark": "Mercedes",
+            "model": "C",
+            "type": "car",
+            "year": 2013,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/cars/mercedesCclasa.jpg"
+        },
+        {
+            "id": 10,
+            "mark": "Audi",
+            "model": "A3",
+            "type": "car",
+            "year": 2012,
+            "engine": "electric",
+            "gearBox": "automatic",
+            "img": "./assets/img/imgCars/cars/audiA3.jpg"
+        },
+        {
+            "id": 11,
+            "mark": "Audi",
+            "model": "A4",
+            "type": "car",
+            "year": 2008,
+            "engine": "disel",
+            "gearBox": "automatic",
+            "img": "./assets/img/imgCars/cars/audiA4.jpg"
+        },
+        {
+            "id": 12,
+            "mark": "Audi",
+            "model": "R8",
+            "type": "car",
+            "year": 2016,
+            "engine": "gas",
+            "gearBox": "automatic",
+            "img": "./assets/img/imgCars/cars/audiR8.jpg"
+        },
+        {
+            "id": 13,
+            "mark": "Ford",
+            "model": "1",
+            "type": "car",
+            "year": 2008,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/cars/ford1.jpg"
+        },
+        {
+            "id": 14,
+            "mark": "Ford",
+            "model": "Fiesta",
+            "type": "car",
+            "year": 2009,
+            "engine": "diesel",
+            "gearBox": "automatic",
+            "img": "./assets/img/imgCars/cars/fordFiesta.jpg"
+        },
+        {
+            "id": 15,
+            "mark": "Yamaha",
+            "model": "R3",
+            "type": "bike",
+            "year": 2010,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/bikes/YamahaR3.jpg"
+        },
+        {
+            "id": 16,
+            "mark": "Yamaha",
+            "model": "R700",
+            "type": "bike",
+            "year": 2010,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/bikes/yamahaR700.jpg"
+        },
+        {
+            "id": 17,
+            "mark": "Honda",
+            "model": "NM4",
+            "type": "bike",
+            "year": 2012,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/bikes/HondaNM4Vultus.jpg"
+        },
+        {
+            "id": 18,
+            "mark": "Honda",
+            "model": "NM4",
+            "type": "bike",
+            "year": 2012,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/bikes/hondanm4.jpg"
+        },
+        {
+            "id": 19,
+            "mark": "Honda",
+            "model": "CBR",
+            "type": "bike",
+            "year": 2011,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/bikes/HondaCbr.jpg"
+        },
+        {
+            "id": 20,
+            "mark": "Vespa",
+            "model": "1",
+            "type": "bike",
+            "year": 2008,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/bikes/vespa.jpg"
+        },
+        {
+            "id": 21,
+            "mark": "Vespa",
+            "model": "2",
+            "type": "bike",
+            "year": 2010,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/bikes/vespa2.jpg"
+        },
+        {
+            "id": 22,
+            "mark": "Harley-Davidson",
+            "model": "1",
+            "type": "bike",
+            "year": 2012,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/bikes/Harley1.jpg"
+        },
+        {
+            "id": 23,
+            "mark": "Harley-Davidson",
+            "model": "2",
+            "type": "bike",
+            "year": 2007,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/bikes/harley2.jpg"
+        },
+        {
+            "id": 24,
+            "mark": "Citroen",
+            "model": "1",
+            "type": "bus",
+            "year": 2009,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/bus/citroenBus.jpg"
+        },
+        {
+            "id": 25,
+            "mark": "Citroen",
+            "model": "2",
+            "type": "bus",
+            "year": 2008,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/bus/citroenBus2.jpg"
+        },
+        {
+            "id": 26,
+            "mark": "Fiat",
+            "model": "1",
+            "type": "bus",
+            "year": 2012,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/bus/fiatBus.jpg"
+        },
+        {
+            "id": 27,
+            "mark": "Fiat",
+            "model": "2",
+            "type": "bus",
+            "year": 2012,
+            "engine": "disel",
+            "gearBox": "automatic",
+            "img": "./assets/img/imgCars/bus/fiatBus2.jpg"
+        },
+        {
+            "id": 28,
+            "mark": "Mercedes",
+            "model": "1",
+            "type": "bus",
+            "year": 2012,
+            "engine": "disel",
+            "gearBox": "automatic",
+            "img": "./assets/img/imgCars/bus/MercedesBus1.jpg"
+        },
+        {
+            "id": 29,
+            "mark": "Mercedes",
+            "model": "2",
+            "type": "bus",
+            "year": 2009,
+            "engine": "disel",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/bus/mercedesBus2.jpg"
+        },
+        {
+            "id": 30,
+            "mark": "Bmw",
+            "model": "X5",
+            "type": "jeep",
+            "year": 2012,
+            "engine": "electric",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/jeep/bmwX5.jpg"
+        },
+        {
+            "id": 31,
+            "mark": "Bmw",
+            "model": "X6",
+            "type": "jeep",
+            "year": 2012,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/jeep/bmwX6.jpg"
+        },
+        {
+            "id": 32,
+            "mark": "Jeep",
+            "model": "Jeep",
+            "type": "jeep",
+            "year": 2010,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/jeep/JeepWylis.jpg"
+        },
+        {
+            "id": 33,
+            "mark": "Jeep",
+            "model": "Jeep",
+            "type": "jeep",
+            "year": 2008,
+            "engine": "disel",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/jeep/JeepWrangler.jpg"
+        },
+        {
+            "id": 34,
+            "mark": "Mercedes",
+            "model": "GLA",
+            "type": "jeep",
+            "year": 2013,
+            "engine": "electric",
+            "gearBox": "automatic",
+            "img": "./assets/img/imgCars/jeep/mercedesGla.jpeg"
+        },
+        {
+            "id": 35,
+            "mark": "Mercedes",
+            "model": "GLA",
+            "type": "jeep",
+            "year": 2014,
+            "engine": "electric",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/jeep/MercedesMl.jpg"
+        },
+        {
+            "id": 36,
+            "mark": "MAN",
+            "model": "MAN",
+            "type": "truck",
+            "year": 2008,
+            "engine": "disel",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/trucks/Man1.jpg"
+        },
+        {
+            "id": 37,
+            "mark": "MAN",
+            "model": "MAN",
+            "type": "truck",
+            "year": 2010,
+            "engine": "disel",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/trucks/Man2.jpg"
+        },
+        {
+            "id": 38,
+            "mark": "MAN",
+            "model": "MAN",
+            "type": "truck",
+            "year": 2009,
+            "engine": "disel",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/trucks/Man3.jpg"
+        },
+        {
+            "id": 39,
+            "mark": "Mercedes",
+            "model": "1",
+            "type": "truck",
+            "year": 2015,
+            "engine": "gas",
+            "gearBox": "automatic",
+            "img": "./assets/img/imgCars/trucks/mercedes1.jpg"
+        },
+        {
+            "id": 40,
+            "mark": "Mercedes",
+            "model": "2",
+            "type": "truck",
+            "year": 2015,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/trucks/mercedes2.jpg"
+        },
+        {
+            "id": 41,
+            "mark": "Bus",
+            "model": "bus",
+            "type": "bus",
+            "year": 1999,
+            "engine": "gas",
+            "gearBox": "manual"
+        }
     ]
 }

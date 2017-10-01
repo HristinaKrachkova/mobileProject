@@ -45,34 +45,18 @@ Bus.prototype = Object.create(Vehicle.prototype)
 Bus.prototype.constructor = Bus
 
 function VehicleList() {
-    this.cars = [new Car('Fiat', 'Stilo',2009, 'gas', 'manual','./assets/img/imgCar/cars/fiatStilo.jpg'), new Car('Fiat', 'Doblo',2012, 'gas', 'automatic','.assets\img\imgCars\cars\fiatDoblo.jpg'),
-new Car('Bmw', '316',2008, 'disel', 'manual','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGmboLWxy-h7BrkGj17XRQe0HniSfHCW677wFMH9KZxoztdJEYxA'), new Car('Bmw', '316',2012, 'disel', 'manual','\assets\img\imgCars\cars\bmw316novo.jpg'), new Car('Bmw', '123',2010, 'gas', 'manual', 'assets\img\imgCars\cars\bmw123.jpg'),
-new Car('Opel', 'Astra',2010, 'diesel', 'automatic','.\assets\img\imgCars\cars\opelAstra.jpg'), new Car('Opel', 'Vectra',2012, 'gas', 'manual','\assets\img\imgCars\cars\OpelAstraNova.jpg'),
-new Car('Mercedes', 'S class',2014, 'gas', 'manual'), new Car('Moskvich', '1',2002, 'gas', 'manual'),
-new Bike('Yamaha', '2 gumi',2002, 'gas', 'manual'), new Bike('Honda', 'NM4',2002, 'gas', 'manual'),
-new Bike('Da si ebe', 's edna guma',2002, 'gas', 'manual'), new Truck('kamaz', 'truck',2002, 'gas', 'manual'),
-new Truck('mercedes', 'rezzo',2002, 'gas', 'manual'), new Truck('chevy', 'kamion',2002, 'gas', 'manual'),
-new Truck('man', 'bah maamu',2002, 'gas', 'manual'), new Bike('bmw', 'x5',2002, 'gas', 'manual')
-]
+    this.cars = []
 }
 
+
 VehicleList.prototype.addCar = function(car) {
-    if(car instanceof Vehicle) {
+   
         this.cars.push(car)
-    }
+   
 }
 
 var carsList = new VehicleList()
-var bus = new Bus('Bus', 'bus', 1999, 'gas', 'manual')
 
-carsList.addCar(bus)
-
-
-
-
-// var xhr = new XMLHttpRequest()
-// xhr.open('GET', 'http://localhost/mobile/mobileProject/json/cars.json', true);
-// xhr.send(null);
 
 
 

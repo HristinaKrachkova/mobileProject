@@ -232,3 +232,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 }, false)
+
+
+function getJSON() {
+    return new Promise( function(resolve, reject) {
+        var xhr  = new XMLHttpRequest();
+        xhr.open('GET', 'http://localhost/mobile/mobileProject/mobileProject/assets/js/cars.json', true);
+        xhr.send(null);
+        xhr.addEventListener('load', function() {
+            if(xhr.status >=200 && xhr.status <= 299) {
+                var cars = JSON.parse(xhr.responseText)
+                resolve(cars)
+            } else {
+                reject(xhr.statusText)
+            }
+        })
+    })
+}
+getJSON().then(function(data) {
+    
+    carsList.cars = Array.prototype.slice.call(data.carList, 0)
+    console.log(carsList)
+})

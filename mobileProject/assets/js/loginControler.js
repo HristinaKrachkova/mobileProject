@@ -132,6 +132,7 @@ function sign_in() {
             document.getElementById("login").style.display = "none"
             document.querySelectorAll(".hidden").forEach(h => h.style.display = "block")
             document.getElementById("wrapper").style.display = "block";
+            document.getElementById("searchResult").style.display = "none"
         } else {
             document.querySelector('p#error').textContent = 'Invalid useraname or password!';
 

@@ -8,7 +8,9 @@
             "year": 2009,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/cars/fiatStilo.jpg"
+            "img": "./assets/img/imgCars/cars/fiatStilo.jpg",
+            "price": 4000,
+            "grad": "Sofia"
         },
         {
             "id": 2,
@@ -18,7 +20,10 @@
             "year": 2012,
             "engine": "gas",
             "gearBox": "automatic",
-            "img": "./assets/img/imgCars/cars/fiatDoblo.jpg"
+            "img": "./assets/img/imgCars/cars/fiatDoblo.jpg",
+            "price": 4900,
+            "grad": "Asenovgrad"
+            
         },
         {
             "id": 3,
@@ -28,7 +33,9 @@
             "year": 2008,
             "engine": "disel",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/cars/bmw316Staro.jpg"
+            "img": "./assets/img/imgCars/cars/bmw316Staro.jpg",
+            "price": 1500,
+            "grad": "Plovdiv"
         },
         {
             "id": 4,
@@ -38,7 +45,9 @@
             "year": 2012,
             "engine": "disel",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/cars/bmw316novo.jpg"
+            "img": "./assets/img/imgCars/cars/bmw316novo.jpg",
+            "price": 6000,
+            "grad": "Sofia"
         },
         {
             "id": 5,
@@ -48,7 +57,9 @@
             "year": 2010,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/cars/bmw123.jpg"
+            "img": "./assets/img/imgCars/cars/bmw123.jpg",
+            "price": 4444,
+            "grad": "Varna"
         },
         {
             "id": 6,
@@ -58,7 +69,9 @@
             "year": 2010,
             "engine": "diesel",
             "gearBox": "automatic",
-            "img": "./assets/img/imgCars/cars/opelAstra.jpg"
+            "img": "./assets/img/imgCars/cars/opelAstra.jpg",
+            "price": 1000,
+            "grad": "Vidin"
         },
         {
             "id": 7,
@@ -68,7 +81,9 @@
             "year": 2012,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/cars/OpelAstraNova.jpg"
+            "img": "./assets/img/imgCars/cars/OpelAstraNova.jpg",
+            "price": 5500,
+            "grad": "Burgas"
         },
         {
             "id": 8,
@@ -78,7 +93,9 @@
             "year": 2014,
             "engine": "electric",
             "gearBox": "automatic",
-            "img": "./assets/img/imgCars/cars/mercedes1.jpg"
+            "img": "./assets/img/imgCars/cars/mercedes1.jpg",
+            "price": 12500,
+            "grad": "Sofia"
         },
         {
             "id": 9,
@@ -88,7 +105,9 @@
             "year": 2013,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/cars/mercedesCclasa.jpg"
+            "img": "./assets/img/imgCars/cars/mercedesCclasa.jpg",
+            "price": 21500,
+            "grad": "Dobrich"
         },
         {
             "id": 10,
@@ -98,7 +117,9 @@
             "year": 2012,
             "engine": "electric",
             "gearBox": "automatic",
-            "img": "./assets/img/imgCars/cars/audiA3.jpg"
+            "img": "./assets/img/imgCars/cars/audiA3.jpg",
+            "price": 11500,
+            "grad": "Sofia"
         },
         {
             "id": 11,
@@ -108,7 +129,9 @@
             "year": 2008,
             "engine": "disel",
             "gearBox": "automatic",
-            "img": "./assets/img/imgCars/cars/audiA4.jpg"
+            "img": "./assets/img/imgCars/cars/audiA4.jpg",
+            "price": 10500,
+            "grad": "Burgas"
         },
         {
             "id": 12,
@@ -118,7 +141,9 @@
             "year": 2016,
             "engine": "gas",
             "gearBox": "automatic",
-            "img": "./assets/img/imgCars/cars/audiR8.jpg"
+            "img": "./assets/img/imgCars/cars/audiR8.jpg",
+            "price": 25000,
+            "grad": "Radomir"
         },
         {
             "id": 13,
@@ -128,7 +153,9 @@
             "year": 2008,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/cars/ford1.jpg"
+            "img": "./assets/img/imgCars/cars/ford1.jpg",
+            "price": 2500,
+            "grad": "Plovdiv"
         },
         {
             "id": 14,
@@ -138,7 +165,9 @@
             "year": 2009,
             "engine": "diesel",
             "gearBox": "automatic",
-            "img": "./assets/img/imgCars/cars/fordFiesta.jpg"
+            "img": "./assets/img/imgCars/cars/fordFiesta.jpg",
+            "price": 1200,
+            "grad": "Pleven"
         },
         {
             "id": 15,
@@ -148,7 +177,9 @@
             "year": 2010,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/bikes/YamahaR3.jpg"
+            "img": "./assets/img/imgCars/bikes/YamahaR3.jpg",
+            "price": 22500,
+            "grad": "Stara Zagora"
         },
         {
             "id": 16,
@@ -158,7 +189,9 @@
             "year": 2010,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/bikes/yamahaR700.jpg"
+            "img": "./assets/img/imgCars/bikes/yamahaR700.jpg",
+            "price": 3500,
+            "grad": "Nova Zagora"
         },
         {
             "id": 17,
@@ -168,7 +201,9 @@
             "year": 2012,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/bikes/HondaNM4Vultus.jpg"
+            "img": "./assets/img/imgCars/bikes/HondaNM4Vultus.jpg",
+            "price": 25200,
+            "grad": "Sofia"
         },
         {
             "id": 18,
@@ -178,7 +213,9 @@
             "year": 2012,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/bikes/hondanm4.jpg"
+            "img": "./assets/img/imgCars/bikes/hondanm4.jpg",
+            "price": 1000,
+            "grad": "Sofia"
         },
         {
             "id": 19,
@@ -188,7 +225,9 @@
             "year": 2011,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/bikes/HondaCbr.jpg"
+            "img": "./assets/img/imgCars/bikes/HondaCbr.jpg",
+            "price": 8500,
+            "grad": "Shumen"
         },
         {
             "id": 20,
@@ -198,7 +237,9 @@
             "year": 2008,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/bikes/vespa.jpg"
+            "img": "./assets/img/imgCars/bikes/vespa.jpg",
+            "price": 2500,
+            "grad": "Sofia"
         },
         {
             "id": 21,
@@ -208,7 +249,9 @@
             "year": 2010,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/bikes/vespa2.jpg"
+            "img": "./assets/img/imgCars/bikes/vespa2.jpg",
+            "price": 5500,
+            "grad": "Sofia"
         },
         {
             "id": 22,
@@ -218,7 +261,9 @@
             "year": 2012,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/bikes/Harley1.jpg"
+            "img": "./assets/img/imgCars/bikes/Harley1.jpg",
+            "price": 12500,
+            "grad": "Sofia"
         },
         {
             "id": 23,
@@ -228,7 +273,9 @@
             "year": 2007,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/bikes/harley2.jpg"
+            "img": "./assets/img/imgCars/bikes/harley2.jpg",
+            "price": 32500,
+            "grad": "Sofia"
         },
         {
             "id": 24,
@@ -238,7 +285,9 @@
             "year": 2009,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/bus/citroenBus.jpg"
+            "img": "./assets/img/imgCars/bus/citroenBus.jpg",
+            "price": 9500,
+            "grad": "Sofia"
         },
         {
             "id": 25,
@@ -248,7 +297,9 @@
             "year": 2008,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/bus/citroenBus2.jpg"
+            "img": "./assets/img/imgCars/bus/citroenBus2.jpg",
+            "price": 4500,
+            "grad": "Sofia"
         },
         {
             "id": 26,
@@ -258,7 +309,9 @@
             "year": 2012,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/bus/fiatBus.jpg"
+            "img": "./assets/img/imgCars/bus/fiatBus.jpg",
+            "price": 6500,
+            "grad": "Sofia"
         },
         {
             "id": 27,
@@ -268,7 +321,9 @@
             "year": 2012,
             "engine": "disel",
             "gearBox": "automatic",
-            "img": "./assets/img/imgCars/bus/fiatBus2.jpg"
+            "img": "./assets/img/imgCars/bus/fiatBus2.jpg",
+            "price": 7500,
+            "grad": "Sofia"
         },
         {
             "id": 28,
@@ -278,7 +333,9 @@
             "year": 2012,
             "engine": "disel",
             "gearBox": "automatic",
-            "img": "./assets/img/imgCars/bus/MercedesBus1.jpg"
+            "img": "./assets/img/imgCars/bus/MercedesBus1.jpg",
+            "price": 5900,
+            "grad": "Sofia"
         },
         {
             "id": 29,
@@ -288,7 +345,9 @@
             "year": 2009,
             "engine": "disel",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/bus/mercedesBus2.jpg"
+            "img": "./assets/img/imgCars/bus/mercedesBus2.jpg",
+            "price": 5100,
+            "grad": "Sofia"
         },
         {
             "id": 30,
@@ -298,7 +357,9 @@
             "year": 2012,
             "engine": "electric",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/jeep/bmwX5.jpg"
+            "img": "./assets/img/imgCars/jeep/bmwX5.jpg",
+            "price": 21500,
+            "grad": "Sofia"
         },
         {
             "id": 31,
@@ -308,7 +369,9 @@
             "year": 2012,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/jeep/bmwX6.jpg"
+            "img": "./assets/img/imgCars/jeep/bmwX6.jpg",
+            "price": 12500,
+            "grad": "Sofia"
         },
         {
             "id": 32,
@@ -318,7 +381,9 @@
             "year": 2010,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/jeep/JeepWylis.jpg"
+            "img": "./assets/img/imgCars/jeep/JeepWylis.jpg",
+            "price": 7700,
+            "grad": "Sofia"
         },
         {
             "id": 33,
@@ -328,7 +393,9 @@
             "year": 2008,
             "engine": "disel",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/jeep/JeepWrangler.jpg"
+            "img": "./assets/img/imgCars/jeep/JeepWrangler.jpg",
+            "price": 5400,
+            "grad": "Sofia"
         },
         {
             "id": 34,
@@ -338,7 +405,9 @@
             "year": 2013,
             "engine": "electric",
             "gearBox": "automatic",
-            "img": "./assets/img/imgCars/jeep/mercedesGla.jpeg"
+            "img": "./assets/img/imgCars/jeep/mercedesGla.jpeg",
+            "price": 21000,
+            "grad": "Sofia"
         },
         {
             "id": 35,
@@ -348,7 +417,9 @@
             "year": 2014,
             "engine": "electric",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/jeep/MercedesMl.jpg"
+            "img": "./assets/img/imgCars/jeep/MercedesMl.jpg",
+            "price": 11500,
+            "grad": "Sofia"
         },
         {
             "id": 36,
@@ -358,7 +429,9 @@
             "year": 2008,
             "engine": "disel",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/trucks/Man1.jpg"
+            "img": "./assets/img/imgCars/trucks/Man1.jpg",
+            "price": 9500,
+            "grad": "Sofia"
         },
         {
             "id": 37,
@@ -368,7 +441,9 @@
             "year": 2010,
             "engine": "disel",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/trucks/Man2.jpg"
+            "img": "./assets/img/imgCars/trucks/Man2.jpg",
+            "price": 13500,
+            "grad": "Sofia"
         },
         {
             "id": 38,
@@ -378,7 +453,9 @@
             "year": 2009,
             "engine": "disel",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/trucks/Man3.jpg"
+            "img": "./assets/img/imgCars/trucks/Man3.jpg",
+            "price": 15500,
+            "grad": "Sofia"
         },
         {
             "id": 39,
@@ -388,7 +465,9 @@
             "year": 2015,
             "engine": "gas",
             "gearBox": "automatic",
-            "img": "./assets/img/imgCars/trucks/mercedes1.jpg"
+            "img": "./assets/img/imgCars/trucks/mercedes1.jpg",
+            "price": 7500,
+            "grad": "Sofia"
         },
         {
             "id": 40,
@@ -398,16 +477,33 @@
             "year": 2015,
             "engine": "gas",
             "gearBox": "manual",
-            "img": "./assets/img/imgCars/trucks/mercedes2.jpg"
+            "img": "./assets/img/imgCars/trucks/mercedes2.jpg",
+            "price": 8500,
+            "grad": "Sofia"
         },
         {
             "id": 41,
-            "mark": "Bus",
-            "model": "bus",
-            "type": "bus",
+            "mark": "Golf",
+            "model": "3 Cabrio",
+            "type": "car",
             "year": 1999,
             "engine": "gas",
-            "gearBox": "manual"
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/cars/GolfCabrio.jpg",
+            "price": 99500,
+            "grad": "Sofia"
+        },
+        {
+            "id": 42,
+            "mark": "Golf",
+            "model": "3 Cabrio",
+            "type": "car",
+            "year": 1999,
+            "engine": "gas",
+            "gearBox": "manual",
+            "img": "./assets/img/imgCars/cars/GolfCabrio.jpg",
+            "price": 99500,
+            "grad": "Sofia"
         }
     ]
 }

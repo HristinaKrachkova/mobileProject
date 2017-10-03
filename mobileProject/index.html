@@ -9,6 +9,7 @@
     <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600'>
     <link rel="stylesheet" href="assets/css/login.css">
     <link rel="stylesheet" href="assets/css/searchResultsCSS.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src='assets/js/model.js'></script>
     <script src='assets/js/view.js'></script>
@@ -16,6 +17,7 @@
     <script src="assets/js/loginService.js"></script>
     <script src="assets/js/footer.js"></script>
     <script src="assets/templates/news.js"></script>
+    <script src="assets/js/randomCars.js"></script>
     <script src="assets/js/slide.js"></script>
 
 
@@ -323,59 +325,25 @@
             </div>
             <div class="clear"></div>
         </section>
-
+        
         <section id="newest" class="hidden">
+            <script id="random-template" type="text/x-handlebars-template">
+             {{#each cars}}
             <a href="#" class="item">
-                <img src="http://via.placeholder.com/150">
+               
+                <img width = '150px' height="150px" src="{{img}}">
                 <div>
-                    <div class="newest">Audi A6</div>
-                    <div class="newest">бензин - 2.0i</div>
-                    <div class="newest">5600.00 лв.</div>
-                    <div class="newest">120000 км.</div>
-                    <div class="newest">Кюстендил</div>
+                    <div class="newest">{{mark}}  {{model}}</div>
+                    <div class="newest">{{engine}}</div>
+                    <div class="newest">{{price}}</div>
+                    <div class="newest">{{gearBox}}</div>
+                    <div class="newest">{{grad}}</div>
                 </div>
             </a>
-            <a href="#" class="item">
-                <img src="http://via.placeholder.com/150">
-                <div>
-                    <div class="newest">Audi A6</div>
-                    <div class="newest">бензин - 2.0i</div>
-                    <div class="newest">5600.00 лв.</div>
-                    <div class="newest">120000 км.</div>
-                    <div class="newest">Кюстендил</div>
-                </div>
-            </a>
-            <a href="#" class="item">
-                <img src="http://via.placeholder.com/150">
-                <div>
-                    <div class="newest">Audi A6</div>
-                    <div class="newest">бензин - 2.0i</div>
-                    <div class="newest">5600.00 лв.</div>
-                    <div class="newest">120000 км.</div>
-                    <div class="newest">Кюстендил</div>
-                </div>
-            </a>
-            <a href="#" class="item">
-                <img src="http://via.placeholder.com/150">
-                <div>
-                    <div class="newest">Audi A6</div>
-                    <div class="newest">бензин - 2.0i</div>
-                    <div class="newest">5600.00 лв.</div>
-                    <div class="newest">120000 км.</div>
-                    <div class="newest">Кюстендил</div>
-                </div>
-            </a>
-            <a href="#" class="item">
-                <img src="http://via.placeholder.com/150">
-                <div>
-                    <div class="newest">Audi A6</div>
-                    <div class="newest">бензин - 2.0i</div>
-                    <div class="newest">5600.00 лв.</div>
-                    <div class="newest">120000 км.</div>
-                    <div class="newest">Кюстендил</div>
-                </div>
-            </a>
+            {{/each}}
+            </script>
         </section>
+        
         <div id='searchResult'></div>
         <script id="search-template" type="text/x-handlebars-template">
             {{#each results}}
@@ -387,6 +355,8 @@
                     <p>Година на производство {{year}} </p>
                     <p>Двигател: {{engine}} </p>
                     <p>Скоростна кутия: {{gearBox}} </p>
+                    <p>Цена: {{price}} </p>
+                    <p>Град: {{grad}} </p>
                 </div>
             </div>
             {{/each}}

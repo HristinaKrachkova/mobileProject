@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         if (price !== '') {
             result = result.filter(function (x) {
-                return x.price == price
+                return x.price >= price
             })
         }
         if (year != 0) {
@@ -249,8 +249,9 @@ function getJSON() {
         })
     })
 }
-getJSON().then(function(data) {
+
+    getJSON().then(function(data) {
     
     carsList.cars = Array.prototype.slice.call(data.carList, 0)
-    console.log(carsList)
-})
+    } )
+

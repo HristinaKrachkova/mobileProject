@@ -158,3 +158,4 @@ document.addEventListener('DOMContentLoaded', function () {
 window.onload = function () {
     document.querySelector('.cont_centrar').className = "cont_centrar cent_active";
 }
+

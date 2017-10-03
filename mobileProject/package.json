@@ -1,0 +1,24 @@
+{
+  "name": "abc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HristinaKrachkova/mobileProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HristinaKrachkova/mobileProject/issues"
+  },
+  "homepage": "https://github.com/HristinaKrachkova/mobileProject#readme",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7"
+
+  }
+}

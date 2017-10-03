@@ -60,7 +60,6 @@ var carsList = new VehicleList()
 
 
 
-
 // cars = cars.sort(function (a, b) {
 //     if (a.mark.toUpperCase() > b.mark.toUpperCase()) {
 //         return 1

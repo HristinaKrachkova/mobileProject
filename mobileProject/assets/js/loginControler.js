@@ -162,3 +162,5 @@ function sign_in() {
 window.onload = function() {
     document.querySelector('.cont_centrar').className = "cont_centrar cent_active";
 }
+
+document.getElementById('sigBut').addEventListener('click', sign_in, false)

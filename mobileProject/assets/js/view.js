@@ -203,8 +203,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         var templateResult = document.getElementById('search-template').innerHTML
-        var template = Handlebars.compile(templateResult)
-        var readyHTML = template({ results: result })
+        var templateSearch = Handlebars.compile(templateResult)
+        var readyHTML = templateSearch({ results: result })
         document.getElementById('searchResult').innerHTML = readyHTML
         var hidden = document.getElementsByClassName("hidden");
             document.getElementById('searchResult').style.display = "block";

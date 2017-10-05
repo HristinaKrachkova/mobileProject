@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600'>    
+    <link rel="stylesheet" href="assets/css/publish.css">
     <link rel="stylesheet" href="assets/css/custom.css">
-    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600'>
     <link rel="stylesheet" href="assets/css/login.css">
     <link rel="stylesheet" href="assets/css/searchResultsCSS.css">
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>   
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="assets/js/publish.js"></script>
     <script src='assets/js/model.js'></script>
     <script src='assets/js/view.js'></script>
     <script src="assets/js/loginControler.js"></script>
@@ -18,10 +23,13 @@
     <script src="assets/js/footer.js"></script>
     <script src="assets/templates/news.js"></script>
     <script src="assets/js/randomCars.js"></script>
-    <script src="assets/js/slide.js"></script> 
+    <script src="assets/js/slide.js"></script>
     <script src="assets/js/searchAnimation.js"></script>
     <script src="assets/js/rightMenu.js"></script>
-    
+    <script src="assets/js/registerCarControler.js"></script>
+
+
+
 
 
     <title>Document</title>
@@ -52,7 +60,7 @@
                         </div>
                     </div>
                     <div class="cont_btn" "login">
-                        <button class="btn_sign" "login" id='loginAndRegisterBtn' >SIGN IN</button>
+                        <button class="btn_sign" "login" id='loginAndRegisterBtn'>SIGN IN</button>
                         <p id="error"></p>
                     </div>
                 </form>
@@ -63,12 +71,12 @@
     <div id="wrapper">
         <header>
             <div id="logo">
-                <a href="index.html"><img src="./assets/img/logo.png" alt=""></a>
+                <img src="./assets/img/logo.png" alt="">
             </div>
             <span id="slogan">Сайт №1 за Автомобили </span>
 
             <div id="loginBtn">
-                <button type="button" name="button">Търсене</button>
+                <button id="publishBtn" type="button" name="button">Публикувай</button>
                 <button id="loginButton" type="button" name="button">Login</button>
                 <button id="logoutButton" type="button" name="button">Logout</button>
             </div>
@@ -76,14 +84,20 @@
         </header>
 
         <section id="termsAndConditions">
-            <h2>ОБЩИ УСЛОВИЯ за ползване на сайта <a href="index.html">www.mobile.it</a></h2>
-            <p> 1. Настоящите общи условия уреждат отношенията между "Резон" ООД- София, ЕИК: 121184622, гр.София, ул. "Карнеги"11А, и лицата - ползватели на услугите на сайта www.mobile.bg.</p>
-            <p> 2. Mobile.bg е сайт за малки обяви в областта на пазарите, свързани със средства за транспорт. Mobile.bg е собственост на "Резон" ООД- София, ЕИК: 121184622. В настоящите Общи условия "Резон" ООД ще бъде идентифициран и със собственото си
-                предприятие- сайта mobile.bg.</p>
-            <p> 3. Всяко лице, което е заредило на браузъра си mobile.bg или е било пренасочено към него, следва да се запознае внимателно с настоящите Общи условия и ако лицето не желае да стане ползвател на услугите на mobile.bg, ако не желае да предоставя
-                данни и информация и да има достъп до данни и информация, следва незабавно да напусне сайта.
+            <h2>ОБЩИ УСЛОВИЯ за ползване на сайта www.mobile.it</h2>
+            <p> 1. Настоящите общи условия уреждат отношенията между "Резон" ООД- София, ЕИК: 121184622, гр.София, ул. "Карнеги"11А,
+                и лицата - ползватели на услугите на сайта www.mobile.bg.</p>
+            <p> 2. Mobile.bg е сайт за малки обяви в областта на пазарите, свързани със средства за транспорт. Mobile.bg е собственост
+                на "Резон" ООД- София, ЕИК: 121184622. В настоящите Общи условия "Резон" ООД ще бъде идентифициран и със
+                собственото си предприятие- сайта mobile.bg.</p>
+            <p> 3. Всяко лице, което е заредило на браузъра си mobile.bg или е било пренасочено към него, следва да се запознае
+                внимателно с настоящите Общи условия и ако лицето не желае да стане ползвател на услугите на mobile.bg, ако
+                не желае да предоставя данни и информация и да има достъп до данни и информация, следва незабавно да напусне
+                сайта.
             </p>
-            <p> 4. Данните и информацията, получени от сайта mobile.bg, са собственост на "Резон" ООД и могат да се ползват за търговска и служебна дейност или предоставяни на трети лица само от упълномощени от "Резон" ООД субекти и срещу заплащане.</p>
+            <p> 4. Данните и информацията, получени от сайта mobile.bg, са собственост на "Резон" ООД и могат да се ползват за
+                търговска и служебна дейност или предоставяни на трети лица само от упълномощени от "Резон" ООД субекти и
+                срещу заплащане.</p>
             <p> 5. Ползвателите на услугите на mobile.bg се съгласяват да получават седмичният бюлетин на сайта.</p>
         </section>
 
@@ -122,7 +136,7 @@
             </div>
         </section>-->
 
-        <main class="hidden">
+        <main class="hiddenDiv">
             <div id="user">
                 <img id="iconUser" src='./assets/img/Icon-user.png' />
                 <span id="userName"></span>
@@ -298,7 +312,7 @@
             </div>
         </main>
 
-        <section id="news" class="hidden">
+        <section id="news" class="hiddenDiv">
             <h2>НОВИНИ</h2>
 
             <div id="displayNews"></div>
@@ -328,11 +342,11 @@
             </div>
             <div class="clear"></div>
         </section>
-        
-        <section id="newest" class="hidden">
+
+        <section id="newest" class="hiddenDiv">
             <script id="random-template" type="text/x-handlebars-template">
-             {{#each cars}}
-            <a href="#" class="item">
+                {{#each cars}}
+                <a href="#" class="item">
                
                 <img width = '150px' height="150px" src="{{img}}">
                 <div>
@@ -342,11 +356,10 @@
                     <div class="newest">{{gearBox}}</div>
                     <div class="newest">{{grad}}</div>
                 </div>
-            </a>
-            {{/each}}
+            </a> {{/each}}
             </script>
         </section>
-        
+
         <div id='searchResult'></div>
         <script id="search-template" type="text/x-handlebars-template">
             {{#each results}}
@@ -361,17 +374,388 @@
                     <p>Цена: {{price}} </p>
                     <p>Град: {{grad}} </p>
                 </div>
-                <button class="seeMore" >Виж повече</button>
+                <button class="seeMore">Виж повече</button>
             </div>
-            
+
             {{/each}}
         </script>
 
-        <footer class="hidden">
+        <div id="publish" >
+            <div class="container">
+                <h1>Bootstrap Button Select</h1>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3">
+
+                        <a class="btn btn-primary btn-select btn-select-light">
+                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                <span class="btn-select-value">Основна категория</span>
+                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                <ul>
+                    <li>Автомобили</li>
+                    <li>Джипове</li>
+                    <li>Бусове</li>
+                    <li>Камиони</li>
+                    <li>Мотоциклети</li>
+                </ul>
+            </a>
+                        </pre>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+
+                        <a class="btn btn-primary btn-select btn-select-light">
+                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                <span class="btn-select-value">Марка</span>
+                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                <ul>
+                    <li>Option 1</li>
+                    <li>Option 2</li>
+                    <li>Option 3</li>
+                    <li>Option 4</li>
+                </ul>
+            </a>
+                        </pre>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+
+                        <a class="btn btn-primary btn-select btn-select-light">
+                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                <span class="btn-select-value">Модел</span>
+                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                <ul>
+                    <li>Option 1</li>
+                    <li>Option 2</li>
+                    <li>Option 3</li>
+                    <li>Option 4</li>
+                </ul>
+            </a>
+                        </pre>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+
+                        <a class="btn btn-primary btn-select btn-select-light">
+                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                <span class="btn-select-value">Тип двигател</span>
+                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                <ul>
+                    <li>Option 1</li>
+                    <li>Option 2</li>
+                    <li>Option 3</li>
+                    <li>Option 4</li>
+                </ul>
+            </a>
+                        </pre>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+
+                        <a class="btn btn-primary btn-select btn-select-light">
+                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                <span class="btn-select-value">Скоростна кутия</span>
+                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                <ul>
+                    <li>Option 1</li>
+                    <li>Option 2</li>
+                    <li>Option 3</li>
+                    <li>Option 4</li>
+                </ul>
+            </a>
+                        </pre>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+
+                        <a class="btn btn-primary btn-select btn-select-light">
+                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                <span class="btn-select-value">Цена</span>
+                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                <ul>
+                    <li>Option 1</li>
+                    <li>Option 2</li>
+                    <li>Option 3</li>
+                    <li>Option 4</li>
+                </ul>
+            </a>
+                        </pre>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+
+                        <a class="btn btn-primary btn-select btn-select-light">
+                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                <span class="btn-select-value">Година</span>
+                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                <ul>
+                    <li>Option 1</li>
+                    <li>Option 2</li>
+                    <li>Option 3</li>
+                    <li>Option 4</li>
+                </ul>
+            </a>
+                        </pre>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+
+                        <a class="btn btn-primary btn-select btn-select-light">
+                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                <span class="btn-select-value">Пробег</span>
+                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                <ul>
+                    <li>Option 1</li>
+                    <li>Option 2</li>
+                    <li>Option 3</li>
+                    <li>Option 4</li>
+                </ul>
+            </a>
+                        </pre>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+
+                        <a class="btn btn-primary btn-select btn-select-light">
+                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                <span class="btn-select-value">Град</span>
+                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                <ul>
+                    <li>Option 1</li>
+                    <li>Option 2</li>
+                    <li>Option 3</li>
+                    <li>Option 4</li>
+                </ul>
+            </a>
+                        </pre>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="[ row ]">
+                    <h2>Fancy Bootstrap Checkboxes that work with <a href="https://bootswatch.com/" target="_blank">Bootswatch</a></h2>
+                    <p>My latest project needed some checkboxes that worked very nicely with bootswatch. Use the Theme picker
+                        above here to check out what the checkboxes look like in the different themes.</p>
+                </div>
+                <div class="[ col-xs-12 col-sm-6 ]">
+                    <div class="container">
+
+                        <hr />
+
+                        <div class="[ form-group ]">
+                            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary" autocomplete="off" />
+                            <div class="[ btn-group ]">
+                                <label for="fancy-checkbox-primary" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                                <label for="fancy-checkbox-primary" class="[ btn btn-default active ]">
+                    Primary Checkbox
+                </label>
+                            </div>
+                        </div>
+                        <div class="[ form-group ]">
+                            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary-1" autocomplete="off" />
+                            <div class="[ btn-group ]">
+                                <label for="fancy-checkbox-primary-1" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                                <label for="fancy-checkbox-primary-1" class="[ btn btn-default active ]">
+                    Primary Checkbox
+                </label>
+                            </div>
+                        </div>
+
+                        <div class="[ form-group ]">
+                            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary-2" autocomplete="off" />
+                            <div class="[ btn-group ]">
+                                <label for="fancy-checkbox-primary-2" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                                <label for="fancy-checkbox-primary-2" class="[ btn btn-default active ]">
+                    Primary Checkbox
+                </label>
+                            </div>
+                        </div>
+                        <div class="[ form-group ]">
+                            <input type="checkbox" name="fancy-checkbox-primary-3" id="fancy-checkbox-primary-3" autocomplete="off" />
+                            <div class="[ btn-group ]">
+                                <label for="fancy-checkbox-primary-3" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                                <label for="fancy-checkbox-primary-3" class="[ btn btn-default active ]">
+                    Primary Checkbox
+                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+
+                        <hr />
+
+                        <div class="[ form-group ]">
+                            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary-4" autocomplete="off" />
+                            <div class="[ btn-group ]">
+                                <label for="fancy-checkbox-primary-4" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                                <label for="fancy-checkbox-primary-4" class="[ btn btn-default active ]">
+                    Primary Checkbox
+                </label>
+                            </div>
+                        </div>
+                        <div class="[ form-group ]">
+                            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary-5" autocomplete="off" />
+                            <div class="[ btn-group ]">
+                                <label for="fancy-checkbox-primary-5" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                                <label for="fancy-checkbox-primary-5" class="[ btn btn-default active ]">
+                    Primary Checkbox
+                </label>
+                            </div>
+                        </div>
+
+                        <div class="[ form-group ]">
+                            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary-6" autocomplete="off" />
+                            <div class="[ btn-group ]">
+                                <label for="fancy-checkbox-primary-6" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                                <label for="fancy-checkbox-primary-6" class="[ btn btn-default active ]">
+                    Primary Checkbox
+                </label>
+                            </div>
+                        </div>
+                        <div class="[ form-group ]">
+                            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary-7" autocomplete="off" />
+                            <div class="[ btn-group ]">
+                                <label for="fancy-checkbox-primary-7" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                                <label for="fancy-checkbox-primary-7" class="[ btn btn-default active ]">
+                    Primary Checkbox
+                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+
+                        <hr />
+
+                        <div class="[ form-group ]">
+                            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary-8" autocomplete="off" />
+                            <div class="[ btn-group ]">
+                                <label for="fancy-checkbox-primary-8" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                                <label for="fancy-checkbox-primary-8" class="[ btn btn-default active ]">
+                    Primary Checkbox
+                </label>
+                            </div>
+                        </div>
+                        <div class="[ form-group ]">
+                            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary-9" autocomplete="off" />
+                            <div class="[ btn-group ]">
+                                <label for="fancy-checkbox-primary-9" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                                <label for="fancy-checkbox-primary-9" class="[ btn btn-default active ]">
+                    Primary Checkbox
+                </label>
+                            </div>
+                        </div>
+
+                        <div class="[ form-group ]">
+                            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary-10" autocomplete="off" />
+                            <div class="[ btn-group ]">
+                                <label for="fancy-checkbox-primary-10" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                                <label for="fancy-checkbox-primary-10" class="[ btn btn-default active ]">
+                    Primary Checkbox
+                </label>
+                            </div>
+                        </div>
+                        <div class="[ form-group ]">
+                            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary-11" autocomplete="off" />
+                            <div class="[ btn-group ]">
+                                <label for="fancy-checkbox-primary-11" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                                <label for="fancy-checkbox-primary-11" class="[ btn btn-default active ]">
+                    Primary Checkbox
+                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+
+                        <hr />
+
+                        <div class="[ form-group ]">
+                            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary-12" autocomplete="off" />
+                            <div class="[ btn-group ]">
+                                <label for="fancy-checkbox-primary-12" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                                <label for="fancy-checkbox-primary-12" class="[ btn btn-default active ]">
+                    Primary Checkbox
+                </label>
+                            </div>
+                        </div>
+                        <div class="[ form-group ]">
+                            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary-13" autocomplete="off" />
+                            <div class="[ btn-group ]">
+                                <label for="fancy-checkbox-primary-13" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                                <label for="fancy-checkbox-primary-13" class="[ btn btn-default active ]">
+                    Primary Checkbox
+                </label>
+                            </div>
+                        </div>
+
+                        <div class="[ form-group ]">
+                            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary-14" autocomplete="off" />
+                            <div class="[ btn-group ]">
+                                <label for="fancy-checkbox-primary-14" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                                <label for="fancy-checkbox-primary-14" class="[ btn btn-default active ]">
+                    Primary Checkbox
+                </label>
+                            </div>
+                        </div>
+                        <div class="[ form-group ]">
+                            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary-15" autocomplete="off" />
+                            <div class="[ btn-group ]">
+                                <label for="fancy-checkbox-primary-15" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                                <label for="fancy-checkbox-primary-15" class="[ btn btn-default active ]">
+                    Primary Checkbox
+                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer >
             <ul id="footNav">
                 <li><a href="#">Контакти</a></li>
                 <li><a href="#">За нас</a></li>
-                <li><a id="tc" href="#">Общи условия</a></li>
+                <li><a id="tc" href="">Общи условия</a></li>
                 <li><a target="_blank" href="http://www.sdi.bg/onlineInsurance/">Застраховки</a></li>
                 <li><a target="_blank" href="https://toprentacar.bg/">Rent-a-car</a></li>
             </ul>
@@ -381,11 +765,6 @@
         </footer>
 
 
-    </div>
-
-    </div>
-
-    
 
 </body>
 

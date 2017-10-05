@@ -75,16 +75,13 @@ header {
     transition: background 0.4s ease-in-out;
 }
 
-#logoutButton {
+#logoutButton, #publish {
     display: none;
+     margin-top: -24px;
 }
 
 #loginBtn button:hover {
     background: #016d98;
-}
-
-#logo img:hover {
-    opacity: 0.7;
 }
 
 main {
@@ -505,8 +502,15 @@ p.copyright {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.32);
     border-radius: 6px;
     padding: 23px;
+    margin-top: -4px;
 }
 
+#publish {
+    border: 1px solid #cccccc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.32);
+    border-radius: 6px;
+    padding: 23px;
+}
 #termsAndConditions p {
     padding: 10px 0;
 }
@@ -526,11 +530,12 @@ p.copyright {
     transition: all 0.4s ease-in-out;
 }
 
-.iconNav:hover {
+.iconNav:hover, #logo img:hover {
     filter: brightness(80%);
     backface-visibility: hidden;
+    transition: all 0.4s ease-in-out;
 }
-
+ 
 #iconUser {
     display: inline-block;
     width: 20px;
@@ -547,4 +552,10 @@ p.copyright {
     display: inline-block;
     width: 200px;
     height: 200px;
+}
+
+/*@media (min-width: 1200px);*/
+
+.container {
+    width: 1025px;
 }

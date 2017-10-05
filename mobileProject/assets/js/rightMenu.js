@@ -7,7 +7,7 @@ $(function() {
 
     
         document.getElementById('searchResult').innerHTML = readyHTML
-        var hidden = document.getElementsByClassName("hidden");
+        var hidden = document.getElementsByClassName("hiddenDiv");
             document.getElementById('searchResult').style.display = "block";
             Array.prototype.forEach.call(hidden, function (m) {
                 m.style.display = "none";

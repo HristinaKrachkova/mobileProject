@@ -435,6 +435,7 @@ section#newest {
     padding: 30px 0;
     background: rgba(181, 181, 181, 0.22);
     border: 1px solid #cccccc;
+    box-shadow: 0 4px 2px -2px gray;
 }
 
 #newest .item {
@@ -499,7 +500,7 @@ p.copyright {
 
 #termsAndConditions {
     border: 1px solid #cccccc;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.32);
+    box-shadow: 0 4px 2px -2px gray;
     border-radius: 6px;
     padding: 23px;
     margin-top: -4px;
@@ -507,7 +508,7 @@ p.copyright {
 
 #publish {
     border: 1px solid #cccccc;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.32);
+    box-shadow: 0 4px 2px -2px gray;
     border-radius: 6px;
     padding: 23px;
 }

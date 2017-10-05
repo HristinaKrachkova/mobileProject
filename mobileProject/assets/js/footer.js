@@ -9,11 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
     buttonTC.addEventListener("click", function () {
         event.preventDefault();
         document.getElementById('publishBtn').innerHTML = 'HOME';
+        document.getElementById('publish').style.display = "none";
+        document.getElementById('searchResult').style.display = "none";
         divTC.style.display = "block";
         Array.prototype.forEach.call(hidden, function (m) {
             m.style.display = "none";
         });
     });
+
 
 
 

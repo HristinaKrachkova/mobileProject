@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function sign_up() {
+    
     var inputs = document.querySelectorAll('.input_form_sign');
 
     document.querySelectorAll('.ul_tabs > li')[0].className = "";
@@ -53,9 +54,11 @@ function sign_up() {
 
         if (userList.addUser(username, email, password, confirmPassword, document.querySelector('input[name = "terms_and_cons"]').checked)) {
 
-            document.querySelector('p#error').textContent = userList.addUser();
+            document.querySelector('p#error').textContent = 'Successful registration!';
             document.querySelector('p#error').style.color = 'rgb(17, 114, 149)';
-           
+
+            sign_in();
+
             setTimeout(function () {
                 document.querySelector('p#error').textContent = '';
                 document.querySelector('input[name = "name_us"]').value = '';
@@ -63,13 +66,12 @@ function sign_up() {
                 document.querySelector('input[name = "pass_us"]').value = '';
                 document.querySelector('input[name = "conf_pass_us"]').value = '';
             }, 2000);
-            // sign_in()
         } else {
             document.querySelector('p#error').textContent = 'Invalid data! Please try again.';
             setTimeout(function () {
                 document.querySelector('p#error').textContent = '';
             }, 2000);
-        
+
         }
     });
 };
@@ -125,6 +127,7 @@ function sign_in() {
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("loginAndRegisterBtn").addEventListener('click', function () {
         event.preventDefault();
+
         var email = document.querySelector('input[name = "emauil_us"]').value;
         var password = document.querySelector('input[name = "pass_us"]').value;
         if (userList.login(email, password)) {

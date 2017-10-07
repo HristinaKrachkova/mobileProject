@@ -10,9 +10,8 @@
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
-    border-bottom: 2px solid #cccccc;
+    box-shadow: 0 4px 2px -2px grey;
     padding: 23px;
-    
 }
 
 .carContent {
@@ -66,4 +65,8 @@
     border-radius: 5px 5px 5px 5px;
     border-bottom: none;
     transition: background 0.4s ease-in-out;
+}
+
+.seeMore:hover, .buy:hover{
+    background: #016d98;
 }

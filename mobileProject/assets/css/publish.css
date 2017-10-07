@@ -107,26 +107,26 @@
         .btn-select.btn-primary:hover,
         .btn-select.btn-primary:active,
         .btn-select.btn-primary.active {
-            border-color: #286090;
+            border-color: #0093ce;
         }
 
         .btn-select.btn-primary ul li.selected {
-            background-color: #2e6da4;
+            background-color: #0093ce;
             color: white;
         }
 
         .btn-select.btn-primary ul {
-            border: #2e6da4 1px solid;
+            border: #0093ce 1px solid;
         }
 
         .btn-select.btn-primary .btn-select-value {
-            background-color: #428bca;
-            border: #2e6da4 1px solid;
+            background-color: #0093ce;
+            border: #0093ce 1px solid;
         }
 
         .btn-select.btn-primary:hover,
         .btn-select.btn-primary.active {
-            background-color: #286090;
+            background-color: #0093ce;
         }
         /* Primary End */
         /* Success Start */

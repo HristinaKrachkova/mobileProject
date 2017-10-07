@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600'>    
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600'>
     <link rel="stylesheet" href="assets/css/publish.css">
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/login.css">
@@ -21,7 +21,7 @@
     <script src="assets/js/loginControler.js"></script>
     <script src="assets/js/loginService.js"></script>
     <script src="assets/js/footer.js"></script>
-    <script src="assets/templates/news.js"></script>
+    <script src="assets/js/news.js"></script>
     <script src="assets/js/randomCars.js"></script>
     <script src="assets/js/slide.js"></script>
     <script src="assets/js/searchAnimation.js"></script>
@@ -56,7 +56,7 @@
                         <input type="password" class="input_form_sign d_block  active_inp" placeholder="PASSWORD" name="pass_us" />
                         <input type="password" class="input_form_sign" placeholder="CONFIRM PASSWORD" name="conf_pass_us" />
                         <div class="terms_and_cons d_none">
-                            <p><input type="checkbox" name="terms_and_cons" /> <label for="terms_and_cons">Accept  Terms and Conditions.</label></p>
+                            <p><input type="checkbox" name="terms_and_cons" /><a id="termsAndCons" href=""> <label   for="terms_and_cons">Accept  Terms and Conditions.</label></p></a>
                         </div>
                     </div>
                     <div class="cont_btn" "login">
@@ -83,7 +83,7 @@
 
         </header>
 
-        <section id="termsAndConditions">
+        <section id="termsAndConditions" class="footerDivs">
             <h2>ОБЩИ УСЛОВИЯ за ползване на сайта www.mobile.it</h2>
             <p> 1. Настоящите общи условия уреждат отношенията между "Резон" ООД- София, ЕИК: 121184622, гр.София, ул. "Карнеги"11А,
                 и лицата - ползватели на услугите на сайта www.mobile.bg.</p>
@@ -101,40 +101,34 @@
             <p> 5. Ползвателите на услугите на mobile.bg се съгласяват да получават седмичният бюлетин на сайта.</p>
         </section>
 
-        <!--<section id="contacts">
-            <div id="contactsLeft">
-                <h2>Контакти</h2>
-                <ul>
-                    <li>mobile.bg</li>
-                    <li>София 1000, ул. Карнеги 11а</li>
-                    <li>Телефон: 02 9699 143, 02 9699 129</li>
-                    <li>Работно време: 9:00 - 17:00 /без събота и неделя/.</li>
-                </ul>
-                <ul>
-                    <li>Бургас: 0898868887</li>
-                    <li>Варна: 0885600614</li>
-                    <li>Пловдив: 0888650025</li>
-                    <li>Русе: 0887884355</li>
-                    <li>София: 0887627901, 0889126317</li>
-                    <li>Ямбол: 0888847004 </li>
-                </ul>
-                <ul>
-                    <li>РЕЗОН ООД</li>
-                    <li>ПИБ АД, клон Витоша</li>
-                    <li>IBAN: BG00 FINV 0000 00BG N0AH 0B</li>
-                    <li>BIC: FINVBGSF</li>
-                </ul>
-                <ul>
-                    <li>Ф.Д. 1182/95 - СГС</li>
-                    <li>Идентификационен код по ДДС BG121184622 </li>
-                    <li>факс: 02/9699177</li>
-                </ul>
-            </div>
-            <div id="contactsRight">
-                <h2>Въпроси и предложения</h2>
-                
-            </div>
-        </section>-->
+        <section id="contactList" class="footerDivs">
+            <h2>Контакти</h2>
+            <ul>
+                <li>mobile.bg</li>
+                <li>София 1000, ул. Карнеги 11а</li>
+                <li>Телефон: 02 9699 143, 02 9699 129</li>
+                <li>Работно време: 9:00 - 17:00 /без събота и неделя/.</li>
+            </ul>
+            <ul>
+                <li>Бургас: 0898868887</li>
+                <li>Варна: 0885600614</li>
+                <li>Пловдив: 0888650025</li>
+                <li>Русе: 0887884355</li>
+                <li>София: 0887627901, 0889126317</li>
+                <li>Ямбол: 0888847004 </li>
+            </ul>
+            <ul>
+                <li>РЕЗОН ООД</li>
+                <li>ПИБ АД, клон Витоша</li>
+                <li>IBAN: BG00 FINV 0000 00BG N0AH 0B</li>
+                <li>BIC: FINVBGSF</li>
+            </ul>
+            <ul>
+                <li>Ф.Д. 1182/95 - СГС</li>
+                <li>Идентификационен код по ДДС BG121184622 </li>
+                <li>факс: 02/9699177</li>
+            </ul>
+        </section>
 
         <main class="hiddenDiv">
             <div id="user">
@@ -218,10 +212,6 @@
 
                                     </select>
                             </div>
-                            <div class="formBoxControl labelModify">
-                                <span class="formControlTitle">КУР за цС*ка-ловеч</span>
-
-                            </div>
                         </div>
                         <div class="colRight">
                             <div class="formBoxControl">
@@ -275,36 +265,36 @@
                     <div id="bigCatMenu">
                         <ul>
                             <li>
-                                <a class="bigCatMenu searchButtons" href="#" id='firstTimersCar'><img src="./assets/img/category-icons/first-timers-car.png" alt=""></a>
+                                <a class="bigCatMenu searchButtons" href="" id='firstTimersCar'><img src="./assets/img/category-icons/first-timers-car.png" alt=""></a>
                             </li>
                             <li>
-                                <a class="bigCatMenu searchButtons" href="#" id='luxuryCar'><img src="./assets/img/category-icons/luxury-car.png" alt=""></a>
+                                <a class="bigCatMenu searchButtons" href="" id='luxuryCar'><img src="./assets/img/category-icons/luxury-car.png" alt=""></a>
                             </li>
                             <li>
-                                <a class="bigCatMenu searchButtons" href="#" id='cityCar'><img src="./assets/img/category-icons/city-car.png" alt=""></a>
+                                <a class="bigCatMenu searchButtons" href="" id='cityCar'><img src="./assets/img/category-icons/city-car.png" alt=""></a>
                             </li>
 
                         </ul>
                         <ul>
                             <li>
-                                <a class="bigCatMenu searchButtons" href="#" id='sportCar'><img src="./assets/img/category-icons/sport-car.png" alt=""></a>
+                                <a class="bigCatMenu searchButtons" href="" id='sportCar'><img src="./assets/img/category-icons/sport-car.png" alt=""></a>
                             </li>
                             <li>
-                                <a class="bigCatMenu searchButtons" href="#" id='cabrio'><img src="./assets/img/category-icons/cabrio.png" alt=""></a>
+                                <a class="bigCatMenu searchButtons" href="" id='cabrio'><img src="./assets/img/category-icons/cabrio.png" alt=""></a>
                             </li>
                             <li>
-                                <a class="bigCatMenu searchButtons" href="#" id='classicCar'><img src="./assets/img/category-icons/classic-car.png" alt=""></a>
+                                <a class="bigCatMenu searchButtons" href="" id='classicCar'><img src="./assets/img/category-icons/classic-car.png" alt=""></a>
                             </li>
                         </ul>
                         <ul>
                             <li>
-                                <a class="bigCatMenu searchButtons" href="#" id='familyCar'><img src="./assets/img/category-icons/family-car.png" alt=""></a>
+                                <a class="bigCatMenu searchButtons" href="" id='familyCar'><img src="./assets/img/category-icons/family-car.png" alt=""></a>
                             </li>
                             <li>
-                                <a class="bigCatMenu searchButtons" href="#" id='suv'><img src="./assets/img/category-icons/suv.png" alt=""></a>
+                                <a class="bigCatMenu searchButtons" href="" id='suv'><img src="./assets/img/category-icons/suv.png" alt=""></a>
                             </li>
                             <li>
-                                <a class="bigCatMenu searchButtons" href="#" id='ecoFriendly'><img src="./assets/img/category-icons/eco-friendly.png" alt=""></a>
+                                <a class="bigCatMenu searchButtons" href="" id='ecoFriendly'><img src="./assets/img/category-icons/eco-friendly.png" alt=""></a>
                             </li>
                         </ul>
                     </div>
@@ -374,19 +364,38 @@
                     <p>Цена: {{price}} </p>
                     <p>Град: {{grad}} </p>
                 </div>
-                <div class = 'carDescription'> <p> Публикувано във факти.бг: Нов-внос Италия. Закупена е от град Априлия(вилна зона на Рим). Няма зима няма ръжда. Редовни документи. --ДИРЕКТЕН ВНОСИТЕЛ НА АВТОМОБИЛИ ЗАКУПЕНИ САМО ОТ ЧАСТНИ ЛИЦА-Колата е в невероятно техническо състояние. Без никакви удари и пребоядисванки разни. Не е напудрена или полирвана натурално състояние. САМО ЗА ЦЕНИТЕЛИ. Всички екстри за модела. Климатроника работи както и всички системи по колата чисто нови гуми Пирели. А как върви и как вози - като Мерцедес. УНИКАТ. . . . Думи нямам да опиша изживяването с това ЦЛК. Само да разкажа една случка. Идва колата в БГ и един приятел като я вида полудя. Дай вика едно кръгче да направя моли ми се цял ден викам му ок. слагам едни номера и потегляме до едно близко село по магистралата. Както си караше нормално и взе че даде рязко газ получи се светлинен тунел ушите ми заглъхнаха поглеждам към колегата няма го хващам аз волана и гледам онзи на задната седалка викам му кво става бре искам казва да се возя като куфар в багажника без чувства ми каза той. Както и да е озаптихме звяра. Бре чувам аз някакво пиукане в багажника отварям гледам 6 пиленца излюпени. А аз като тръгнахме сложих 6 яйца от магазина че пазарувах. Сигурно от високата скорост са се излюпили. Взимам ги аз и се прибирам гледам жената с 15 години по млада. Питам я аз кво става бре а тя ми вика. . . и аз бях в мерцедеса. . . . . ЧУДЕСА ПРИЯТЕЛИ ЧУДЕСА. . После водихме колегата да му леят куршум(беше се уплашил). Гледа жената и му казва: много си млад за да си ветеран от войната мерник излиза. А не бе бабо мерцедес кара бре казвам и аз. Умолявам клиентите не карали такава кола да предупредят. Съдействие на клиента за регистрация. . . И да се знае аз не продавам цена а разкошна кола. Разрешени са всякакви тестове. We speak English and Russian." </p></div>
+                <div class='carDescription'>
+                    <p> Публикувано във факти.бг: Нов-внос Италия. Закупена е от град Априлия(вилна зона на Рим). Няма зима няма
+                        ръжда. Редовни документи. --ДИРЕКТЕН ВНОСИТЕЛ НА АВТОМОБИЛИ ЗАКУПЕНИ САМО ОТ ЧАСТНИ ЛИЦА-Колата е
+                        в невероятно техническо състояние. Без никакви удари и пребоядисванки разни. Не е напудрена или полирвана
+                        натурално състояние. САМО ЗА ЦЕНИТЕЛИ. Всички екстри за модела. Климатроника работи както и всички
+                        системи по колата чисто нови гуми Пирели. А как върви и как вози - като Мерцедес. УНИКАТ. . . . Думи
+                        нямам да опиша изживяването с това ЦЛК. Само да разкажа една случка. Идва колата в БГ и един приятел
+                        като я вида полудя. Дай вика едно кръгче да направя моли ми се цял ден викам му ок. слагам едни номера
+                        и потегляме до едно близко село по магистралата. Както си караше нормално и взе че даде рязко газ
+                        получи се светлинен тунел ушите ми заглъхнаха поглеждам към колегата няма го хващам аз волана и гледам
+                        онзи на задната седалка викам му кво става бре искам казва да се возя като куфар в багажника без
+                        чувства ми каза той. Както и да е озаптихме звяра. Бре чувам аз някакво пиукане в багажника отварям
+                        гледам 6 пиленца излюпени. А аз като тръгнахме сложих 6 яйца от магазина че пазарувах. Сигурно от
+                        високата скорост са се излюпили. Взимам ги аз и се прибирам гледам жената с 15 години по млада. Питам
+                        я аз кво става бре а тя ми вика. . . и аз бях в мерцедеса. . . . . ЧУДЕСА ПРИЯТЕЛИ ЧУДЕСА. . После
+                        водихме колегата да му леят куршум(беше се уплашил). Гледа жената и му казва: много си млад за да
+                        си ветеран от войната мерник излиза. А не бе бабо мерцедес кара бре казвам и аз. Умолявам клиентите
+                        не карали такава кола да предупредят. Съдействие на клиента за регистрация. . . И да се знае аз не
+                        продавам цена а разкошна кола. Разрешени са всякакви тестове. We speak English and Russian." </p>
+                </div>
                 <button class="seeMore">Виж повече</button>
-                <button class = 'buy'>Купи</button>
+                <button class='buy'>Купи</button>
             </div>
 
             {{/each}}
         </script>
 
-        <div id="publish" >
+        <div id="publish">
             <div class="container">
-                <h1>Bootstrap Button Select</h1>
+                <h1>Публикуване на безплатна обява</h1>
                 <div class="row">
-                    <div class="col-xs-6 col-sm-3">
+                    <div id="mainCat" class="col-xs-6 col-sm-3">
 
                         <a class="btn btn-primary btn-select btn-select-light">
                 <input type="hidden" class="btn-select-input" id="" name="" value="" />
@@ -439,10 +448,9 @@
                 <span class="btn-select-value">Тип двигател</span>
                 <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
                 <ul>
-                    <li>Option 1</li>
-                    <li>Option 2</li>
-                    <li>Option 3</li>
-                    <li>Option 4</li>
+                    <li>Бензин</li>
+                    <li>Дизел</li>
+                    <li>Електрически</li>
                 </ul>
             </a>
                         </pre>
@@ -454,97 +462,36 @@
                 <span class="btn-select-value">Скоростна кутия</span>
                 <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
                 <ul>
-                    <li>Option 1</li>
-                    <li>Option 2</li>
-                    <li>Option 3</li>
-                    <li>Option 4</li>
+                    <li>Ръчна</li>
+                    <li>Автоматична</li>
+                    <li>Полуавтоматична</li>
                 </ul>
             </a>
                         </pre>
                     </div>
                     <div class="col-xs-6 col-sm-3">
-
-                        <a class="btn btn-primary btn-select btn-select-light">
-                <input type="hidden" class="btn-select-input" id="" name="" value="" />
-                <span class="btn-select-value">Цена</span>
-                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul>
-                    <li>Option 1</li>
-                    <li>Option 2</li>
-                    <li>Option 3</li>
-                    <li>Option 4</li>
-                </ul>
-            </a>
-                        </pre>
+                        <input type="text" class="btn-input" placeholder="&nbsp  Цена" id="" name="" value="" />
                     </div>
                     <div class="col-xs-6 col-sm-3">
-
-                        <a class="btn btn-primary btn-select btn-select-light">
-                <input type="hidden" class="btn-select-input" id="" name="" value="" />
-                <span class="btn-select-value">Година</span>
-                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul>
-                    <li>Option 1</li>
-                    <li>Option 2</li>
-                    <li>Option 3</li>
-                    <li>Option 4</li>
-                </ul>
-            </a>
-                        </pre>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
-
-                        <a class="btn btn-primary btn-select btn-select-light">
-                <input type="hidden" class="btn-select-input" id="" name="" value="" />
-                <span class="btn-select-value">Пробег</span>
-                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul>
-                    <li>Option 1</li>
-                    <li>Option 2</li>
-                    <li>Option 3</li>
-                    <li>Option 4</li>
-                </ul>
-            </a>
-                        </pre>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
-
-                        <a class="btn btn-primary btn-select btn-select-light">
-                <input type="hidden" class="btn-select-input" id="" name="" value="" />
-                <span class="btn-select-value">Град</span>
-                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul>
-                    <li>Option 1</li>
-                    <li>Option 2</li>
-                    <li>Option 3</li>
-                    <li>Option 4</li>
-                </ul>
-            </a>
-                        </pre>
+                        <input type="text" class="btn-input" placeholder="&nbsp  Година" id="" name="" value="" />
                     </div>
 
                 </div>
             </div>
             <div class="container">
-                <div class="[ row ]">
-                    <h2>Fancy Bootstrap Checkboxes that work with <a href="https://bootswatch.com/" target="_blank">Bootswatch</a></h2>
-                    <p>My latest project needed some checkboxes that worked very nicely with bootswatch. Use the Theme picker
-                        above here to check out what the checkboxes look like in the different themes.</p>
-                </div>
+
                 <div class="[ col-xs-12 col-sm-6 ]">
-                    <div class="container">
-
-                        <hr />
-
+                    <div class="container checkboxContainer">
+                        <h4>Безопасност</h4>
                         <div class="[ form-group ]">
                             <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary" autocomplete="off" />
                             <div class="[ btn-group ]">
                                 <label for="fancy-checkbox-primary" class="[ btn btn-primary ]">
                     <span class="[ glyphicon glyphicon-ok ]"></span>
-                    <span> </span>
+                <span> </span>
                 </label>
                                 <label for="fancy-checkbox-primary" class="[ btn btn-default active ]">
-                    Primary Checkbox
+                    ABS
                 </label>
                             </div>
                         </div>
@@ -556,7 +503,7 @@
                     <span> </span>
                 </label>
                                 <label for="fancy-checkbox-primary-1" class="[ btn btn-default active ]">
-                    Primary Checkbox
+                    Въздушни възглавници
                 </label>
                             </div>
                         </div>
@@ -569,7 +516,7 @@
                     <span> </span>
                 </label>
                                 <label for="fancy-checkbox-primary-2" class="[ btn btn-default active ]">
-                    Primary Checkbox
+                    Парктроник
                 </label>
                             </div>
                         </div>
@@ -581,16 +528,14 @@
                     <span> </span>
                 </label>
                                 <label for="fancy-checkbox-primary-3" class="[ btn btn-default active ]">
-                    Primary Checkbox
+                    Адаптивни светлини
                 </label>
                             </div>
                         </div>
                     </div>
 
-                    <div class="container">
-
-                        <hr />
-
+                    <div class="container checkboxContainer">
+                        <h4>Комфорт</h4>
                         <div class="[ form-group ]">
                             <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary-4" autocomplete="off" />
                             <div class="[ btn-group ]">
@@ -599,7 +544,7 @@
                     <span> </span>
                 </label>
                                 <label for="fancy-checkbox-primary-4" class="[ btn btn-default active ]">
-                    Primary Checkbox
+                    Безключово палене
                 </label>
                             </div>
                         </div>
@@ -611,7 +556,7 @@
                     <span> </span>
                 </label>
                                 <label for="fancy-checkbox-primary-5" class="[ btn btn-default active ]">
-                    Primary Checkbox
+                    Ел. огледала
                 </label>
                             </div>
                         </div>
@@ -624,7 +569,7 @@
                     <span> </span>
                 </label>
                                 <label for="fancy-checkbox-primary-6" class="[ btn btn-default active ]">
-                    Primary Checkbox
+                    Ел. стъкла
                 </label>
                             </div>
                         </div>
@@ -636,15 +581,13 @@
                     <span> </span>
                 </label>
                                 <label for="fancy-checkbox-primary-7" class="[ btn btn-default active ]">
-                    Primary Checkbox
+                    Климатроник
                 </label>
                             </div>
                         </div>
                     </div>
-                    <div class="container">
-
-                        <hr />
-
+                    <div class="container checkboxContainer">
+                        <h4>Защита</h4>
                         <div class="[ form-group ]">
                             <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary-8" autocomplete="off" />
                             <div class="[ btn-group ]">
@@ -653,7 +596,7 @@
                     <span> </span>
                 </label>
                                 <label for="fancy-checkbox-primary-8" class="[ btn btn-default active ]">
-                    Primary Checkbox
+                    Аларма
                 </label>
                             </div>
                         </div>
@@ -665,7 +608,7 @@
                     <span> </span>
                 </label>
                                 <label for="fancy-checkbox-primary-9" class="[ btn btn-default active ]">
-                    Primary Checkbox
+                    Имобилайзер
                 </label>
                             </div>
                         </div>
@@ -678,7 +621,7 @@
                     <span> </span>
                 </label>
                                 <label for="fancy-checkbox-primary-10" class="[ btn btn-default active ]">
-                    Primary Checkbox
+                    Брониран
                 </label>
                             </div>
                         </div>
@@ -690,15 +633,13 @@
                     <span> </span>
                 </label>
                                 <label for="fancy-checkbox-primary-11" class="[ btn btn-default active ]">
-                    Primary Checkbox
+                    Централно заключване
                 </label>
                             </div>
                         </div>
                     </div>
-                    <div class="container">
-
-                        <hr />
-
+                    <div class="container checkboxContainer">
+                        <h4>Интериор</h4>
                         <div class="[ form-group ]">
                             <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary-12" autocomplete="off" />
                             <div class="[ btn-group ]">
@@ -707,7 +648,7 @@
                     <span> </span>
                 </label>
                                 <label for="fancy-checkbox-primary-12" class="[ btn btn-default active ]">
-                    Primary Checkbox
+                    Десен волан
                 </label>
                             </div>
                         </div>
@@ -719,7 +660,7 @@
                     <span> </span>
                 </label>
                                 <label for="fancy-checkbox-primary-13" class="[ btn btn-default active ]">
-                    Primary Checkbox
+                    Велурен салон
                 </label>
                             </div>
                         </div>
@@ -732,7 +673,7 @@
                     <span> </span>
                 </label>
                                 <label for="fancy-checkbox-primary-14" class="[ btn btn-default active ]">
-                    Primary Checkbox
+                    Кожен салон
                 </label>
                             </div>
                         </div>
@@ -744,20 +685,22 @@
                     <span> </span>
                 </label>
                                 <label for="fancy-checkbox-primary-15" class="[ btn btn-default active ]">
-                    Primary Checkbox
+                    Подгряване седалките
                 </label>
                             </div>
+
                         </div>
+                        <button id="publishFormBtn">Публикувай</button>
                     </div>
                 </div>
             </div>
+
         </div>
 
-        <footer >
+        <footer>
             <ul id="footNav">
-                <li><a href="#">Контакти</a></li>
-                <li><a href="#">За нас</a></li>
-                <li><a id="tc" href="">Общи условия</a></li>
+                <li><a id="contacts" class="footerBtns" href="">Контакти</a></li>
+                <li><a id="tc" class="footerBtns" href="">Общи условия</a></li>
                 <li><a target="_blank" href="http://www.sdi.bg/onlineInsurance/">Застраховки</a></li>
                 <li><a target="_blank" href="https://toprentacar.bg/">Rent-a-car</a></li>
             </ul>

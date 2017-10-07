@@ -1,3 +1,20 @@
+Skip to content
+Features
+Business
+Explore
+Marketplace
+Pricing
+This repository
+Search
+Sign in or Sign up
+ Watch 0  Star 0  Fork 0 HristinaKrachkova/mobileProject
+ Code  Issues 0  Pull requests 0  Projects 0 Insights 
+Branch: master Find file Copy pathmobileProject/mobileProject/assets/css/custom.css
+e21cc69  23 hours ago
+@ejechev ejechev searchResult buttons and description added
+2 contributors @ejechev @HristinaKrachkova
+RawBlameHistory     
+562 lines (470 sloc)  9.29 KB
 * {
     font-family: 'Open Sans', sans-serif;
 }
@@ -42,7 +59,7 @@ header {
 
 #logo img {
     width: 100%;
-    transition: opacity 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 #slogan {
@@ -73,6 +90,7 @@ header {
     border-radius: 5px 5px 0 0;
     border-bottom: none;
     transition: background 0.4s ease-in-out;
+    width: 120px;
 }
 
 #logoutButton, #publish {
@@ -367,7 +385,7 @@ section#news {
     vertical-align: middle;
 }
 
-#newsList>ul {
+#newsList>ul, #contactList ul {
     list-style-type: none;
 }
 
@@ -380,6 +398,7 @@ section#news {
     width: 55%;
     box-sizing: border-box;
     margin-top: 10px;
+    
 }
 
 #newsList ul {
@@ -411,6 +430,7 @@ section#news {
 .boxNewsContent h5 {
     font-size: 17px;
     margin: 0px 0 26px 0;
+    font-weight: bold;
 }
 
 #newsList {
@@ -498,7 +518,7 @@ p.copyright {
     vertical-align: middle;
 }
 
-#termsAndConditions {
+#termsAndConditions, #contactList  {
     border: 1px solid #cccccc;
     box-shadow: 0 4px 2px -2px gray;
     border-radius: 6px;
@@ -516,15 +536,16 @@ p.copyright {
     padding: 10px 0;
 }
 
-#termsAndConditions h2 {
+#termsAndConditions h2, #contactList h2 {
     padding-bottom: 20px;
 }
 
-#termsAndConditions a {
+#termsAndConditions a, {
     text-decoration: none;
     color: #555;
 }
 
+ 
 .iconNav {
     display: block;
     overflow: hidden;
@@ -534,7 +555,6 @@ p.copyright {
 .iconNav:hover, #logo img:hover {
     filter: brightness(80%);
     backface-visibility: hidden;
-    transition: all 0.4s ease-in-out;
 }
  
 #iconUser {
@@ -560,3 +580,79 @@ p.copyright {
 .container {
     width: 1025px;
 }
+
+div#mainCat {
+    width: 33%;
+    margin-right: 67%;
+}
+
+.col-xs-6.col-sm-3 {
+    width: 33%;
+}
+
+input.btn-input {
+    width: 100.5%;
+    height: 34px;
+    border: 1px solid #0093ce;
+}
+
+.checkboxContainer {
+    margin-left: -22px;
+}
+
+.row {
+    margin-top: 30px;
+}
+
+.btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
+    width: 181px;
+}
+
+#publishFormBtn  {
+    float: right;
+    background: #0093ce;
+    text-align: center;
+    padding: 19px 0;
+    color: white;
+    border: 1px solid #007db8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.4s ease-in-out;
+    font-size: 16px;
+    width: 180px;
+    margin: 20px;
+    border-radius: 5px 5px 5px 5px;
+}
+#loginAndRegisterBtn{
+    border: 1px solid #007db8;
+        background: #0093ce;
+        transition: background 0.4s ease-in-out;
+}
+#publishFormBtn:hover,#loginAndRegisterBtn:hover{
+    background: #016d98;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #0093ce !important;
+    border-color:#0093ce !important;
+     transition: all 0.4s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: #016d98;
+}
+
+.footerDivs{
+    display: none;
+}
+
+input[name=terms_and_cons], label[for=terms_and_cons] {
+    cursor: pointer;
+}
+
+button#publishBtn {
+    display: inline-block;
+    width: 120px;
+}
+

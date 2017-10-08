@@ -248,6 +248,7 @@ function getJSON() {
             }
         })
     })
+    
 }
 
     getJSON().then(function(data) {

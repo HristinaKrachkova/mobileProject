@@ -336,15 +336,15 @@
         <section id="newest" class="hiddenDiv">
             <script id="random-template" type="text/x-handlebars-template">
                 {{#each cars}}
-                <a href="#" class="item">
+                <a href=""  class="item searchButtons">
                
                 <img width = '150px' height="150px" src="{{img}}">
                 <div>
                     <div class="newest">{{mark}}  {{model}}</div>
-                    <div class="newest">{{engine}}</div>
-                    <div class="newest">{{price}}</div>
-                    <div class="newest">{{gearBox}}</div>
-                    <div class="newest">{{grad}}</div>
+                    <div class="newest">Двигател: {{engine}}</div>
+                    <div class="newest">Цена: {{price}} лв.</div>
+                    <div class="newest">Ск.кутия: {{gearBox}}</div>
+                    <div class="newest">Град: {{grad}}</div>
                 </div>
             </a> {{/each}}
             </script>

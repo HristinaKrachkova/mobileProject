@@ -29,7 +29,29 @@ $(function () {
     });
 
 
+    $('.item').on('click',function () {
+        event.preventDefault();
+     
+        changeBtn();
+        $('#searchResult').css('display', 'block')
+        $('#publish').css('display', 'none');
+        var randomImg = $(this).find('img').attr('src');
+    
+        var result = [carsList.cars.find(c => c.img == randomImg)];
+        var searchTemplate = $('#search-template').html();
+        var template = Handlebars.compile(searchTemplate);
+        var resultRandom = { results: result };
+        var result = template(resultRandom);
+             
+        $('#searchResult').html(result);
+        $('.searchResult').css('display', 'block');
+        $('.hiddenDiv').css('display', 'none');
+      
+    })
+
+
     $('#logo>img').click(function () {
-        $('.hiddenDiv').css('display', 'block') && $('#publish').css('display', 'none') && $('#searchResult').css('display', 'none') && $('.footerDivs').css('display', 'none') && $('#publishBtn').text('Публикувай')
+        $('.hiddenDiv').css('display', 'block') && $('#publish').css('display', 'none') && $('#searchResult').css('display', 'none')
+            && $('.footerDivs').css('display', 'none') && $('#publishBtn').text('Публикувай');
     })
 })

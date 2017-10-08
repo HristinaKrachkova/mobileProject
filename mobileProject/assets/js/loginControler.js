@@ -71,7 +71,6 @@ function sign_up() {
             setTimeout(function () {
                 document.querySelector('p#error').textContent = '';
             }, 2000);
-
         }
     });
 };
@@ -120,7 +119,6 @@ function sign_in() {
         }
     }, 1500);
     document.querySelector('.btn_sign').innerHTML = "SIGN IN";
-
 }
 
 
@@ -156,7 +154,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("user").style.display = "none";
         document.getElementById("userName").innerHTML = "";
     });
-
 });
 
 

@@ -8,7 +8,7 @@ $(function () {
                         $(this).text('Скрий информацията');
                         $(this).siblings('.carDescription').show('slow');
                         $(this).siblings('.buy').show('slow');
-                        $(this).siblings('.buy').on('click', function() {
+                        $(this).siblings('.buy').on('click', function () {
                             alert('kupih q')
                         })
 

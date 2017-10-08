@@ -465,6 +465,11 @@ section#newest {
     text-align: center;
     cursor: pointer;
     text-decoration: none;
+    border: 1px solid #cccccc;
+    box-shadow: 0 0 2px  grey;
+    border-radius: 3px;
+    margin: 0 2px;
+    padding: 8px 0;
 }
 
 .newest {
@@ -655,4 +660,6 @@ button#publishBtn {
     display: inline-block;
     width: 120px;
 }
-
+img {
+    border-radius: 5px;
+}

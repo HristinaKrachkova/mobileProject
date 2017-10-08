@@ -207,12 +207,10 @@ document.addEventListener('DOMContentLoaded', function () {
         var readyHTML = templateSearch({ results: result })
         document.getElementById('searchResult').innerHTML = readyHTML
         var hidden = document.getElementsByClassName("hiddenDiv");
-            document.getElementById('searchResult').style.display = "block";
-            Array.prototype.forEach.call(hidden, function (m) {
-                m.style.display = "none";
-            })
-
-        // })
+        document.getElementById('searchResult').style.display = "block";
+        Array.prototype.forEach.call(hidden, function (m) {
+            m.style.display = "none";
+        })
 
 
 
@@ -229,35 +227,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     })
 
-// logo typotiq
-// var hiddenElements = document.getElementById("wrapper"),
-//         loginForm = document.getElementById("login");
-//     loginForm.style.top = window.innerHeight;
-//     loginForm.style.left = window.innerWidth;
-
-//     document.getElementById("loginButton").addEventListener("click", function () {
-//         loginForm.style.display = "block";
-//         hiddenElements.style.display = "none";
-//     });
-//     document.getElementById("x").addEventListener("click", function () {
-//         loginForm.style.display = "none";
-//         hiddenElements.style.display = "block";
-//         iconUser.style.display = "none";
-
-
-
-
-
 }, false)
 
 
 function getJSON() {
-    return new Promise( function(resolve, reject) {
-        var xhr  = new XMLHttpRequest();
+    return new Promise(function (resolve, reject) {
+        var xhr = new XMLHttpRequest();
         xhr.open('GET', 'http://localhost/mobile/mobileProject/mobileProject/assets/js/cars.json', true);
         xhr.send(null);
-        xhr.addEventListener('load', function() {
-            if(xhr.status >=200 && xhr.status <= 299) {
+        xhr.addEventListener('load', function () {
+            if (xhr.status >= 200 && xhr.status <= 299) {
                 var cars = JSON.parse(xhr.responseText)
                 resolve(cars)
             } else {
@@ -267,8 +246,8 @@ function getJSON() {
     })
 }
 
-    getJSON().then(function(data) {
-    
+getJSON().then(function (data) {
+
     carsList.cars = Array.prototype.slice.call(data.carList, 0)
-    } )
+})
 

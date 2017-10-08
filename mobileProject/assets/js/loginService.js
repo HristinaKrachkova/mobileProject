@@ -4,7 +4,11 @@ var userList = (function () {
         this.email = email;
         this.password = password;
         this.confirmPassword = confirmPassword;
-        this.termsAndCons = termsAndCons;
+        this.likes = [];
+    }
+
+    User.prototype.addLike = function (vehicle) {
+        this.likes.push(vehicle);
     }
 
     function UserList() {
@@ -23,11 +27,12 @@ var userList = (function () {
             if (!(this._users.some(user => user.username === username))) {
                 this._users.push(new User(username, email, password, confirmPassword, termsAndCons));
                 localStorage.setItem('users', JSON.stringify(this._users));
-            } 
+            }
             return true;
         }
-
     }
+
+
 
     UserList.prototype.login = function (email, password) {
         return this._users.some(user => user.email === email &&

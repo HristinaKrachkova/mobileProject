@@ -23,11 +23,8 @@ var userList = (function () {
             if (!(this._users.some(user => user.username === username))) {
                 this._users.push(new User(username, email, password, confirmPassword, termsAndCons));
                 localStorage.setItem('users', JSON.stringify(this._users));
-            } else {
-                
-                return 'Username already exists!';
-            }
-            return 'Successful registration!';
+            } 
+            return true;
         }
 
     }

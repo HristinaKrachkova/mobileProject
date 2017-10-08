@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var templateSearch = Handlebars.compile(templateResult)
         var readyHTML = templateSearch({ results: result })
         document.getElementById('searchResult').innerHTML = readyHTML
-        var hidden = document.getElementsByClassName("hidden");
+        var hidden = document.getElementsByClassName("hiddenDiv");
             document.getElementById('searchResult').style.display = "block";
             Array.prototype.forEach.call(hidden, function (m) {
                 m.style.display = "none";
@@ -228,6 +228,23 @@ document.addEventListener('DOMContentLoaded', function () {
             searchByType();
         });
     })
+
+// logo typotiq
+// var hiddenElements = document.getElementById("wrapper"),
+//         loginForm = document.getElementById("login");
+//     loginForm.style.top = window.innerHeight;
+//     loginForm.style.left = window.innerWidth;
+
+//     document.getElementById("loginButton").addEventListener("click", function () {
+//         loginForm.style.display = "block";
+//         hiddenElements.style.display = "none";
+//     });
+//     document.getElementById("x").addEventListener("click", function () {
+//         loginForm.style.display = "none";
+//         hiddenElements.style.display = "block";
+//         iconUser.style.display = "none";
+
+
 
 
 

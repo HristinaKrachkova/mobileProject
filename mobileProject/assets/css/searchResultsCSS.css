@@ -10,7 +10,7 @@
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
-    border-bottom: 2px solid #cccccc;
+    box-shadow: 0 4px 2px -2px grey;
     padding: 23px;
 }
 
@@ -19,8 +19,54 @@
     vertical-align: middle;
     margin: 60px;
     box-sizing: border-box;
+    margin-right: 200px;
+}
+
+.carContent p {
+    font-size: 1.15em;
+    
 }
 
 #searchResult {
     margin-bottom: 20px;
+}
+
+.carDescription {
+    display: none;
+}
+
+.buy {
+    display: none;
+    float: right;
+    padding: 15px;
+    background: #0093ce;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #007db8;
+    color: white;
+    font-weight: bold;
+    width: 100px;
+    margin-left: 15px;
+    border-radius: 5px 5px 5px 5px;
+    border-bottom: none;
+    transition: background 0.4s ease-in-out;
+}
+
+.seeMore {
+    padding: 15px;
+    background: #0093ce;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #007db8;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    margin-left: 15px;
+    border-radius: 5px 5px 5px 5px;
+    border-bottom: none;
+    transition: background 0.4s ease-in-out;
+}
+
+.seeMore:hover, .buy:hover{
+    background: #016d98;
 }

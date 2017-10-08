@@ -4,6 +4,7 @@
     margin-left: 10px;
     margin-top: 10px;
     padding-top: 10px;
+    border-radius: 50px;
 }
 
 .cars {
@@ -69,4 +70,11 @@
 
 .seeMore:hover, .buy:hover{
     background: #016d98;
+}
+
+.randomImg {
+    border-radius: 20px;
+}
+.newsImg {
+ border-radius: 20px;
 }

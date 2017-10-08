@@ -656,3 +656,9 @@ button#publishBtn {
     width: 120px;
 }
 
+.pInput {
+    width: 19%;
+    DISPLAY: INLINE-BLOCK;
+    margin-left: 21px;
+}
+

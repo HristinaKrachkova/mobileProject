@@ -1,3 +1,44 @@
+var marksOptions = function(typeButton) {
+        
+        var selectButton = document.getElementById(typeButton)
+        if(selectButton.tagName == 'UL') {
+            selectButton = document.querySelector('#pType li.selected')
+        }
+        var options = carsList.cars.filter(function (car) {
+            if (selectButton.value == '1') {
+                return car.type == 'car'
+            }
+            if (selectButton.value == '2') {
+                return car.type == 'jeep'
+            }
+            if (selectButton.value == '3') {
+                return car.type == 'bus'
+            }
+            if (selectButton.value == '4') {
+                return car.type == 'truck'
+            }
+            if (selectButton.value == '5') {
+                return car.type == 'bike'
+            }
+        })
+
+        var marks = options.slice()
+        for (var index = 0; index < options.length; index++) {
+            for (var num = 0; num < marks.length; num++) {
+                if (num > index) {
+                    if (marks[num] == null || (options[index].mark.toUpperCase() === marks[num].mark.toUpperCase())) {
+                        marks[num] = null;
+
+                    }
+                }
+            }
+        }
+        marks = marks.filter(function (x) {
+            return x !== null
+        })
+        return marks
+    }
+
 document.addEventListener('DOMContentLoaded', function () {
     function changeIcon() {
         var e = document.getElementById('vType').value;
@@ -63,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
     }
+    
     function searchByType() {
 
         var selectButton = document.getElementById('vType')
@@ -84,38 +126,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             return 0
         })
-        var options = carsList.cars.filter(function (car) {
-            if (selectButton.value == '1') {
-                return car.type == 'car'
-            }
-            if (selectButton.value == '2') {
-                return car.type == 'jeep'
-            }
-            if (selectButton.value == '3') {
-                return car.type == 'bus'
-            }
-            if (selectButton.value == '4') {
-                return car.type == 'truck'
-            }
-            if (selectButton.value == '5') {
-                return car.type == 'bike'
-            }
-        })
-
-        var marks = options.slice()
-        for (var index = 0; index < options.length; index++) {
-            for (var num = 0; num < marks.length; num++) {
-                if (num > index) {
-                    if (marks[num] == null || (options[index].mark.toUpperCase() === marks[num].mark.toUpperCase())) {
-                        marks[num] = null;
-
-                    }
-                }
-            }
-        }
-        marks = marks.filter(function (x) {
-            return x !== null
-        })
+        var marks = marksOptions('vType')
+        
 
         marks.forEach(function (x) {
             var brand = document.createElement('option')
@@ -244,6 +256,7 @@ function getJSON() {
             }
         })
     })
+    
 }
 
 getJSON().then(function (data) {

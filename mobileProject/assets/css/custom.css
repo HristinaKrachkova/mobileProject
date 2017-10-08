@@ -660,6 +660,16 @@ button#publishBtn {
     display: inline-block;
     width: 120px;
 }
+<<<<<<< HEAD
 img {
     border-radius: 5px;
 }
+=======
+
+.pInput {
+    width: 19%;
+    DISPLAY: INLINE-BLOCK;
+    margin-left: 21px;
+}
+
+>>>>>>> e92ee4b729bb63704f9eb347bf52ebcd08d4b610

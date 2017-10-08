@@ -25,6 +25,7 @@
     <script src="assets/js/randomCars.js"></script>
     <script src="assets/js/slide.js"></script>
     <script src="assets/js/searchAnimation.js"></script>
+    <script src="assets/js/publishControll.js"></script>
     <script src="assets/js/rightMenu.js"></script>
     <script src="assets/js/registerCarControler.js"></script>
 
@@ -310,7 +311,7 @@
             <script id="news-template" type="text/x-handlebars-template">
                 {{#each news}}
                 <div class="slides">
-                    <img src="{{image}}">
+                    <img class = 'newsImg' src="{{image}}">
                     <div class="boxNewsContent">
                         <h5>{{title}}</h5>
                         <p> {{text}} </p>
@@ -338,7 +339,7 @@
                 {{#each cars}}
                 <a href=""  class="item searchButtons">
                
-                <img width = '150px' height="150px" src="{{img}}">
+                <img width = '150px' height="150px" class = 'randomImg' src="{{img}}">
                 <div>
                     <div class="newest">{{mark}}  {{model}}</div>
                     <div class="newest">Двигател: {{engine}}</div>
@@ -401,12 +402,13 @@
                 <input type="hidden" class="btn-select-input" id="" name="" value="" />
                 <span class="btn-select-value">Основна категория</span>
                 <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul>
-                    <li>Автомобили</li>
-                    <li>Джипове</li>
-                    <li>Бусове</li>
-                    <li>Камиони</li>
-                    <li>Мотоциклети</li>
+                <ul id = 'pType'>
+                    <li>Основна категория</li>
+                    <li type = 'car' value = '1'>Автомобили</li>
+                    <li type = 'jeep' value = '2'>Джипове</li>
+                    <li type = 'bus' value = '3'>Бусове</li>
+                    <li type = 'truck'value = '4'>Камиони</li>
+                    <li type = 'bike' value = '5'>Мотоциклети</li>
                 </ul>
             </a>
                         </pre>
@@ -417,11 +419,8 @@
                 <input type="hidden" class="btn-select-input" id="" name="" value="" />
                 <span class="btn-select-value">Марка</span>
                 <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul>
-                    <li>Option 1</li>
-                    <li>Option 2</li>
-                    <li>Option 3</li>
-                    <li>Option 4</li>
+                <ul id = 'pBrand'>
+                    
                 </ul>
             </a>
                         </pre>
@@ -432,11 +431,8 @@
                 <input type="hidden" class="btn-select-input" id="" name="" value="" />
                 <span class="btn-select-value">Модел</span>
                 <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul>
-                    <li>Option 1</li>
-                    <li>Option 2</li>
-                    <li>Option 3</li>
-                    <li>Option 4</li>
+                <ul id = 'pModel'>
+                   
                 </ul>
             </a>
                         </pre>
@@ -447,10 +443,10 @@
                 <input type="hidden" class="btn-select-input" id="" name="" value="" />
                 <span class="btn-select-value">Тип двигател</span>
                 <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul>
-                    <li>Бензин</li>
-                    <li>Дизел</li>
-                    <li>Електрически</li>
+                <ul id = 'pEngine'>
+                    <li value="gas">Бензин</li>
+                    <li value="disel">Дизел</li>
+                    <li value="electric">Електрически</li>
                 </ul>
             </a>
                         </pre>
@@ -461,20 +457,24 @@
                 <input type="hidden" class="btn-select-input" id="" name="" value="" />
                 <span class="btn-select-value">Скоростна кутия</span>
                 <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul>
-                    <li>Ръчна</li>
-                    <li>Автоматична</li>
-                    <li>Полуавтоматична</li>
+                <ul id = 'pGearBox'>
+                    <li value = 'manual'>Ръчна</li>
+                    <li value = 'automatic'>Автоматична</li>
+                   
                 </ul>
             </a>
                         </pre>
                     </div>
-                    <div class="col-xs-6 col-sm-3">
-                        <input type="text" class="btn-input" placeholder="&nbsp  Цена" id="" name="" value="" />
+                    <div class="pInput">
+                        <input type="text" class="btn-input" placeholder="&nbsp  Цена" id="pPrice" name="" value="" />
                     </div>
-                    <div class="col-xs-6 col-sm-3">
-                        <input type="text" class="btn-input" placeholder="&nbsp  Година" id="" name="" value="" />
+                    <div class="pInput">
+                        <input type="text" class="btn-input" placeholder="&nbsp  Година" id="pYear" name="" value="" />
                     </div>
+                     <div class="pInput">
+                        <input type="text" class="btn-input" placeholder="&nbsp  URL" id="pImg" name="" value="" />
+                    </div>
+                   
 
                 </div>
             </div>

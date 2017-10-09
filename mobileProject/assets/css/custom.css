@@ -666,3 +666,7 @@ img {
 .marginTopClass {
     margin-top: 30px;
 }
+
+#userName {
+    cursor: pointer;
+}

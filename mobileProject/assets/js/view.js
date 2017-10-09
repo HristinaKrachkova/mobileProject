@@ -177,17 +177,10 @@ document.addEventListener('DOMContentLoaded', function() {
         var engine = document.getElementById('vEngine').value
         var gearBox = document.getElementById('vGear').value
 
-<<<<<<< HEAD
         
         
-        if ($('#vType').children('[selected = selected]') !== 'Всички') {
+        if ($('#vType').children('[selected = selected]').html() != 'Всички') {
             result = carsList.cars.filter(function (x) {
-=======
-
-
-        if (type != 0)
-            result = carsList.cars.filter(function(x) {
->>>>>>> 8353067ab563065ac8662575e992aee299dea2e9
                 return x.type.toUpperCase() == type.toUpperCase()
             })
         if (mark !== 'Всички') {

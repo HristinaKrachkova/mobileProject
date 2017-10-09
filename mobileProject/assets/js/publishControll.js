@@ -1,14 +1,8 @@
 $(function() {
 
-<<<<<<< HEAD
     $('#pType').on('click', function (e) {
 
         $(e).ready(function () {
-=======
-    $('#pType').on('click', function(e) {
-
-        $(e).ready(function() {
->>>>>>> 8353067ab563065ac8662575e992aee299dea2e9
             $('#pBrand').html('')
             $('#pModel').html('')
             $('#pPrice').val($('#pPrice').attr('placeholder'))
@@ -71,26 +65,26 @@ $(function() {
         event.preventDefault();
         $('#pType li.selected').attr('type')
         var user = $('#userName').html();
-<<<<<<< HEAD
         if(user != "") {
         carsList.publishCar($('#pBrand li.selected').html(),$('#pModel li.selected').html(), $('#pType li.selected').attr('type'),$('#pYear').val(),  $('#pEngine li.selected').attr('value'),$('#pGearBox li.selected').attr('value'), $('#pImg').val(),$('#pPrice').val()   )
-        } else {
+        document.getElementById('searchResult').innerHTML = ''
+        var p = document.createElement('p');
+        p.textContent = 'Честито ! Вие публикувахте вашата обява. Може да я намерите чрез формата за търсене'
+        p.setAttribute('class', 'nothingP')
+        document.getElementById('searchResult').appendChild(p);
+        document.getElementById('searchResult').style.display = "block";
+        $('#publish').css('display', 'none')
+        
+    } else {
+            document.getElementById('searchResult').innerHTML = ''
             var p = document.createElement('p');
-            p.textContent = 'Изберете тип на превозното средство'
+            p.textContent = 'Влезте в профила си!'
             p.setAttribute('class', 'nothingP')
             document.getElementById('searchResult').appendChild(p);
             document.getElementById('searchResult').style.display = "block";
-            $('.hiddenDiv').css('display', 'none')
+            $('#publish').css('display', 'none')
         }    
 })
-=======
-        if (user !== "") {
-            carsList.publishCar($('#pBrand li.selected').html(), $('#pModel li.selected').html(), $('#pType li.selected').attr('type'), $('#pYear').val(), $('#pEngine li.selected').attr('value'), $('#pGearBox li.selected').attr('value'), $('#pImg').val(), $('#pPrice').val())
-        } else {
-            alert('logni se')
-        }
-    })
->>>>>>> 8353067ab563065ac8662575e992aee299dea2e9
 
 
-}) })
+}) 

@@ -64,10 +64,15 @@ $(function () {
         event.preventDefault();
         $('#pType li.selected').attr('type')
         var user = $('#userName').html();
-        if(user !== "") {
+        if(user != "") {
         carsList.publishCar($('#pBrand li.selected').html(),$('#pModel li.selected').html(), $('#pType li.selected').attr('type'),$('#pYear').val(),  $('#pEngine li.selected').attr('value'),$('#pGearBox li.selected').attr('value'), $('#pImg').val(),$('#pPrice').val()   )
         } else {
-            alert('logni se')
+            var p = document.createElement('p');
+            p.textContent = 'Изберете тип на превозното средство'
+            p.setAttribute('class', 'nothingP')
+            document.getElementById('searchResult').appendChild(p);
+            document.getElementById('searchResult').style.display = "block";
+            $('.hiddenDiv').css('display', 'none')
         }    
 })
 

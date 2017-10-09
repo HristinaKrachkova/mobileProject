@@ -176,9 +176,9 @@ document.addEventListener('DOMContentLoaded', function () {
         var engine = document.getElementById('vEngine').value
         var gearBox = document.getElementById('vGear').value
 
-
-
-        if (type != 0)
+        
+        
+        if ($('#vType').children('[selected = selected]') !== 'Всички') {
             result = carsList.cars.filter(function (x) {
                 return x.type.toUpperCase() == type.toUpperCase()
             })
@@ -222,7 +222,15 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('searchResult').style.display = "block";
         Array.prototype.forEach.call(hidden, function (m) {
             m.style.display = "none";
-        })
+        }) } else {
+            document.getElementById('searchResult').innerHTML = ''
+            var p = document.createElement('p');
+            p.textContent = 'Изберете тип на превозното средство'
+            p.setAttribute('class', 'nothingP')
+            document.getElementById('searchResult').appendChild(p);
+            document.getElementById('searchResult').style.display = "block";
+            
+        }
 
 
 

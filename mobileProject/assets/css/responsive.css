@@ -68,6 +68,13 @@
     }
 }
 
+@media screen and (max-width: 850px) {  
+    .carContent {
+        margin: 50px;
+    }
+}
+
+
 @media screen and (max-width: 835px) {
     
     #newest .item {
@@ -119,8 +126,6 @@
     width: 12px;
     display: none
     }
-
-
 }
     
 @media screen and (max-width: 770px) {
@@ -191,6 +196,12 @@
     width: 100px;
     height: 100px;
     }
+    .carContent {
+    margin: 30px;
+    }
+    .carContent p {
+    font-size: 13px;
+}
 }
 
 @media screen and (max-width: 680px) {
@@ -258,6 +269,16 @@
     }
     #iconNav ul li {
         margin: 0 10px;
+    }
+    .cars {
+    text-align: center;
+    
+    }
+    .imgResults {
+        float: none;
+    }
+    button.seeMore {
+    float: left;
     }
 }
 
@@ -338,6 +359,11 @@
    #news{
        display: none;
    }
+   button.seeMore {
+    float: left;
+    width: 38%;
+    font-size: 12px;
+    }
    
 }
 
@@ -364,6 +390,9 @@
     #footNav>li>a {
     font-size: 12px;
     }
+   button.seeMore {
+    width: 150px;
+    }
 }
 
 @media screen and (max-width: 380px) {
@@ -383,5 +412,11 @@
     }
     #footNav>li>a {
         font-size: 10px;
+    }
+    #footNav>li {
+    width: 35%;
+    }
+    #footNav>li>a {
+    font-size: 12px;
     }
 }

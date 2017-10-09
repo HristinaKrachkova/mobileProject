@@ -36,21 +36,16 @@
     display: none;
 }
 
-.buy {
-    display: none;
+.likeBtn {
     float: right;
-    padding: 15px;
-    background: #0093ce;
     border: none;
-    cursor: pointer;
-    border: 1px solid #007db8;
     color: white;
     font-weight: bold;
-    width: 100px;
-    margin-left: 15px;
     border-radius: 5px 5px 5px 5px;
     border-bottom: none;
     transition: background 0.4s ease-in-out;
+    display: none;
+     margin: 10px 20px 0 -60px;
 }
 
 .seeMore {
@@ -86,6 +81,5 @@
 
 }
 .likeBtn:hover {
-    filter: brightness(75%);
-    
+    filter: brightness(75%); 
 }

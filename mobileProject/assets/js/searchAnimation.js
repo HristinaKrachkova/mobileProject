@@ -4,29 +4,14 @@ $(function () {
         if ($(this).text() == 'Виж повече') {
             $(this).text('Скрий информацията');
             $(this).siblings('.carDescription').show('slow');
-            $(this).siblings('.buy').show('slow');
+            $(this).siblings('.likeBtn').show('slow');
 
         } else {
             $(this).text('Виж повече')
             $(this).siblings('.carDescription').hide('slow')
-            $(this).siblings('.buy').hide('slow')
+            $(this).siblings('.likeBtn').hide('slow')
         }
     })
-
-
-
-
-
-    $(document).on('click', '.cars .buy', function () {
-        alert('kupih q')
-
-    })
-
-
-
-
-
-
 
     $(document).on('click', '.cars .likeBtn', function (e) {
         event.preventDefault();

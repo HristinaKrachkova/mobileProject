@@ -28,8 +28,12 @@ $(function () {
             })
 
             if (user) {
-                user.likes.push(c)
-                localStorage.setItem('users', JSON.stringify(users));
+                var imaLi = user.likes.some(x => x.img === c.img)
+                console.log(imaLi)
+                if (!imaLi) {
+                    user.likes.push(c)
+                    localStorage.setItem('users', JSON.stringify(users));
+                }
             }
         })
 

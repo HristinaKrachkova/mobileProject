@@ -234,6 +234,21 @@
     }
 }
 
+@media screen and (min-width: 680px) {
+    .col-sm-3.mainInputs {
+        display: inline-block;
+        width: 46%;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .col-sm-3.mainInputs {
+        display: block;
+        width: 50%;
+    }
+}
+
 @media screen and (max-width: 615px) {
     #logo {
         max-width: 280px;
@@ -265,6 +280,22 @@
     #iconNav ul li {
         margin: 0 20px;
         display: inline-block;
+    }
+    #mainCat {
+        display: block;
+        width: 80%;
+    }
+    .col-xs-4 {
+        width: 30%;
+        margin-left: 24px;
+    }
+    .col-xs-4 {
+        width: 40%;
+        float: none;
+        margin-bottom: 17px;
+    }
+    .row {
+        margin: 0 !important;
     }
 }
 

@@ -33,6 +33,15 @@ $(function () {
                 var e = document.getElementById("pBrand");
                 var modelsOfE = $('#pBrand li.selected').html();
                 return x.mark == modelsOfE && x.type == $('#pType li.selected').attr('type');
+            })  
+            models.sort(function(a,b) {
+                if(a.model > b.model) {
+                    return 1;
+                }
+                if(a.model < b.model) {
+                    return -1;
+                }
+                return 0;
             })
                 var usedModels = []
                 models.forEach(function(car) {
@@ -55,8 +64,13 @@ $(function () {
     $('#publishFormBtn').on('click', function(e) {
         event.preventDefault();
         $('#pType li.selected').attr('type')
+        var user = $('#userName').html();
+        if(user !== "") {
         carsList.publishCar($('#pBrand li.selected').html(),$('#pModel li.selected').html(), $('#pType li.selected').attr('type'),$('#pYear').val(),  $('#pEngine li.selected').attr('value'),$('#pGearBox li.selected').attr('value'), $('#pImg').val(),$('#pPrice').val()   )
-    })
+        } else {
+            alert('logni se')
+        }    
+})
 
 
 })

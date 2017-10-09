@@ -34,6 +34,8 @@ $(function () {
                     user.likes.push(c)
                     localStorage.setItem('users', JSON.stringify(users));
                 }
+            } else {
+                alert('Log in !')
             }
         })
 

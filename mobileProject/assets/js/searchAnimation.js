@@ -1,5 +1,5 @@
-$(function () {
-    $(document).on('click', '.cars .seeMore', function () {
+$(function() {
+    $(document).on('click', '.cars .seeMore', function() {
         event.preventDefault()
         if ($(this).text() == 'Виж повече') {
             $(this).text('Скрий информацията');
@@ -13,17 +13,17 @@ $(function () {
         }
     })
 
-    $(document).on('click', '.cars .likeBtn', function (e) {
+    $(document).on('click', '.cars .likeBtn', function(e) {
         event.preventDefault();
-        $(e).ready(function () {
+        $(e).ready(function() {
             var users = JSON.parse(localStorage.getItem('users'))
             var likedCar = $(e.target).parent().find('img').attr('src')
-            var c = carsList.cars.find(function (x) {
+            var c = carsList.cars.find(function(x) {
                 return x.img == likedCar
             })
             console.log(likedCar)
             console.log(c)
-            var user = users.find(function (user) {
+            var user = users.find(function(user) {
                 return user.username == $('#userName').html()
             })
 

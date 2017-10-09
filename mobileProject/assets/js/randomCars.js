@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
     var randomTemplate = $("#random-template").html();
     var template = Handlebars.compile(randomTemplate);
     var cars = []

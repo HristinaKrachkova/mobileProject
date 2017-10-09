@@ -68,17 +68,15 @@
     }
 }
 
-@media screen and (max-width: 850px) {  
+@media screen and (max-width: 850px) {
     .carContent {
         margin: 50px;
     }
 }
 
-
 @media screen and (max-width: 835px) {
-    
     #newest .item {
-    width: 17%;
+        width: 17%;
     }
     .randomImg {
         border-radius: 20px;
@@ -86,122 +84,127 @@
         height: 120px;
     }
     .col-xs-3 {
-    width: 34%;
+        width: 34%;
     }
     .col-xs-4 {
-    width: 30%;
+        width: 30%;
     }
     .row {
         margin: auto;
     }
     .mainInputs {
-    display: inline-block;
-    width: 45%;
+        display: inline-block;
+        width: 45%;
     }
     #displayNews img {
-    width: 180px;
-    height: 180px;
+        width: 180px;
+        height: 180px;
     }
     .btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
-    width: 10px;
-     text-align: center;
-    display: inline-block;
-    padding-right: 20px;
+        width: 10px;
+        text-align: center;
+        display: inline-block;
+        padding-right: 20px;
     }
     .form-group input[type="checkbox"]:checked+.btn-group>label span:first-child {
-    display: inline-block;
-    padding-right: 10px;
-    font-size: 10px;
-    text-align: center;
+        display: inline-block;
+        padding-right: 10px;
+        font-size: 10px;
+        text-align: center;
     }
-   .btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
-    width: 134px;
-    font-size: 12px;
-    margin-right: 40px;
+    .btn-group>.btn:last-child:not(:first-child),
+    .btn-group>.dropdown-toggle:not(:first-child) {
+        width: 134px;
+        font-size: 12px;
+        margin-right: 40px;
     }
-    .h4, h4 {
+    .h4,
+    h4 {
         margin-right: 46px;
     }
-    #iconUser, span#userName {
-    width: 12px;
-    display: none
+    #iconUser,
+    span#userName {
+        width: 12px;
+        display: none
     }
 }
-    
+
 @media screen and (max-width: 770px) {
     #displayNews img {
-    width: 200px;
-    height: 200px;
-    display: block;
-    margin-left: 45%
+        width: 200px;
+        height: 200px;
+        display: block;
+        margin-left: 45%
     }
     .newest {
         color: #444;
         font-size: 12px;
     }
     #displayNews {
-    width: 49%;
+        width: 49%;
     }
     #newsList {
-    width: 40%;
+        width: 40%;
     }
     .btn-select {
         width: 70%;
     }
     .col-xs-4 {
-    width: 26%;
+        width: 26%;
     }
     .mainInputs {
         margin-right: -100px;
     }
     h1 {
-    margin-bottom: 20px;
-    margin-right: 118px;
+        margin-bottom: 20px;
+        margin-right: 118px;
     }
     .checkboxContainer {
-    width: 36%;
+        width: 36%;
     }
-    .btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
+    .btn-group>.btn:last-child:not(:first-child),
+    .btn-group>.dropdown-toggle:not(:first-child) {
         width: 170px;
         font-size: 13px;
         margin-right: 80px;
     }
-    .h4, h4 {
-    margin-right: 76px;
+    .h4,
+    h4 {
+        margin-right: 76px;
     }
     #publishFormBtn {
-    margin-right: 157px;
+        margin-right: 157px;
     }
     #loginBtn button {
-    margin-left: 30px;
-    width: 90px;
-    height: 40px;
-    padding: 0;
-    margin-right: -26px;
-    }   
+        margin-left: 30px;
+        width: 90px;
+        height: 40px;
+        padding: 0;
+        margin-right: -26px;
+    }
     .boxNewsContent h5 {
-    font-size: 15px;
+        font-size: 15px;
     }
     p {
-    font-size: 12px;
+        font-size: 12px;
     }
     #displayNews img {
-    width: 140px;
-    height: 140px;
+        width: 140px;
+        height: 140px;
     }
     h2 {
         font-size: 25px;
     }
     .randomImg {
-    width: 100px;
-    height: 100px;
+        width: 100px;
+        height: 100px;
     }
     .carContent {
-    margin: 30px;
+        margin: 30px;
     }
     .carContent p {
-    font-size: 13px;
-}
+        font-size: 13px;
+    }
 }
 
 @media screen and (max-width: 680px) {
@@ -210,121 +213,116 @@
         height: 130px;
     }
     #newsList {
-    width: 100%;
+        width: 100%;
     }
     .boxNewsContent {
-    display: none;
+        display: none;
     }
     #newsList {
-    border-left: 0px;
+        border-left: 0px;
         text-align: center;
     }
     #displayNews {
         width: 85%;
     }
     #newest .item {
-    width: 18.5%;
+        width: 18.5%;
     }
 }
-
 
 @media screen and (max-width: 615px) {
     #logo {
-    max-width: 280px;
+        max-width: 280px;
     }
     header {
-    height: 140px;
+        height: 140px;
     }
     #iconNav ul {
-    width: 350px;
+        width: 350px;
     }
     .newest {
-    color: #444;
-    font-size: 10px;
+        color: #444;
+        font-size: 10px;
     }
     .randomImg {
-    width: 90px;
-    height: 90px;
+        width: 90px;
+        height: 90px;
     }
     #news h2 {
-    margin-bottom: 20px;
+        margin-bottom: 20px;
     }
     #iconNav ul li a {
-    width: 60px;
-    height: 40px;
+        width: 60px;
+        height: 40px;
     }
     #iconNav ul {
-    width: 530px;
+        width: 530px;
     }
     #iconNav ul li {
-    margin: 0 20px;
-    display: inline-block;
+        margin: 0 20px;
+        display: inline-block;
     }
 }
 
-
-@media screen and (max-width: 530px) {   
-   #iconNav ul {
-    width: 450px;
+@media screen and (max-width: 530px) {
+    #iconNav ul {
+        width: 450px;
     }
     #iconNav ul li {
         margin: 0 10px;
     }
     .cars {
-    text-align: center;
-    
+        text-align: center;
     }
     .imgResults {
         float: none;
     }
     button.seeMore {
-    float: left;
+        float: left;
     }
 }
 
-
-@media screen and (max-width: 500px) {   
+@media screen and (max-width: 500px) {
     #slogan {
         font-size: 0.95em;
     }
     #loginBtn button {
-    width: 65px;
-    font-size: 9px;
-    height: 30px;
+        width: 65px;
+        font-size: 9px;
+        height: 30px;
     }
-   #displayNews {
-    width: 76%;
-}
+    #displayNews {
+        width: 76%;
+    }
     #newest .item {
-    width: 30%;
-    margin-top: 10px;
+        width: 30%;
+        margin-top: 10px;
     }
     .newest {
-    font-size: 12px;
+        font-size: 12px;
     }
     #footNav>li {
-    display: inline-block;
-    margin: 0 10px;
+        display: inline-block;
+        margin: 0 10px;
     }
     #footNav>li>a {
-    font-size: 14px;
+        font-size: 14px;
     }
     #iconNav ul li a {
-    width: 70px;
-    height: 40px;
+        width: 70px;
+        height: 40px;
     }
     #iconNav ul li {
         margin: 0 5px;
     }
 }
 
-
 @media screen and (max-width: 450px) {
     header {
-    height: 110px;
+        height: 110px;
     }
     #logo img {
-    width: 63%;
+        width: 63%;
     }
     #bigCatMenu ul li a {
         width: 115px;
@@ -338,42 +336,36 @@
         margin-top: -15px;
     }
     #iconNav ul li a {
-    width: 60px;
-    height: 35px;
+        width: 60px;
+        height: 35px;
     }
-   
     #displayNews img {
-    margin-left: 120px;
+        margin-left: 120px;
     }
     #iconNav ul {
-    width: 365px;
+        width: 365px;
     }
     #displayNews img {
         margin-left: 119px;
     }
 }
 
-
-
 @media screen and (max-width: 440px) {
-   #news{
-       display: none;
-   }
-   button.seeMore {
-    float: left;
-    width: 38%;
-    font-size: 12px;
+    #news {
+        display: none;
     }
-   
+    button.seeMore {
+        float: left;
+        width: 38%;
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 410px) {
-   #news{
-       display: none;
-   } 
+    #news {
+        display: none;
+    }
 }
-
-
 
 @media screen and (max-width: 400px) {
     #bigCatMenu ul {
@@ -384,14 +376,14 @@
         height: 100px;
     }
     #iconNav ul li a {
-    width: 50px;
-    height: 30px;
+        width: 50px;
+        height: 30px;
     }
     #footNav>li>a {
-    font-size: 12px;
+        font-size: 12px;
     }
-   button.seeMore {
-    width: 150px;
+    button.seeMore {
+        width: 150px;
     }
 }
 
@@ -406,17 +398,17 @@
         width: 100%;
     }
     #loginBtn button {
-    width: 55px;
-    font-size: 8px;
-    height: 22px;
+        width: 55px;
+        font-size: 8px;
+        height: 22px;
     }
     #footNav>li>a {
         font-size: 10px;
     }
     #footNav>li {
-    width: 35%;
+        width: 35%;
     }
     #footNav>li>a {
-    font-size: 12px;
+        font-size: 12px;
     }
 }

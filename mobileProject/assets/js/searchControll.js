@@ -247,6 +247,12 @@ document.addEventListener('DOMContentLoaded', function() {
             searchByType();
         });
     })
+    $('#vPrice').on('keyup',function(){
+        if(isNaN($('#vPrice').val())) { 
+            $('#vPrice').css('color', 'red')
+        } else {
+            $('#vPrice').css('color', 'black')
+        }})
 
 }, false)
 

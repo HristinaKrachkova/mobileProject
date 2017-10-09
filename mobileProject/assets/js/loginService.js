@@ -10,7 +10,7 @@ var userList = (function () {
     User.prototype.addLike = function (vehicle) {
         this.likes.push(vehicle);
     }
-
+    
     function UserList() {
         if (localStorage.getItem('users') != null)
             this._users = JSON.parse(localStorage.getItem('users'));

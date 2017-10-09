@@ -78,3 +78,14 @@
 .newsImg {
  border-radius: 20px;
 }
+.likeBtn {
+    width: 30px;
+    margin-left: -60px;
+    margin-right: 20px;
+    cursor: pointer;
+
+}
+.likeBtn:hover {
+    filter: brightness(75%);
+    
+}

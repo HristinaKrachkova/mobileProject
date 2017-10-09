@@ -45,6 +45,13 @@ $(function() {
         buttonResult(results)
 
     })
+    $('#cabrio').on('click', function() {
+        event.preventDefault() 
+        var results = carsList.cars.filter(function(car) {
+            return car.mark === 'Golf'
+        })
+        buttonResult(results)
+    })
     $('#classicCar').on('click', function() {
         event.preventDefault();
         var results = carsList.cars.filter(function(car) {

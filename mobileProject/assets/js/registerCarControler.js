@@ -44,7 +44,6 @@ $(function () {
         var result = template(resultRandom);
              
         $('#searchResult').html(result);
-        $('.searchResult').css('display', 'block');
         $('.hiddenDiv').css('display', 'none');
       
     })

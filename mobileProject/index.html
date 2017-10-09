@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/login.css">
     <link rel="stylesheet" href="assets/css/searchResultsCSS.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
@@ -28,6 +29,7 @@
     <script src="assets/js/publishControll.js"></script>
     <script src="assets/js/rightMenu.js"></script>
     <script src="assets/js/registerCarControler.js"></script>
+     <script src="assets/js/userProfile.js"></script>
 
 
 
@@ -57,7 +59,9 @@
                         <input type="password" class="input_form_sign d_block  active_inp" placeholder="PASSWORD" name="pass_us" />
                         <input type="password" class="input_form_sign" placeholder="CONFIRM PASSWORD" name="conf_pass_us" />
                         <div class="terms_and_cons d_none">
-                            <p><input type="checkbox" name="terms_and_cons" /><a id="termsAndCons" href=""> <label   for="terms_and_cons">Accept  Terms and Conditions.</label></p></a>
+                            <p><input type="checkbox" name="terms_and_cons" />
+                                <a id="termsAndCons" href=""> <label for="terms_and_cons">Accept  Terms and Conditions.</label></p>
+                            </a>
                         </div>
                     </div>
                     <div class="cont_btn" "login">
@@ -311,7 +315,7 @@
             <script id="news-template" type="text/x-handlebars-template">
                 {{#each news}}
                 <div class="slides">
-                    <img class = 'newsImg' src="{{image}}">
+                    <img class='newsImg' src="{{image}}">
                     <div class="boxNewsContent">
                         <h5>{{title}}</h5>
                         <p> {{text}} </p>
@@ -337,17 +341,17 @@
         <section id="newest" class="hiddenDiv">
             <script id="random-template" type="text/x-handlebars-template">
                 {{#each cars}}
-                <a href=""  class="item searchButtons">
-               
-                <img width = '150px' height="150px" class = 'randomImg' src="{{img}}">
-                <div>
-                    <div class="newest">{{mark}}  {{model}}</div>
-                    <div class="newest">Двигател: {{engine}}</div>
-                    <div class="newest">Цена: {{price}} лв.</div>
-                    <div class="newest">Ск.кутия: {{gearBox}}</div>
-                    <div class="newest">Град: {{grad}}</div>
-                </div>
-            </a> {{/each}}
+                <a href="" class="item searchButtons">
+
+                    <img width='150px' height="150px" class='randomImg' src="{{img}}">
+                    <div>
+                        <div class="newest">{{mark}} {{model}}</div>
+                        <div class="newest">Двигател: {{engine}}</div>
+                        <div class="newest">Цена: {{price}} лв.</div>
+                        <div class="newest">Ск.кутия: {{gearBox}}</div>
+                        <div class="newest">Град: {{grad}}</div>
+                    </div>
+                </a> {{/each}}
             </script>
         </section>
 
@@ -386,7 +390,7 @@
                         продавам цена а разкошна кола. Разрешени са всякакви тестове. We speak English and Russian." </p>
                 </div>
                 <button class="seeMore">Виж повече</button>
-                <button class='buy'>Купи</button>
+                <img class='likeBtn' src="assets/img/likeBtn.png" alt="">
             </div>
 
             {{/each}}
@@ -396,91 +400,98 @@
             <div class="container">
                 <h1>Публикуване на безплатна обява</h1>
                 <div class="row">
-                    <div id="mainCat" class="col-xs-6 col-sm-3">
+                    <div class="row">
+                        <div class="col-xs-12 col-xs-6 mainInputs">
+                            <a id="mainCat" class="btn btn-primary btn-select btn-select-light">
+                                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                                <span class="btn-select-value">Основна категория</span>
+                                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                                <ul id='pType'>
+                                    <li>Основна категория</li>
+                                    <li type='car' value='1'>Автомобили</li>
+                                    <li type='jeep' value='2'>Джипове</li>
+                                    <li type='bus' value='3'>Бусове</li>
+                                    <li type='truck' value='4'>Камиони</li>
+                                    <li type='bike' value='5'>Мотоциклети</li>
+                                </ul>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 mainInputs">
+                            <a class="btn btn-primary btn-select btn-select-light">
+                                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                                <span class="btn-select-value">Марка</span>
+                                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                                <ul id='pBrand'>
 
-                        <a class="btn btn-primary btn-select btn-select-light">
-                <input type="hidden" class="btn-select-input" id="" name="" value="" />
-                <span class="btn-select-value">Основна категория</span>
-                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul id = 'pType'>
-                    <li>Основна категория</li>
-                    <li type = 'car' value = '1'>Автомобили</li>
-                    <li type = 'jeep' value = '2'>Джипове</li>
-                    <li type = 'bus' value = '3'>Бусове</li>
-                    <li type = 'truck'value = '4'>Камиони</li>
-                    <li type = 'bike' value = '5'>Мотоциклети</li>
-                </ul>
-            </a>
-                        </pre>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="col-xs-3 mainInputs">
+                            <a class="btn btn-primary btn-select btn-select-light">
+                                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                                <span class="btn-select-value">Модел</span>
+                                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                                <ul id='pModel'>
 
-                        <a class="btn btn-primary btn-select btn-select-light">
-                <input type="hidden" class="btn-select-input" id="" name="" value="" />
-                <span class="btn-select-value">Марка</span>
-                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul id = 'pBrand'>
-                    
-                </ul>
-            </a>
-                        </pre>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="col-xs-3 mainInputs">
+                            <a class="btn btn-primary btn-select btn-select-light">
+                                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                                <span class="btn-select-value">Тип двигател</span>
+                                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                                <ul id='pEngine'>
+                                    <li value="gas">Бензин</li>
+                                    <li value="disel">Дизел</li>
+                                    <li value="electric">Електрически</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="col-xs-3 mainInputs">
+                            <a class="btn btn-primary btn-select btn-select-light">
+                                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                                <span class="btn-select-value">Скоростна кутия</span>
+                                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                                <ul id='pGearBox'>
+                                    <li value='manual'>Ръчна</li>
+                                    <li value='automatic'>Автоматична</li>
 
-                        <a class="btn btn-primary btn-select btn-select-light">
-                <input type="hidden" class="btn-select-input" id="" name="" value="" />
-                <span class="btn-select-value">Модел</span>
-                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul id = 'pModel'>
-                   
-                </ul>
-            </a>
-                        </pre>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
+                                </ul>
+                            </a>
+                        </div>
 
-                        <a class="btn btn-primary btn-select btn-select-light">
-                <input type="hidden" class="btn-select-input" id="" name="" value="" />
-                <span class="btn-select-value">Тип двигател</span>
-                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul id = 'pEngine'>
-                    <li value="gas">Бензин</li>
-                    <li value="disel">Дизел</li>
-                    <li value="electric">Електрически</li>
-                </ul>
-            </a>
-                        </pre>
                     </div>
-                    <div class="col-xs-6 col-sm-3">
+                    <div class="row">
 
-                        <a class="btn btn-primary btn-select btn-select-light">
-                <input type="hidden" class="btn-select-input" id="" name="" value="" />
-                <span class="btn-select-value">Скоростна кутия</span>
-                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul id = 'pGearBox'>
-                    <li value = 'manual'>Ръчна</li>
-                    <li value = 'automatic'>Автоматична</li>
-                   
-                </ul>
-            </a>
-                        </pre>
-                    </div>
-                    <div class="pInput">
-                        <input type="text" class="btn-input" placeholder="&nbsp  Цена" id="pPrice" name="" value="" />
-                    </div>
-                    <div class="pInput">
-                        <input type="text" class="btn-input" placeholder="&nbsp  Година" id="pYear" name="" value="" />
-                    </div>
-                     <div class="pInput">
-                        <input type="text" class="btn-input" placeholder="&nbsp  URL" id="pImg" name="" value="" />
-                    </div>
-                   
+                        <div class="col-xs-4">
+                            <input type="text" class="btn-input" placeholder="&nbsp  Цена" id="pPrice" name="" value="" />
+                        </div>
 
+
+                        <div class="col-xs-4">
+                            <input type="text" class="btn-input" placeholder="&nbsp  Година" id="pYear" name="" value="" />
+                        </div>
+
+
+                        <div class="col-xs-4">
+                            <input type="text" class="btn-input" placeholder="&nbsp  URL" id="pImg" name="" value="" />
+                        </div>
+
+
+                    </div>
                 </div>
+
+
+
+
+
             </div>
             <div class="container">
 
-                <div class="[ col-xs-12 col-sm-6 ]">
+                <div class="col-xs-12 marginTopClass">
                     <div class="container checkboxContainer">
                         <h4>Безопасност</h4>
                         <div class="[ form-group ]">
@@ -690,9 +701,11 @@
                             </div>
 
                         </div>
-                        <button id="publishFormBtn">Публикувай</button>
+
                     </div>
+
                 </div>
+                <button id="publishFormBtn">Публикувай</button>
             </div>
 
         </div>

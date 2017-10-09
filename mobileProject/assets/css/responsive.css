@@ -1,0 +1,422 @@
+@media (min-width: 1200px) {
+    .container {
+        width: 1025px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .checkboxContainer {
+        margin-left: -22px;
+        display: inline-block;
+        width: 27%;
+    }
+    .container {
+        text-align: center;
+    }
+    .btn-group>.btn:last-child:not(:first-child),
+    .btn-group>.dropdown-toggle:not(:first-child) {
+        width: 150px;
+        font-size: 0.85em;
+        height: 34px;
+        padding: 9px 0 0 0;
+    }
+    #publishFormBtn {
+        float: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        padding-right: 0;
+        padding-left: 0;
+        width: 875px;
+    }
+    .checkboxContainer {
+        width: 27%;
+    }
+    .form-group {
+        display: block !important;
+    }
+    #newsList {
+        width: 40%;
+    }
+    #displayNews {
+        width: 58%;
+    }
+}
+
+@media screen and (max-width:930px) {
+    .checkboxContainer {
+        width: 36%;
+    }
+    #newsList {
+        width: 35%;
+    }
+    #displayNews {
+        width: 62%;
+    }
+    #mainLeft,
+    #mainRight {
+        display: block;
+        width: 100% !important;
+    }
+    #iconNav ul {
+        margin: 0 auto;
+    }
+    #mainRight {
+        margin-top: 35px;
+    }
+}
+
+@media screen and (max-width: 850px) {  
+    .carContent {
+        margin: 50px;
+    }
+}
+
+
+@media screen and (max-width: 835px) {
+    
+    #newest .item {
+    width: 17%;
+    }
+    .randomImg {
+        border-radius: 20px;
+        width: 120px;
+        height: 120px;
+    }
+    .col-xs-3 {
+    width: 34%;
+    }
+    .col-xs-4 {
+    width: 30%;
+    }
+    .row {
+        margin: auto;
+    }
+    .mainInputs {
+    display: inline-block;
+    width: 45%;
+    }
+    #displayNews img {
+    width: 180px;
+    height: 180px;
+    }
+    .btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    width: 10px;
+     text-align: center;
+    display: inline-block;
+    padding-right: 20px;
+    }
+    .form-group input[type="checkbox"]:checked+.btn-group>label span:first-child {
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 10px;
+    text-align: center;
+    }
+   .btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
+    width: 134px;
+    font-size: 12px;
+    margin-right: 40px;
+    }
+    .h4, h4 {
+        margin-right: 46px;
+    }
+    #iconUser, span#userName {
+    width: 12px;
+    display: none
+    }
+}
+    
+@media screen and (max-width: 770px) {
+    #displayNews img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: 45%
+    }
+    .newest {
+        color: #444;
+        font-size: 12px;
+    }
+    #displayNews {
+    width: 49%;
+    }
+    #newsList {
+    width: 40%;
+    }
+    .btn-select {
+        width: 70%;
+    }
+    .col-xs-4 {
+    width: 26%;
+    }
+    .mainInputs {
+        margin-right: -100px;
+    }
+    h1 {
+    margin-bottom: 20px;
+    margin-right: 118px;
+    }
+    .checkboxContainer {
+    width: 36%;
+    }
+    .btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
+        width: 170px;
+        font-size: 13px;
+        margin-right: 80px;
+    }
+    .h4, h4 {
+    margin-right: 76px;
+    }
+    #publishFormBtn {
+    margin-right: 157px;
+    }
+    #loginBtn button {
+    margin-left: 30px;
+    width: 90px;
+    height: 40px;
+    padding: 0;
+    margin-right: -26px;
+    }   
+    .boxNewsContent h5 {
+    font-size: 15px;
+    }
+    p {
+    font-size: 12px;
+    }
+    #displayNews img {
+    width: 140px;
+    height: 140px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    .randomImg {
+    width: 100px;
+    height: 100px;
+    }
+    .carContent {
+    margin: 30px;
+    }
+    .carContent p {
+    font-size: 13px;
+}
+}
+
+@media screen and (max-width: 680px) {
+    #displayNews img {
+        width: 130px;
+        height: 130px;
+    }
+    #newsList {
+    width: 100%;
+    }
+    .boxNewsContent {
+    display: none;
+    }
+    #newsList {
+    border-left: 0px;
+        text-align: center;
+    }
+    #displayNews {
+        width: 85%;
+    }
+    #newest .item {
+    width: 18.5%;
+    }
+}
+
+
+@media screen and (max-width: 615px) {
+    #logo {
+    max-width: 280px;
+    }
+    header {
+    height: 140px;
+    }
+    #iconNav ul {
+    width: 350px;
+    }
+    .newest {
+    color: #444;
+    font-size: 10px;
+    }
+    .randomImg {
+    width: 90px;
+    height: 90px;
+    }
+    #news h2 {
+    margin-bottom: 20px;
+    }
+    #iconNav ul li a {
+    width: 60px;
+    height: 40px;
+    }
+    #iconNav ul {
+    width: 530px;
+    }
+    #iconNav ul li {
+    margin: 0 20px;
+    display: inline-block;
+    }
+}
+
+
+@media screen and (max-width: 530px) {   
+   #iconNav ul {
+    width: 450px;
+    }
+    #iconNav ul li {
+        margin: 0 10px;
+    }
+    .cars {
+    text-align: center;
+    
+    }
+    .imgResults {
+        float: none;
+    }
+    button.seeMore {
+    float: left;
+    }
+}
+
+
+@media screen and (max-width: 500px) {   
+    #slogan {
+        font-size: 0.95em;
+    }
+    #loginBtn button {
+    width: 65px;
+    font-size: 9px;
+    height: 30px;
+    }
+   #displayNews {
+    width: 76%;
+}
+    #newest .item {
+    width: 30%;
+    margin-top: 10px;
+    }
+    .newest {
+    font-size: 12px;
+    }
+    #footNav>li {
+    display: inline-block;
+    margin: 0 10px;
+    }
+    #footNav>li>a {
+    font-size: 14px;
+    }
+    #iconNav ul li a {
+    width: 70px;
+    height: 40px;
+    }
+    #iconNav ul li {
+        margin: 0 5px;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    header {
+    height: 110px;
+    }
+    #logo img {
+    width: 63%;
+    }
+    #bigCatMenu ul li a {
+        width: 115px;
+        height: 110px;
+    }
+    #bigCatMenu ul {
+        width: 400px;
+    }
+    #user {
+        display: block;
+        margin-top: -15px;
+    }
+    #iconNav ul li a {
+    width: 60px;
+    height: 35px;
+    }
+   
+    #displayNews img {
+    margin-left: 120px;
+    }
+    #iconNav ul {
+    width: 365px;
+    }
+    #displayNews img {
+        margin-left: 119px;
+    }
+}
+
+
+
+@media screen and (max-width: 440px) {
+   #news{
+       display: none;
+   }
+   button.seeMore {
+    float: left;
+    width: 38%;
+    font-size: 12px;
+    }
+   
+}
+
+@media screen and (max-width: 410px) {
+   #news{
+       display: none;
+   } 
+}
+
+
+
+@media screen and (max-width: 400px) {
+    #bigCatMenu ul {
+        text-align: left;
+    }
+    #bigCatMenu ul li a {
+        width: 100px;
+        height: 100px;
+    }
+    #iconNav ul li a {
+    width: 50px;
+    height: 30px;
+    }
+    #footNav>li>a {
+    font-size: 12px;
+    }
+   button.seeMore {
+    width: 150px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #iconNav ul {
+        display: none;
+    }
+    #buttonBox #btnBuy {
+        width: 100%;
+    }
+    #buttonBox #btnSell {
+        width: 100%;
+    }
+    #loginBtn button {
+    width: 55px;
+    font-size: 8px;
+    height: 22px;
+    }
+    #footNav>li>a {
+        font-size: 10px;
+    }
+    #footNav>li {
+    width: 35%;
+    }
+    #footNav>li>a {
+    font-size: 12px;
+    }
+}

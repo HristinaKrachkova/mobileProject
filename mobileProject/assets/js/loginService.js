@@ -10,7 +10,7 @@ var userList = (function () {
     User.prototype.addLike = function (vehicle) {
         this.likes.push(vehicle);
     }
-
+    
     function UserList() {
         if (localStorage.getItem('users') != null)
             this._users = JSON.parse(localStorage.getItem('users'));
@@ -23,7 +23,7 @@ var userList = (function () {
     UserList.prototype.addUser = function (username, email, password, confirmPassword, termsAndCons) {
 
         if ((typeof username == 'string') && (username.trim().length > 3) &&
-            (password.trim().length > 5) && email && (password === confirmPassword) && (termsAndCons === true)) {
+            (password.trim().length > 5) && (email.search('@') > -1) && (password === confirmPassword) && (termsAndCons === true)) {
             if (!(this._users.some(user => user.username === username))) {
                 this._users.push(new User(username, email, password, confirmPassword, termsAndCons));
                 localStorage.setItem('users', JSON.stringify(this._users));

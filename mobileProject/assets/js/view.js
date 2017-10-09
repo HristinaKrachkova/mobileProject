@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         
         
-        if ($('#vType').children('[selected = selected]').html() != 'Всички') {
+        if ($('#vType').children(':selected').html() !== 'Всички') {
             result = carsList.cars.filter(function (x) {
                 return x.type.toUpperCase() == type.toUpperCase()
             })

@@ -25,7 +25,6 @@ $(function() {
     $('.bigCatMenu').click(function() {
         changeBtn();
         $('#publish').css('display', 'none');
-
     });
 
 
@@ -45,7 +44,6 @@ $(function() {
 
         $('#searchResult').html(result);
         $('.hiddenDiv').css('display', 'none');
-
     })
 
 

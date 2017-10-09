@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         slides[index - 1].style.display = "block";
         newsList[index - 1].style.fontWeight = "bold";
         index++;
-        var idTimeout = setTimeout(autoSlide, 3000);
+        var idTimeout = setTimeout(autoSlide, 300000000);
     };
     autoSlide();
 

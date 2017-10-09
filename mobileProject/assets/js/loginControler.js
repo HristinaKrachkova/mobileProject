@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("x").addEventListener("click", function() {
         loginForm.style.display = "none";
         hiddenElements.style.display = "block";
-        iconUser.style.display = "none";
+        document.getElementById('iconUser').style.display = "none";
     });
 });
 
@@ -136,6 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById("publish").style.display = "none"
             document.querySelectorAll(".hiddenDiv").forEach(h => h.style.display = "block")
             document.getElementById("wrapper").style.display = "block";
+            document.getElementById('iconUser').style.display = "block";
         } else {
             document.querySelector('p#error').textContent = 'Invalid email or password!';
             setTimeout(function() {

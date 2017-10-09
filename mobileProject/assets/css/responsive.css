@@ -123,7 +123,7 @@
         margin-right: 46px;
     }
     #iconUser,
-    span#userName {
+    #userName {
         width: 12px;
         display: none
     }
@@ -211,6 +211,7 @@
     #displayNews img {
         width: 130px;
         height: 130px;
+        margin-left: auto;
     }
     #newsList {
         width: 100%;
@@ -223,10 +224,13 @@
         text-align: center;
     }
     #displayNews {
-        width: 85%;
+        width: 100%;
     }
     #newest .item {
         width: 18.5%;
+    }
+    #displayNews img {
+        float: none;
     }
 }
 

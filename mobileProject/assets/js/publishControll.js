@@ -1,8 +1,8 @@
 $(function() {
 
-    $('#pType').on('click', function(e) {
+    $('#pType').on('click', function (e) {
 
-        $(e).ready(function() {
+        $(e).ready(function () {
             $('#pBrand').html('')
             $('#pModel').html('')
             $('#pPrice').val($('#pPrice').attr('placeholder'))
@@ -61,16 +61,30 @@ $(function() {
         })
     })
 
-    $('#publishFormBtn').on('click', function(e) {
+    $('#publishFormBtn').on('click', function (e) {
         event.preventDefault();
         $('#pType li.selected').attr('type')
         var user = $('#userName').html();
-        if (user !== "") {
-            carsList.publishCar($('#pBrand li.selected').html(), $('#pModel li.selected').html(), $('#pType li.selected').attr('type'), $('#pYear').val(), $('#pEngine li.selected').attr('value'), $('#pGearBox li.selected').attr('value'), $('#pImg').val(), $('#pPrice').val())
-        } else {
-            alert('logni se')
-        }
-    })
-
-
+        if(user != "") {
+        carsList.publishCar($('#pBrand li.selected').html(),$('#pModel li.selected').html(), $('#pType li.selected').attr('type'),$('#pYear').val(),  $('#pEngine li.selected').attr('value'),$('#pGearBox li.selected').attr('value'), $('#pImg').val(),$('#pPrice').val()   )
+        document.getElementById('searchResult').innerHTML = ''
+        var p = document.createElement('p');
+        p.textContent = 'Честито ! Вие публикувахте вашата обява. Може да я намерите чрез формата за търсене'
+        p.setAttribute('class', 'nothingP')
+        document.getElementById('searchResult').appendChild(p);
+        document.getElementById('searchResult').style.display = "block";
+        $('#publish').css('display', 'none')
+        
+    } else {
+            document.getElementById('searchResult').innerHTML = ''
+            var p = document.createElement('p');
+            p.textContent = 'Влезте в профила си!'
+            p.setAttribute('class', 'nothingP')
+            document.getElementById('searchResult').appendChild(p);
+            document.getElementById('searchResult').style.display = "block";
+            $('#publish').css('display', 'none')
+        }    
 })
+
+
+}) 

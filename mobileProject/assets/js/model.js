@@ -9,7 +9,7 @@ function Vehicle(mark, model, type, year, engine, gearBox, img, price) {
     if (type == 'car' || type == 'bus' || type == 'bike' || type == 'truck' || type == 'jeep') {
         this.type = type;
     }
-    if (year >= 1993) {
+    if (year >= 1993 && year <= 2017) {
         this.year = year;
     }
     if (engine == 'electric' || engine == 'gas' || engine == 'disel') {

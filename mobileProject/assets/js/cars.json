@@ -1,6 +1,5 @@
 {
-    "carList": [
-        {
+    "carList": [{
             "id": 1,
             "mark": "Fiat",
             "model": "Stilo",
@@ -23,7 +22,7 @@
             "img": "./assets/img/imgCars/cars/fiatDoblo.jpg",
             "price": 4900,
             "grad": "Asenovgrad"
-            
+
         },
         {
             "id": 3,

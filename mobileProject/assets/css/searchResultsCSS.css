@@ -25,7 +25,6 @@
 
 .carContent p {
     font-size: 1.15em;
-    
 }
 
 #searchResult {
@@ -45,7 +44,7 @@
     border-bottom: none;
     transition: background 0.4s ease-in-out;
     display: none;
-     margin: 10px 20px 0 -60px;
+    margin: 10px 20px 0 -60px;
 }
 
 .seeMore {
@@ -63,23 +62,26 @@
     transition: background 0.4s ease-in-out;
 }
 
-.seeMore:hover, .buy:hover{
+.seeMore:hover,
+.buy:hover {
     background: #016d98;
 }
 
 .randomImg {
     border-radius: 20px;
 }
+
 .newsImg {
- border-radius: 20px;
+    border-radius: 20px;
 }
+
 .likeBtn {
     width: 30px;
     margin-left: -60px;
     margin-right: 20px;
     cursor: pointer;
-
 }
+
 .likeBtn:hover {
-    filter: brightness(75%); 
+    filter: brightness(75%);
 }

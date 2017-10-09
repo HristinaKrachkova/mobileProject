@@ -1,45 +1,45 @@
 var marksOptions = function(typeButton) {
-        
-        var selectButton = document.getElementById(typeButton)
-        if(selectButton.tagName == 'UL') {
-            selectButton = document.querySelector('#pType li.selected')
+
+    var selectButton = document.getElementById(typeButton)
+    if (selectButton.tagName == 'UL') {
+        selectButton = document.querySelector('#pType li.selected')
+    }
+    var options = carsList.cars.filter(function(car) {
+        if (selectButton.value == '1') {
+            return car.type == 'car'
         }
-        var options = carsList.cars.filter(function (car) {
-            if (selectButton.value == '1') {
-                return car.type == 'car'
-            }
-            if (selectButton.value == '2') {
-                return car.type == 'jeep'
-            }
-            if (selectButton.value == '3') {
-                return car.type == 'bus'
-            }
-            if (selectButton.value == '4') {
-                return car.type == 'truck'
-            }
-            if (selectButton.value == '5') {
-                return car.type == 'bike'
-            }
-        })
+        if (selectButton.value == '2') {
+            return car.type == 'jeep'
+        }
+        if (selectButton.value == '3') {
+            return car.type == 'bus'
+        }
+        if (selectButton.value == '4') {
+            return car.type == 'truck'
+        }
+        if (selectButton.value == '5') {
+            return car.type == 'bike'
+        }
+    })
 
-        var marks = options.slice()
-        for (var index = 0; index < options.length; index++) {
-            for (var num = 0; num < marks.length; num++) {
-                if (num > index) {
-                    if (marks[num] == null || (options[index].mark.toUpperCase() === marks[num].mark.toUpperCase())) {
-                        marks[num] = null;
+    var marks = options.slice()
+    for (var index = 0; index < options.length; index++) {
+        for (var num = 0; num < marks.length; num++) {
+            if (num > index) {
+                if (marks[num] == null || (options[index].mark.toUpperCase() === marks[num].mark.toUpperCase())) {
+                    marks[num] = null;
 
-                    }
                 }
             }
         }
-        marks = marks.filter(function (x) {
-            return x !== null
-        })
-        return marks
     }
+    marks = marks.filter(function(x) {
+        return x !== null
+    })
+    return marks
+}
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     function changeIcon() {
         var e = document.getElementById('vType').value;
         switch (e) {
@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
         }
     }
+
     function clearMenu(searchOption) {
         if (searchOption == 'vModel' || searchOption == 'vBrand') {
             while (document.getElementById(searchOption).childNodes.length > 2) {
@@ -104,11 +105,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
     }
-    
+
     function searchByType() {
 
         var selectButton = document.getElementById('vType')
-        Array.prototype.forEach.call(document.getElementById('searchMiniForm'), function (x) {
+        Array.prototype.forEach.call(document.getElementById('searchMiniForm'), function(x) {
             if (x['id'] !== 'vType' && x['id'] !== 'searchButton') {
                 clearMenu(x['id'])
             }
@@ -117,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
         changeSlogan()
 
 
-        var cars = carsList.cars.sort(function (a, b) {
+        var cars = carsList.cars.sort(function(a, b) {
             if (a.mark.toUpperCase() > b.mark.toUpperCase()) {
                 return 1
             }
@@ -127,22 +128,22 @@ document.addEventListener('DOMContentLoaded', function () {
             return 0
         })
         var marks = marksOptions('vType')
-        
 
-        marks.forEach(function (x) {
+
+        marks.forEach(function(x) {
             var brand = document.createElement('option')
             brand.setAttribute('value', (marks.indexOf(x) + 1))
             brand.innerHTML = x.mark;
             document.getElementById('vBrand').appendChild(brand)
         })
-        document.getElementById('vBrand').addEventListener('change', function (event) {
-            var models = carsList.cars.filter(function (x) {
+        document.getElementById('vBrand').addEventListener('change', function(event) {
+            var models = carsList.cars.filter(function(x) {
                 var e = document.getElementById("vBrand");
                 var strUser = e.options[e.selectedIndex];
                 return x.mark.toUpperCase() == strUser.innerHTML.toUpperCase()
             })
             clearMenu('vModel')
-            models.forEach(function (x) {
+            models.forEach(function(x) {
                 if (document.getElementById('vBrand').options[document.getElementById('vBrand').selectedIndex].innerHTML !== 'Всички') {
                     var el = document.getElementById("vType");
                     var strUser = el.options[el.selectedIndex];
@@ -151,9 +152,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     mod.setAttribute('value', x.model)
                     if (x.type == strUser.getAttribute('type')) {
                         mod.innerHTML = x.model
-                        if (!Array.prototype.some.call(document.querySelectorAll('#vModel option'), function (option) {
-                            return mod.innerHTML == option.innerHTML
-                        })) {
+                        if (!Array.prototype.some.call(document.querySelectorAll('#vModel option'), function(option) {
+                                return mod.innerHTML == option.innerHTML
+                            })) {
                             document.getElementById('vModel').appendChild(mod)
                         }
                     }
@@ -166,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
     document.getElementById('vType').addEventListener('change', searchByType, false)
-    document.getElementById('searchButton').addEventListener('click', function (event) {
+    document.getElementById('searchButton').addEventListener('click', function(event) {
         event.preventDefault()
         var type = document.getElementById('vType').options[document.getElementById('vType').selectedIndex].getAttribute('type')
         var mark = document.getElementById('vBrand').options[document.getElementById('vBrand').selectedIndex].textContent
@@ -179,37 +180,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         if (type != 0)
-            result = carsList.cars.filter(function (x) {
+            result = carsList.cars.filter(function(x) {
                 return x.type.toUpperCase() == type.toUpperCase()
             })
         if (mark !== 'Всички') {
-            result = result.filter(function (x) {
+            result = result.filter(function(x) {
                 return x.mark.toUpperCase() == mark.toUpperCase()
             })
         }
         if (model !== 'Всички') {
-            result = result.filter(function (x) {
+            result = result.filter(function(x) {
                 return x.model.toUpperCase() == model.toUpperCase()
             })
         }
         if (price !== '') {
-            result = result.filter(function (x) {
+            result = result.filter(function(x) {
                 return x.price >= price
             })
         }
         if (year != 0) {
-            result = result.filter(function (x) {
+            result = result.filter(function(x) {
                 return x.year >= year
             })
         }
 
         if (engine != 0) {
-            result = result.filter(function (x) {
+            result = result.filter(function(x) {
                 return x.engine == engine
             })
         }
         if (gearBox != 0) {
-            result = result.filter(function (x) {
+            result = result.filter(function(x) {
                 return x.gearBox == gearBox
             })
         }
@@ -220,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('searchResult').innerHTML = readyHTML
         var hidden = document.getElementsByClassName("hiddenDiv");
         document.getElementById('searchResult').style.display = "block";
-        Array.prototype.forEach.call(hidden, function (m) {
+        Array.prototype.forEach.call(hidden, function(m) {
             m.style.display = "none";
         })
 
@@ -231,8 +232,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }, false)
 
     var iconsLi = Array.prototype.slice.call(document.querySelectorAll('#iconNavUl li a'))
-    iconsLi.forEach(function (x) {
-        x.addEventListener('click', function (event) {
+    iconsLi.forEach(function(x) {
+        x.addEventListener('click', function(event) {
             event.preventDefault();
             document.getElementById('vType').value = x.getAttribute('value');
             searchByType();
@@ -243,11 +244,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function getJSON() {
-    return new Promise(function (resolve, reject) {
+    return new Promise(function(resolve, reject) {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', 'http://localhost/mobile/mobileProject/mobileProject/assets/js/cars.json', true);
         xhr.send(null);
-        xhr.addEventListener('load', function () {
+        xhr.addEventListener('load', function() {
             if (xhr.status >= 200 && xhr.status <= 299) {
                 var cars = JSON.parse(xhr.responseText)
                 resolve(cars)
@@ -256,11 +257,10 @@ function getJSON() {
             }
         })
     })
-    
+
 }
 
-getJSON().then(function (data) {
+getJSON().then(function(data) {
 
     carsList.cars = Array.prototype.slice.call(data.carList, 0)
 })
-

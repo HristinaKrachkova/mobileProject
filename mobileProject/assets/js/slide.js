@@ -1,27 +1,27 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
 
     var index = 1;
     var slides = document.getElementsByClassName("slides");
     var newsList = document.getElementsByClassName("newsList");
-    Array.prototype.forEach.call(slides, function (s) {
+    Array.prototype.forEach.call(slides, function(s) {
         s.style.display = "none";
     });
 
     function autoSlide() {
-        Array.prototype.forEach.call(slides, function (s) {
+        Array.prototype.forEach.call(slides, function(s) {
             s.style.display = "none";
         });
-        Array.prototype.forEach.call(newsList, function (n) {
+        Array.prototype.forEach.call(newsList, function(n) {
             n.style.fontWeight = "normal";
             n.addEventListener("mouseover", newsHover);
             var id = n.id;
         });
 
         function newsHover() {
-            Array.prototype.forEach.call(slides, function (s) {
+            Array.prototype.forEach.call(slides, function(s) {
                 s.style.display = "none";
             });
-            Array.prototype.forEach.call(newsList, function (n) {
+            Array.prototype.forEach.call(newsList, function(n) {
                 n.style.fontWeight = "normal";
                 n.addEventListener("mouseout", autoSlide);
             });

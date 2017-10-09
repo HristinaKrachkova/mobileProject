@@ -63,16 +63,16 @@ function VehicleList() {
 }
 
 
-VehicleList.prototype.addCar = function (car) {
+VehicleList.prototype.addCar = function(car) {
     this.cars.push(car)
 
 }
-VehicleList.prototype.removeCar = function (idto) {
+VehicleList.prototype.removeCar = function(idto) {
     this.cars.splice(this.cars.findIndex(x => x.id === idto), 1)
 
 }
 
-VehicleList.prototype.publishCar = function (mark, model, type, year, engine, gearBox, img, price) {
+VehicleList.prototype.publishCar = function(mark, model, type, year, engine, gearBox, img, price) {
     var car = new Vehicle(mark, model, type, year, engine, gearBox, img, price)
     this.cars.push(car)
 }

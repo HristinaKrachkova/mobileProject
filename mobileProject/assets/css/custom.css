@@ -1,21 +1,4 @@
-Skip to content
-Features
-Business
-Explore
-Marketplace
-Pricing
-This repository
-Search
-Sign in or Sign up
- Watch 0  Star 0  Fork 0 HristinaKrachkova/mobileProject
- Code  Issues 0  Pull requests 0  Projects 0 Insights 
-Branch: master Find file Copy pathmobileProject/mobileProject/assets/css/custom.css
-e21cc69  23 hours ago
-@ejechev ejechev searchResult buttons and description added
-2 contributors @ejechev @HristinaKrachkova
-RawBlameHistory     
-562 lines (470 sloc)  9.29 KB
-* {
+Skip to content Features Business Explore Marketplace Pricing This repository Search Sign in or Sign up Watch 0 Star 0 Fork 0 HristinaKrachkova/mobileProject Code Issues 0 Pull requests 0 Projects 0 Insights Branch: master Find file Copy pathmobileProject/mobileProject/assets/css/custom.css e21cc69 23 hours ago @ejechev ejechev searchResult buttons and description added 2 contributors @ejechev @HristinaKrachkova RawBlameHistory 562 lines (470 sloc) 9.29 KB * {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -69,6 +52,7 @@ header {
     font-size: 20px;
     margin-right: 35px;
     font-weight: bold;
+    transition: all 1s ease;
 }
 
 #loginBtn {
@@ -93,9 +77,10 @@ header {
     width: 120px;
 }
 
-#logoutButton, #publish {
+#logoutButton,
+#publish {
     display: none;
-     margin-top: -24px;
+    margin-top: -24px;
 }
 
 #loginBtn button:hover {
@@ -114,6 +99,7 @@ main {
     width: 49%;
     display: inline-block;
     vertical-align: middle;
+    transition: width 1s ease-in-out, display 1s ease-in-out;
 }
 
 .centerDiv {
@@ -385,7 +371,8 @@ section#news {
     vertical-align: middle;
 }
 
-#newsList>ul, #contactList ul {
+#newsList>ul,
+#contactList ul {
     list-style-type: none;
 }
 
@@ -398,7 +385,6 @@ section#news {
     width: 55%;
     box-sizing: border-box;
     margin-top: 10px;
-    
 }
 
 #newsList ul {
@@ -466,7 +452,7 @@ section#newest {
     cursor: pointer;
     text-decoration: none;
     border: 1px solid #cccccc;
-    box-shadow: 0 0 2px  grey;
+    box-shadow: 0 0 2px grey;
     border-radius: 3px;
     margin: 0 2px;
     padding: 8px 0;
@@ -523,7 +509,8 @@ p.copyright {
     vertical-align: middle;
 }
 
-#termsAndConditions, #contactList  {
+#termsAndConditions,
+#contactList {
     border: 1px solid #cccccc;
     box-shadow: 0 4px 2px -2px gray;
     border-radius: 6px;
@@ -537,31 +524,34 @@ p.copyright {
     border-radius: 6px;
     padding: 23px;
 }
+
 #termsAndConditions p {
     padding: 10px 0;
 }
 
-#termsAndConditions h2, #contactList h2 {
+#termsAndConditions h2,
+#contactList h2 {
     padding-bottom: 20px;
 }
 
-#termsAndConditions a, {
+#termsAndConditions a,
+{
     text-decoration: none;
     color: #555;
 }
 
- 
 .iconNav {
     display: block;
     overflow: hidden;
     transition: all 0.4s ease-in-out;
 }
 
-.iconNav:hover, #logo img:hover {
+.iconNav:hover,
+#logo img:hover {
     filter: brightness(80%);
     backface-visibility: hidden;
 }
- 
+
 #iconUser {
     display: inline-block;
     width: 20px;
@@ -580,11 +570,8 @@ p.copyright {
     height: 300px;
 }
 
-/*@media (min-width: 1200px);*/
 
-.container {
-    width: 1025px;
-}
+/*@media (min-width: 1200px);*/
 
 div#mainCat {
     width: 33%;
@@ -609,11 +596,12 @@ input.btn-input {
     margin-top: 30px;
 }
 
-.btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
+.btn-group>.btn:last-child:not(:first-child),
+.btn-group>.dropdown-toggle:not(:first-child) {
     width: 181px;
 }
 
-#publishFormBtn  {
+#publishFormBtn {
     float: right;
     background: #0093ce;
     text-align: center;
@@ -628,31 +616,35 @@ input.btn-input {
     margin: 20px;
     border-radius: 5px 5px 5px 5px;
 }
-#loginAndRegisterBtn{
+
+#loginAndRegisterBtn {
     border: 1px solid #007db8;
-        background: #0093ce;
-        transition: background 0.4s ease-in-out;
+    background: #0093ce;
+    transition: background 0.4s ease-in-out;
 }
-#publishFormBtn:hover,#loginAndRegisterBtn:hover{
+
+#publishFormBtn:hover,
+#loginAndRegisterBtn:hover {
     background: #016d98;
 }
 
 .btn-primary {
     color: #fff;
     background-color: #0093ce !important;
-    border-color:#0093ce !important;
-     transition: all 0.4s ease-in-out;
+    border-color: #0093ce !important;
+    transition: all 0.4s ease-in-out;
 }
 
 .btn-primary:hover {
     background: #016d98;
 }
 
-.footerDivs{
+.footerDivs {
     display: none;
 }
 
-input[name=terms_and_cons], label[for=terms_and_cons] {
+input[name=terms_and_cons],
+label[for=terms_and_cons] {
     cursor: pointer;
 }
 
@@ -665,11 +657,12 @@ img {
     border-radius: 5px;
 }
 
-
 .pInput {
     width: 19%;
-    DISPLAY: INLINE-BLOCK;
+    display: inline-block;
     margin-left: 21px;
 }
 
-
+.marginTopClass {
+    margin-top: 30px;
+}

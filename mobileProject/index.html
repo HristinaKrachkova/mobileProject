@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/login.css">
     <link rel="stylesheet" href="assets/css/searchResultsCSS.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
@@ -57,7 +58,9 @@
                         <input type="password" class="input_form_sign d_block  active_inp" placeholder="PASSWORD" name="pass_us" />
                         <input type="password" class="input_form_sign" placeholder="CONFIRM PASSWORD" name="conf_pass_us" />
                         <div class="terms_and_cons d_none">
-                            <p><input type="checkbox" name="terms_and_cons" /><a id="termsAndCons" href=""> <label   for="terms_and_cons">Accept  Terms and Conditions.</label></p></a>
+                            <p><input type="checkbox" name="terms_and_cons" />
+                                <a id="termsAndCons" href=""> <label for="terms_and_cons">Accept  Terms and Conditions.</label></p>
+                            </a>
                         </div>
                     </div>
                     <div class="cont_btn" "login">
@@ -86,19 +89,13 @@
 
         <section id="termsAndConditions" class="footerDivs">
             <h2>ОБЩИ УСЛОВИЯ за ползване на сайта www.mobile.it</h2>
-            <p> 1. Настоящите общи условия уреждат отношенията между "Резон" ООД- София, ЕИК: 121184622, гр.София, ул. "Карнеги"11А,
-                и лицата - ползватели на услугите на сайта www.mobile.bg.</p>
-            <p> 2. Mobile.bg е сайт за малки обяви в областта на пазарите, свързани със средства за транспорт. Mobile.bg е собственост
-                на "Резон" ООД- София, ЕИК: 121184622. В настоящите Общи условия "Резон" ООД ще бъде идентифициран и със
-                собственото си предприятие- сайта mobile.bg.</p>
-            <p> 3. Всяко лице, което е заредило на браузъра си mobile.bg или е било пренасочено към него, следва да се запознае
-                внимателно с настоящите Общи условия и ако лицето не желае да стане ползвател на услугите на mobile.bg, ако
-                не желае да предоставя данни и информация и да има достъп до данни и информация, следва незабавно да напусне
-                сайта.
+            <p> 1. Настоящите общи условия уреждат отношенията между "Резон" ООД- София, ЕИК: 121184622, гр.София, ул. "Карнеги"11А, и лицата - ползватели на услугите на сайта www.mobile.bg.</p>
+            <p> 2. Mobile.bg е сайт за малки обяви в областта на пазарите, свързани със средства за транспорт. Mobile.bg е собственост на "Резон" ООД- София, ЕИК: 121184622. В настоящите Общи условия "Резон" ООД ще бъде идентифициран и със собственото си
+                предприятие- сайта mobile.bg.</p>
+            <p> 3. Всяко лице, което е заредило на браузъра си mobile.bg или е било пренасочено към него, следва да се запознае внимателно с настоящите Общи условия и ако лицето не желае да стане ползвател на услугите на mobile.bg, ако не желае да предоставя
+                данни и информация и да има достъп до данни и информация, следва незабавно да напусне сайта.
             </p>
-            <p> 4. Данните и информацията, получени от сайта mobile.bg, са собственост на "Резон" ООД и могат да се ползват за
-                търговска и служебна дейност или предоставяни на трети лица само от упълномощени от "Резон" ООД субекти и
-                срещу заплащане.</p>
+            <p> 4. Данните и информацията, получени от сайта mobile.bg, са собственост на "Резон" ООД и могат да се ползват за търговска и служебна дейност или предоставяни на трети лица само от упълномощени от "Резон" ООД субекти и срещу заплащане.</p>
             <p> 5. Ползвателите на услугите на mobile.bg се съгласяват да получават седмичният бюлетин на сайта.</p>
         </section>
 
@@ -311,7 +308,7 @@
             <script id="news-template" type="text/x-handlebars-template">
                 {{#each news}}
                 <div class="slides">
-                    <img class = 'newsImg' src="{{image}}">
+                    <img class='newsImg' src="{{image}}">
                     <div class="boxNewsContent">
                         <h5>{{title}}</h5>
                         <p> {{text}} </p>
@@ -337,17 +334,17 @@
         <section id="newest" class="hiddenDiv">
             <script id="random-template" type="text/x-handlebars-template">
                 {{#each cars}}
-                <a href=""  class="item searchButtons">
-               
-                <img width = '150px' height="150px" class = 'randomImg' src="{{img}}">
-                <div>
-                    <div class="newest">{{mark}}  {{model}}</div>
-                    <div class="newest">Двигател: {{engine}}</div>
-                    <div class="newest">Цена: {{price}} лв.</div>
-                    <div class="newest">Ск.кутия: {{gearBox}}</div>
-                    <div class="newest">Град: {{grad}}</div>
-                </div>
-            </a> {{/each}}
+                <a href="" class="item searchButtons">
+
+                    <img width='150px' height="150px" class='randomImg' src="{{img}}">
+                    <div>
+                        <div class="newest">{{mark}} {{model}}</div>
+                        <div class="newest">Двигател: {{engine}}</div>
+                        <div class="newest">Цена: {{price}} лв.</div>
+                        <div class="newest">Ск.кутия: {{gearBox}}</div>
+                        <div class="newest">Град: {{grad}}</div>
+                    </div>
+                </a> {{/each}}
             </script>
         </section>
 
@@ -366,24 +363,14 @@
                     <p>Град: {{grad}} </p>
                 </div>
                 <div class='carDescription'>
-                    <p> Публикувано във факти.бг: Нов-внос Италия. Закупена е от град Априлия(вилна зона на Рим). Няма зима няма
-                        ръжда. Редовни документи. --ДИРЕКТЕН ВНОСИТЕЛ НА АВТОМОБИЛИ ЗАКУПЕНИ САМО ОТ ЧАСТНИ ЛИЦА-Колата е
-                        в невероятно техническо състояние. Без никакви удари и пребоядисванки разни. Не е напудрена или полирвана
-                        натурално състояние. САМО ЗА ЦЕНИТЕЛИ. Всички екстри за модела. Климатроника работи както и всички
-                        системи по колата чисто нови гуми Пирели. А как върви и как вози - като Мерцедес. УНИКАТ. . . . Думи
-                        нямам да опиша изживяването с това ЦЛК. Само да разкажа една случка. Идва колата в БГ и един приятел
-                        като я вида полудя. Дай вика едно кръгче да направя моли ми се цял ден викам му ок. слагам едни номера
-                        и потегляме до едно близко село по магистралата. Както си караше нормално и взе че даде рязко газ
-                        получи се светлинен тунел ушите ми заглъхнаха поглеждам към колегата няма го хващам аз волана и гледам
-                        онзи на задната седалка викам му кво става бре искам казва да се возя като куфар в багажника без
-                        чувства ми каза той. Както и да е озаптихме звяра. Бре чувам аз някакво пиукане в багажника отварям
-                        гледам 6 пиленца излюпени. А аз като тръгнахме сложих 6 яйца от магазина че пазарувах. Сигурно от
-                        високата скорост са се излюпили. Взимам ги аз и се прибирам гледам жената с 15 години по млада. Питам
-                        я аз кво става бре а тя ми вика. . . и аз бях в мерцедеса. . . . . ЧУДЕСА ПРИЯТЕЛИ ЧУДЕСА. . После
-                        водихме колегата да му леят куршум(беше се уплашил). Гледа жената и му казва: много си млад за да
-                        си ветеран от войната мерник излиза. А не бе бабо мерцедес кара бре казвам и аз. Умолявам клиентите
-                        не карали такава кола да предупредят. Съдействие на клиента за регистрация. . . И да се знае аз не
-                        продавам цена а разкошна кола. Разрешени са всякакви тестове. We speak English and Russian." </p>
+                    <p> Публикувано във факти.бг: Нов-внос Италия. Закупена е от град Априлия(вилна зона на Рим). Няма зима няма ръжда. Редовни документи. --ДИРЕКТЕН ВНОСИТЕЛ НА АВТОМОБИЛИ ЗАКУПЕНИ САМО ОТ ЧАСТНИ ЛИЦА-Колата е в невероятно техническо състояние.
+                        Без никакви удари и пребоядисванки разни. Не е напудрена или полирвана натурално състояние. САМО ЗА ЦЕНИТЕЛИ. Всички екстри за модела. Климатроника работи както и всички системи по колата чисто нови гуми Пирели. А как върви и как
+                        вози - като Мерцедес. УНИКАТ. . . . Думи нямам да опиша изживяването с това ЦЛК. Само да разкажа една случка. Идва колата в БГ и един приятел като я вида полудя. Дай вика едно кръгче да направя моли ми се цял ден викам му ок. слагам
+                        едни номера и потегляме до едно близко село по магистралата. Както си караше нормално и взе че даде рязко газ получи се светлинен тунел ушите ми заглъхнаха поглеждам към колегата няма го хващам аз волана и гледам онзи на задната
+                        седалка викам му кво става бре искам казва да се возя като куфар в багажника без чувства ми каза той. Както и да е озаптихме звяра. Бре чувам аз някакво пиукане в багажника отварям гледам 6 пиленца излюпени. А аз като тръгнахме
+                        сложих 6 яйца от магазина че пазарувах. Сигурно от високата скорост са се излюпили. Взимам ги аз и се прибирам гледам жената с 15 години по млада. Питам я аз кво става бре а тя ми вика. . . и аз бях в мерцедеса. . . . . ЧУДЕСА
+                        ПРИЯТЕЛИ ЧУДЕСА. . После водихме колегата да му леят куршум(беше се уплашил). Гледа жената и му казва: много си млад за да си ветеран от войната мерник излиза. А не бе бабо мерцедес кара бре казвам и аз. Умолявам клиентите не карали
+                        такава кола да предупредят. Съдействие на клиента за регистрация. . . И да се знае аз не продавам цена а разкошна кола. Разрешени са всякакви тестове. We speak English and Russian." </p>
                 </div>
                 <button class="seeMore">Виж повече</button>
                 <button class='buy'>Купи</button>
@@ -396,91 +383,98 @@
             <div class="container">
                 <h1>Публикуване на безплатна обява</h1>
                 <div class="row">
-                    <div id="mainCat" class="col-xs-6 col-sm-3">
+                    <div class="row">
+                        <div class="col-xs-12 col-xs-6">
+                            <a id="mainCat" class="btn btn-primary btn-select btn-select-light">
+                                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                                <span class="btn-select-value">Основна категория</span>
+                                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                                <ul id='pType'>
+                                    <li>Основна категория</li>
+                                    <li type='car' value='1'>Автомобили</li>
+                                    <li type='jeep' value='2'>Джипове</li>
+                                    <li type='bus' value='3'>Бусове</li>
+                                    <li type='truck' value='4'>Камиони</li>
+                                    <li type='bike' value='5'>Мотоциклети</li>
+                                </ul>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <a class="btn btn-primary btn-select btn-select-light">
+                                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                                <span class="btn-select-value">Марка</span>
+                                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                                <ul id='pBrand'>
 
-                        <a class="btn btn-primary btn-select btn-select-light">
-                <input type="hidden" class="btn-select-input" id="" name="" value="" />
-                <span class="btn-select-value">Основна категория</span>
-                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul id = 'pType'>
-                    <li>Основна категория</li>
-                    <li type = 'car' value = '1'>Автомобили</li>
-                    <li type = 'jeep' value = '2'>Джипове</li>
-                    <li type = 'bus' value = '3'>Бусове</li>
-                    <li type = 'truck'value = '4'>Камиони</li>
-                    <li type = 'bike' value = '5'>Мотоциклети</li>
-                </ul>
-            </a>
-                        </pre>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="col-xs-3">
+                            <a class="btn btn-primary btn-select btn-select-light">
+                                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                                <span class="btn-select-value">Модел</span>
+                                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                                <ul id='pModel'>
 
-                        <a class="btn btn-primary btn-select btn-select-light">
-                <input type="hidden" class="btn-select-input" id="" name="" value="" />
-                <span class="btn-select-value">Марка</span>
-                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul id = 'pBrand'>
-                    
-                </ul>
-            </a>
-                        </pre>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="col-xs-3">
+                            <a class="btn btn-primary btn-select btn-select-light">
+                                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                                <span class="btn-select-value">Тип двигател</span>
+                                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                                <ul id='pEngine'>
+                                    <li value="gas">Бензин</li>
+                                    <li value="disel">Дизел</li>
+                                    <li value="electric">Електрически</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="col-xs-3">
+                            <a class="btn btn-primary btn-select btn-select-light">
+                                <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                                <span class="btn-select-value">Скоростна кутия</span>
+                                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                                <ul id='pGearBox'>
+                                    <li value='manual'>Ръчна</li>
+                                    <li value='automatic'>Автоматична</li>
 
-                        <a class="btn btn-primary btn-select btn-select-light">
-                <input type="hidden" class="btn-select-input" id="" name="" value="" />
-                <span class="btn-select-value">Модел</span>
-                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul id = 'pModel'>
-                   
-                </ul>
-            </a>
-                        </pre>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
+                                </ul>
+                            </a>
+                        </div>
 
-                        <a class="btn btn-primary btn-select btn-select-light">
-                <input type="hidden" class="btn-select-input" id="" name="" value="" />
-                <span class="btn-select-value">Тип двигател</span>
-                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul id = 'pEngine'>
-                    <li value="gas">Бензин</li>
-                    <li value="disel">Дизел</li>
-                    <li value="electric">Електрически</li>
-                </ul>
-            </a>
-                        </pre>
                     </div>
-                    <div class="col-xs-6 col-sm-3">
+                    <div class="row">
 
-                        <a class="btn btn-primary btn-select btn-select-light">
-                <input type="hidden" class="btn-select-input" id="" name="" value="" />
-                <span class="btn-select-value">Скоростна кутия</span>
-                <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
-                <ul id = 'pGearBox'>
-                    <li value = 'manual'>Ръчна</li>
-                    <li value = 'automatic'>Автоматична</li>
-                   
-                </ul>
-            </a>
-                        </pre>
-                    </div>
-                    <div class="pInput">
-                        <input type="text" class="btn-input" placeholder="&nbsp  Цена" id="pPrice" name="" value="" />
-                    </div>
-                    <div class="pInput">
-                        <input type="text" class="btn-input" placeholder="&nbsp  Година" id="pYear" name="" value="" />
-                    </div>
-                     <div class="pInput">
-                        <input type="text" class="btn-input" placeholder="&nbsp  URL" id="pImg" name="" value="" />
-                    </div>
-                   
+                        <div class="col-xs-4">
+                            <input type="text" class="btn-input" placeholder="&nbsp  Цена" id="pPrice" name="" value="" />
+                        </div>
 
+
+                        <div class="col-xs-4">
+                            <input type="text" class="btn-input" placeholder="&nbsp  Година" id="pYear" name="" value="" />
+                        </div>
+
+
+                        <div class="col-xs-4">
+                            <input type="text" class="btn-input" placeholder="&nbsp  URL" id="pImg" name="" value="" />
+                        </div>
+
+
+                    </div>
                 </div>
+
+
+
+
+
             </div>
             <div class="container">
 
-                <div class="[ col-xs-12 col-sm-6 ]">
+                <div class="col-xs-12 marginTopClass">
                     <div class="container checkboxContainer">
                         <h4>Безопасност</h4>
                         <div class="[ form-group ]">
@@ -690,9 +684,11 @@
                             </div>
 
                         </div>
-                        <button id="publishFormBtn">Публикувай</button>
+
                     </div>
+
                 </div>
+                <button id="publishFormBtn">Публикувай</button>
             </div>
 
         </div>

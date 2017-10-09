@@ -1,0 +1,88 @@
+@media screen and (max-width:930px) {
+    .checkboxContainer {
+        width: 36%;
+    }
+    #newsList {
+        width: 35%;
+    }
+    #displayNews {
+        width: 62%;
+    }
+    #mainLeft,
+    #mainRight {
+        display: block;
+        width: 100% !important;
+    }
+    #iconNav ul {
+        margin: 0 auto;
+    }
+    #mainRight {
+        margin-top: 35px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #logo {
+        max-width: 280px;
+    }
+    #slogan {
+        font-size: 0.95em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #bigCatMenu ul {
+        text-align: left;
+    }
+    #bigCatMenu ul li a {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1025px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .checkboxContainer {
+        margin-left: -22px;
+        display: inline-block;
+        width: 27%;
+    }
+    .container {
+        text-align: center;
+    }
+    .btn-group>.btn:last-child:not(:first-child),
+    .btn-group>.dropdown-toggle:not(:first-child) {
+        width: 150px;
+        font-size: 0.85em;
+        height: 34px;
+        padding: 9px 0 0 0;
+    }
+    #publishFormBtn {
+        float: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        padding-right: 0;
+        padding-left: 0;
+        width: 875px;
+    }
+    .checkboxContainer {
+        width: 27%;
+    }
+    .form-group {
+        display: block !important;
+    }
+    #newsList {
+        width: 40%;
+    }
+    #displayNews {
+        width: 58%;
+    }
+}
